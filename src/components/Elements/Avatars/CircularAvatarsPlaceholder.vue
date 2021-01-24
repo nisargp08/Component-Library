@@ -32,40 +32,40 @@ $icon-color : #94A3B8;
     border-radius: 9999px;
     padding: 0.5rem;
    img{
-       width: 3rem;
-       height: 3rem;
+       width: 2rem;
+       height: 2rem;
        border-radius: 9999px;
        object-fit: cover;
    } 
 }
 .circular-avatar-placeholder-xs{
     img{
+        width: 1rem;
+       height: 1rem;
+    }
+}
+.circular-avatar-placeholder-sm{
+    img{
+        width: 1.5rem;
+       height: 1.5rem;
+    }
+}
+.circular-avatar-placeholder-md{
+    img{
         width: 2rem;
        height: 2rem;
     }
 }
-.circular-avatar-placeholder-sm{
+.circular-avatar-placeholder-lg{
     img{
         width: 2.5rem;
        height: 2.5rem;
     }
 }
-.circular-avatar-placeholder-md{
+.circular-avatar-placeholder-xl{
     img{
         width: 3rem;
        height: 3rem;
-    }
-}
-.circular-avatar-placeholder-lg{
-    img{
-        width: 3.5rem;
-       height: 3.5rem;
-    }
-}
-.circular-avatar-placeholder-xl{
-    img{
-        width: 4rem;
-       height: 4rem;
     }
 }
 </style>
