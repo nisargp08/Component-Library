@@ -47,6 +47,15 @@
               <rounded-top-notification></rounded-top-notification>
           </template>
       </component-box>
+      <!-- Circular Avatars with bottom notification-->
+      <component-box>
+          <template v-slot:header>
+              Circular Avatars with bottom notification
+          </template>
+          <template v-slot:body>
+              <circular-bottom-notification></circular-bottom-notification>
+          </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -59,6 +68,7 @@ import CircularAvatars from "@avatars/CircularAvatars.vue";
 import RoundedAvatars from "@avatars/RoundedAvatars.vue";
 import CircularTopNotification from "@avatars/CircularTopNotification.vue";
 import RoundedTopNotification from "@avatars/RoundedTopNotification.vue";
+import CircularBottomNotification from "@avatars/CircularBottomNotification.vue";
 
 
 export default {
@@ -69,7 +79,8 @@ export default {
     CircularAvatars,
     RoundedAvatars,
     CircularTopNotification,
-    RoundedTopNotification
+    RoundedTopNotification,
+    CircularBottomNotification
   },
 };
 </script>

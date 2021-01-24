@@ -21,7 +21,7 @@ export default {};
 .component-box-head {
   padding: 1.25rem 1rem;
   border-bottom: 1px solid $text-gray-200;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -29,6 +29,9 @@ export default {};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
 }
 .component-box-body {
   padding: 3rem 2rem;
@@ -47,7 +50,7 @@ export default {};
     max-width: 32rem;
     margin: auto;
     flex-wrap: wrap;
-    @media (min-width : 768px) {
+    @media (min-width: 768px) {
       gap: 1rem;
     }
   }
