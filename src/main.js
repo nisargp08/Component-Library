@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+// Css
+import '@/assets/css/normalize.css';
+import '@/assets/css/utilities.css';
+
 new Vue({
   router,
   store,
