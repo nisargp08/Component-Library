@@ -82,8 +82,8 @@ $ringColor: #b5b5b5;
   }
   img {
     display: inline-block;
-    width: 2;
-    height: 2;
+    width: 2rem;
+    height: 2rem;
     object-fit: cover;
     border-radius: 9999px;
     border: 2px solid $ringColor;
