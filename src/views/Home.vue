@@ -8,10 +8,10 @@
           <h3 class="component-section-header">Elements</h3>
         </div>
         <div class="component-group">
-          <a
+          <router-link
             v-for="(item, index) in 5"
             :key="index"
-            href="#"
+            :to="{ name : 'Avatars' }"
             class="component-item-wrapper"
           >
             <figure class="m-0">
@@ -29,36 +29,7 @@
               <p class="figcaption">Avatars</p>
               <p class="figcaption-description">10 components</p>
             </figcaption>
-          </a>
-        </div>
-      </div>
-      <div class="component-section">
-        <div>
-          <h3 class="component-section-header">Page Examples</h3>
-        </div>
-        <div class="component-group">
-          <a
-            v-for="(item, index) in 5"
-            :key="index"
-            href="#"
-            class="component-item-wrapper"
-          >
-            <figure class="m-0">
-              <div class="component-item transition transform">
-                <img
-                  class="w-full h-auto rounded-md"
-                  src="../assets/images/elements-avatars.svg"
-                  alt="Avatars"
-                />
-                <div class="abs-image transition"></div>
-                <!-- <div class="abs-group-image transition"></div> -->
-              </div>
-            </figure>
-            <figcaption class="mt-3">
-              <p class="figcaption">Avatars</p>
-              <p class="figcaption-description">10 components</p>
-            </figcaption>
-          </a>
+          </router-link>
         </div>
       </div>
     </section>
@@ -169,6 +140,9 @@ export default {
   }
 }
 @media(min-width : 1024px){
+  .primary-header{
+    font-size: 1.75rem;
+  }
   .component-section{
     grid-template-columns: repeat(4,minmax(0,1fr));
   }

@@ -20,4 +20,7 @@
   width: 100%;
   margin: 0 auto;
 }
+.border-t{
+    border-top: 1px solid $text-gray-200;
+}
 </style>
