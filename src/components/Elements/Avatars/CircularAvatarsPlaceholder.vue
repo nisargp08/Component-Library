@@ -1,0 +1,71 @@
+<template>
+  <div class="circular-avatars-placeholder">
+      <div class="circular-avatar-placeholder circular-avatar-placeholder-xs">
+          <img src="../../../assets/images/placeholder-avatar.svg" alt="">
+      </div>
+      <div class="circular-avatar-placeholder circular-avatar-placeholder-sm">
+          <img src="../../../assets/images/placeholder-avatar.svg" alt="">
+      </div>
+      <div class="circular-avatar-placeholder circular-avatar-placeholder-md">
+          <img src="../../../assets/images/placeholder-avatar.svg" alt="">
+      </div>
+      <div class="circular-avatar-placeholder circular-avatar-placeholder-lg">
+          <img src="../../../assets/images/placeholder-avatar.svg" alt="">
+      </div>
+      <div class="circular-avatar-placeholder circular-avatar-placeholder-xl">
+          <img src="../../../assets/images/placeholder-avatar.svg" alt="">
+      </div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang="scss" scoped>
+$bg-color : #E2E8F0;
+$icon-color : #94A3B8;
+.circular-avatar-placeholder{
+    background: $bg-color;
+    border-radius: 9999px;
+    padding: 0.5rem;
+   img{
+       width: 3rem;
+       height: 3rem;
+       border-radius: 9999px;
+       object-fit: cover;
+   } 
+}
+.circular-avatar-placeholder-xs{
+    img{
+        width: 2rem;
+       height: 2rem;
+    }
+}
+.circular-avatar-placeholder-sm{
+    img{
+        width: 2.5rem;
+       height: 2.5rem;
+    }
+}
+.circular-avatar-placeholder-md{
+    img{
+        width: 3rem;
+       height: 3rem;
+    }
+}
+.circular-avatar-placeholder-lg{
+    img{
+        width: 3.5rem;
+       height: 3.5rem;
+    }
+}
+.circular-avatar-placeholder-xl{
+    img{
+        width: 4rem;
+       height: 4rem;
+    }
+}
+</style>
