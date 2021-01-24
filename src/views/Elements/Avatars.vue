@@ -29,6 +29,15 @@
               <rounded-avatars></rounded-avatars>
           </template>
       </component-box>
+      <!-- Circular Avatars with Top notification-->
+      <component-box>
+          <template v-slot:header>
+              Circular Avatars with top notification
+          </template>
+          <template v-slot:body>
+              <circular-top-notification></circular-top-notification>
+          </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -39,6 +48,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 import GroupedStacked from "@avatars/GroupStacked.vue";
 import CircularAvatars from "@avatars/CircularAvatars.vue";
 import RoundedAvatars from "@avatars/RoundedAvatars.vue";
+import CircularTopNotification from "@avatars/CircularTopNotification.vue";
 
 export default {
   name: "Avatars",
@@ -47,6 +57,7 @@ export default {
     GroupedStacked,
     CircularAvatars,
     RoundedAvatars,
+    CircularTopNotification,
   },
 };
 </script>
