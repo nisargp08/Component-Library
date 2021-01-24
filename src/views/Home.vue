@@ -9,7 +9,7 @@
         </div>
         <div class="component-group">
           <router-link
-            v-for="(item, index) in 5"
+            v-for="(item, index) in 1"
             :key="index"
             :to="{ name : 'Avatars' }"
             class="component-item-wrapper"
