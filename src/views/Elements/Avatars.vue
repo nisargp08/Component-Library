@@ -74,6 +74,15 @@
               <circular-avatars-placeholder></circular-avatars-placeholder>
           </template>
       </component-box>
+       <!-- Circular Avatars with initials-->
+      <component-box>
+          <template v-slot:header>
+              Circular Avatars with initials
+          </template>
+          <template v-slot:body>
+              <circular-initials></circular-initials>
+          </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -89,6 +98,7 @@ import RoundedTopNotification from "@avatars/RoundedTopNotification.vue";
 import CircularBottomNotification from "@avatars/CircularBottomNotification.vue";
 import RoundedBottomNotification from "@avatars/RoundedBottomNotification.vue";
 import CircularAvatarsPlaceholder from "@avatars/CircularAvatarsPlaceholder.vue";
+import CircularInitials from "@avatars/CircularInitials.vue";
 
 export default {
   name: "Avatars",
@@ -101,7 +111,8 @@ export default {
     RoundedTopNotification,
     CircularBottomNotification,
     RoundedBottomNotification,
-    CircularAvatarsPlaceholder
+    CircularAvatarsPlaceholder,
+    CircularInitials,
   },
 };
 </script>
