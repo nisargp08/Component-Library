@@ -1,5 +1,5 @@
 <template>
-  <div class="divider-dropdown">
+  <div class="dropdown">
     <button @click="isOpen = !isOpen" type="button" class="btn">
       Options
       <!-- Heroicon class: chevron-down -->
@@ -103,7 +103,7 @@ export default {
 // Component style begins
 $dropdown-bg: white;
 
-.divider-dropdown {
+.dropdown {
   color: $text-gray-700;
   $ring-offset-shadow: 0 0 #0000;
   $ring-shadow: 0 0 #0000;
