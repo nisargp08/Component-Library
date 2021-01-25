@@ -42,7 +42,7 @@ export default {
         {
           title: "Dropdowns",
           image: "elements-dropdowns.svg",
-          description: "2 components",
+          description: "4 components",
           linkedTo: "Dropdowns",
         },
       ],
