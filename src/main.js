@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 
 // Css
 import '@/assets/css/normalize.css';
-import '@/assets/css/utilities.css';
+import '@/assets/css/global.scss';
 
 new Vue({
   router,

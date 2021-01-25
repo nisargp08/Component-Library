@@ -15,6 +15,11 @@ const routes = [
     path : '/elements/avatars',
     name : 'Avatars',
     component : () => import(/* webpackChunkName : "Avatars */ '@/views/Elements/Avatars.vue')
+  },
+  {
+    path : '/elements/dropdowns',
+    name : 'Dropdowns',
+    component : () => import(/* webpackChunkName : "Dropdowns */ '@/views/Elements/Dropdowns.vue')
   }
   // {
   //   path: '/about',

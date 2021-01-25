@@ -8,28 +8,14 @@
           <h3 class="component-section-header">Elements</h3>
         </div>
         <div class="component-group">
-          <router-link
-            v-for="(item, index) in 1"
+          <component-group-item
+            v-for="(component, index) in componentList"
             :key="index"
-            :to="{ name : 'Avatars' }"
-            class="component-item-wrapper"
-          >
-            <figure class="m-0">
-              <div class="component-item transition transform">
-                <img
-                  class="w-full h-auto rounded-md"
-                  src="../assets/images/elements-avatars.svg"
-                  alt="Avatars"
-                />
-                <div class="abs-image transition"></div>
-                <!-- <div class="abs-group-image transition"></div> -->
-              </div>
-            </figure>
-            <figcaption class="mt-3">
-              <p class="figcaption">Avatars</p>
-              <p class="figcaption-description">10 components</p>
-            </figcaption>
-          </router-link>
+            :linkedTo="component.linkedTo"
+            :image="component.image"
+            :title="component.title"
+            :description="component.description"
+          ></component-group-item>
         </div>
       </div>
     </section>
@@ -37,13 +23,35 @@
 </template>
 
 <script>
+import ComponentGroupItem from "@general/ComponentGroupItem.vue";
+
 export default {
   name: "Home",
+  components: {
+    ComponentGroupItem,
+  },
+  data() {
+    return {
+      componentList: [
+        {
+          linkedTo: "Avatars",
+          image: "elements-avatars.svg",
+          title: "Avatars",
+          description: "10 components",
+        },
+        {
+          title: "Dropdowns",
+          image: "elements-dropdowns.svg",
+          description: "2 components",
+          linkedTo: "Dropdowns",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss">
-
 /* Global - Common Classes */
 .primary-header {
   font-size: 1.5rem;
@@ -54,13 +62,13 @@ export default {
 }
 .section {
   display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 2rem;
   margin-top: 1.5rem;
 }
 .component-section {
   display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 1.5rem;
   padding-top: 2rem;
   border-top: 1px solid $text-gray-200;
@@ -75,15 +83,16 @@ export default {
 }
 
 /* Component Group */
-.component-group{
+.component-group {
   display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 2rem;
   column-gap: 1.25rem;
 }
 .component-item-wrapper {
-  figure,figcaption{
-    &:hover{
+  figure,
+  figcaption {
+    &:hover {
       opacity: 0.7;
     }
   }
@@ -129,25 +138,25 @@ export default {
 }
 
 /* Media Queries */
-@media(min-width : 640px){
-  .component-group{
-    grid-template-columns: repeat(2,minmax(0,1fr));
+@media (min-width: 640px) {
+  .component-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media(min-width : 768px){
-  .component-group{
-    grid-template-columns: repeat(3,minmax(0,1fr));
+@media (min-width: 768px) {
+  .component-group {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media(min-width : 1024px){
-  .primary-header{
+@media (min-width: 1024px) {
+  .primary-header {
     font-size: 1.75rem;
   }
-  .component-section{
-    grid-template-columns: repeat(4,minmax(0,1fr));
+  .component-section {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .component-group{
-     grid-column: span 3 / span 3 ;
+  .component-group {
+    grid-column: span 3 / span 3;
   }
 }
 </style>

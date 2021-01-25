@@ -48,7 +48,7 @@ export default {};
     gap: 0.5rem;
     width: 100%;
     max-width: 32rem;
-    margin: auto;
+    margin: 0 auto;
     flex-wrap: wrap;
     @media (min-width: 768px) {
       gap: 1rem;

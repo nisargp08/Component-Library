@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <main>
+      <transition
+      mode="out-in"
+      enter-active-class="animate__animated animate__fadeIn animate__delay-150ms"
+      leave-active-class="animate__animated animate__fadeOut animate__delay-150ms"
+    >
       <router-view />
+      </transition>
     </main>
   </div>
 </template>
@@ -22,5 +28,8 @@
 }
 .border-t{
     border-top: 1px solid $text-gray-200;
+}
+.animate__delay-150ms {
+  --animate-duration: 150ms;
 }
 </style>
