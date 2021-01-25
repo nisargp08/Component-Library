@@ -6,7 +6,7 @@
     </p>
     <section class="section">
       <!-- Simple Dropdown -->
-      <component-box class="height-md">
+      <component-box class="height-sm">
         <template v-slot:header>
           Simple Dropdown
         </template>
@@ -32,6 +32,15 @@
           <icons-dropdown></icons-dropdown>
         </template>
       </component-box>
+      <!-- Dropdown with header -->
+      <component-box class="height-md">
+        <template v-slot:header>
+          Dropdown with header
+        </template>
+        <template v-slot:body>
+          <header-dropdown></header-dropdown>
+        </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -42,6 +51,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 import SimpleDropdown from "@dropdowns/Simple.vue";
 import DividerDropdown from "@dropdowns/DividerDropdown.vue";
 import IconsDropdown from "@dropdowns/IconsDropdown.vue";
+import HeaderDropdown from "@dropdowns/HeaderDropdown.vue";
 
 export default {
   name: "Avatars",
@@ -49,7 +59,8 @@ export default {
     ComponentBox,
     SimpleDropdown,
     DividerDropdown,
-    IconsDropdown
+    IconsDropdown,
+    HeaderDropdown
   },
 };
 </script>
@@ -61,8 +72,11 @@ export default {
     background-color: $text-gray-100;
     align-items: flex-start;
   }
-  .height-md .component-box-body{
+  .height-sm .component-box-body{
       min-height: 12rem;
+  }
+   .height-md .component-box-body{
+      min-height: 16rem;
   }
   .height-lg .component-box-body{
       min-height: 20rem;

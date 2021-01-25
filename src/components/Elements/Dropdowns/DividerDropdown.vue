@@ -100,10 +100,8 @@ export default {
   }
 }
 
-// Component style begins
-$dropdown-bg: white;
-
 .dropdown {
+  $dropdown-bg: white;
   color: $text-gray-700;
   $ring-offset-shadow: 0 0 #0000;
   $ring-shadow: 0 0 #0000;
@@ -139,9 +137,9 @@ $dropdown-bg: white;
   }
 
   .dropdown-divide {
-      > :not(:first-child) {
-          border-top: 1px solid $text-gray-100;
-      }
+    > :not(:first-child) {
+      border-top: 1px solid $text-gray-100;
+    }
   }
 }
 </style>

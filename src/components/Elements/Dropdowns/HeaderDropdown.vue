@@ -22,11 +22,19 @@
       enter-active-class="animate__animated animate__fadeIn animate__delay-300ms"
       leave-active-class="animate__animated animate__fadeOut animate__delay-300ms"
     >
-      <div class="dropdown-menu" v-if="isOpen">
-        <a class="menu-items" href="#">Account settings</a>
-        <a class="menu-items" href="#">Support</a>
-        <a class="menu-items" href="#">License</a>
+      <div class="dropdown-menu dropdown-divide" v-if="isOpen">
+        <div class="py-1 dropdown-header">
+            <p>Signed in as</p>
+            <p style="font-size : 0.875rem;color : gray">nisarg@example.com</p>
+        </div>
+        <div class="py-1">
+          <a class="menu-items" href="#">Account settings</a>
+          <a class="menu-items" href="#">Support</a>
+          <a class="menu-items" href="#">License</a>
+        </div>
+        <div class="py-1">
         <a class="menu-items" href="#">Sign out</a>
+        </div>
       </div>
     </transition>
   </div>
@@ -46,7 +54,10 @@ export default {
 .animate__delay-300ms {
   --animate-duration: 300ms;
 }
-// Component style begins
+// Component css starts
+.py-1 {
+  padding: 0.25rem 0;
+}
 .btn {
   // Variables
   $bg-color: white;
@@ -85,6 +96,7 @@ export default {
     margin-right: -0.25rem;
   }
 }
+
 .dropdown {
   $dropdown-bg: white;
   color: $text-gray-700;
@@ -119,6 +131,16 @@ export default {
         background-color: $text-gray-100;
       }
     }
+  }
+  .dropdown-divide {
+    > :not(:first-child) {
+      border-top: 1px solid $text-gray-100;
+    }
+  }
+  .dropdown-header{
+    padding: 1rem 1rem;
+    font-size: 0.875;
+    font-weight: 600;
   }
 }
 </style>
