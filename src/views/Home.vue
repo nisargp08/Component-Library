@@ -45,6 +45,12 @@ export default {
           description: "4 components",
           linkedTo: "Dropdowns",
         },
+        {
+          title: "Badges",
+          image: "elements-badges.svg",
+          description: "7 components",
+          linkedTo: "Badges",
+        },
       ],
     };
   },

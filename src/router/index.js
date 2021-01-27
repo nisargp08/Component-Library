@@ -20,6 +20,11 @@ const routes = [
     path : '/elements/dropdowns',
     name : 'Dropdowns',
     component : () => import(/* webpackChunkName : "Dropdowns */ '@/views/Elements/Dropdowns.vue')
+  },
+  {
+    path : '/elements/badges',
+    name : 'Badges',
+    component : () => import(/* webpackChunkName : "Badges */ '@/views/Elements/Badges.vue')
   }
   // {
   //   path: '/about',
