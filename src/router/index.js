@@ -25,7 +25,12 @@ const routes = [
     path : '/elements/badges',
     name : 'Badges',
     component : () => import(/* webpackChunkName : "Badges */ '@/views/Elements/Badges.vue')
-  }
+  },
+  {
+    path : '/elements/buttons',
+    name : 'Buttons',
+    component : () => import(/* webpackChunkName : "Buttons */ '@/views/Elements/Buttons.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'About',

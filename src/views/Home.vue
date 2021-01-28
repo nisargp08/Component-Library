@@ -51,6 +51,12 @@ export default {
           description: "7 components",
           linkedTo: "Badges",
         },
+        {
+          title: "Buttons",
+          image: "elements-buttons.svg",
+          description: "5 components",
+          linkedTo: "Buttons",
+        },
       ],
     };
   },
