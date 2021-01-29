@@ -9,6 +9,7 @@
       <component-box class="height-sm">
         <template v-slot:header>
           Simple Dropdown
+          <span class="badge badge-red ml-1">requires js</span>
         </template>
         <template v-slot:body>
           <simple-dropdown></simple-dropdown>
@@ -18,6 +19,7 @@
       <component-box class="height-lg">
         <template v-slot:header>
           Dropdown with dividers
+          <span class="badge badge-red ml-1">requires js</span>
         </template>
         <template v-slot:body>
           <divider-dropdown></divider-dropdown>
@@ -27,6 +29,7 @@
       <component-box class="height-lg">
         <template v-slot:header>
           Dropdown with icons
+          <span class="badge badge-red ml-1">requires js</span>
         </template>
         <template v-slot:body>
           <icons-dropdown></icons-dropdown>
@@ -36,6 +39,7 @@
       <component-box class="height-md">
         <template v-slot:header>
           Dropdown with header
+          <span class="badge badge-red ml-1">requires js</span>
         </template>
         <template v-slot:body>
           <header-dropdown></header-dropdown>

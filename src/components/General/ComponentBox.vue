@@ -55,4 +55,18 @@ export default {};
     }
   }
 }
+.badge{
+  display: inline-block;
+  padding: 0 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  background-color: #f4f4f5;
+  color: #71717a;
+  text-transform: uppercase;
+}
+.badge-red {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
 </style>

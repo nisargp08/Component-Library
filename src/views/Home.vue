@@ -3,13 +3,13 @@
     <h2 class="primary-header">Application UI</h2>
 
     <section class="section">
-      <div class="component-section">
+      <div v-for="(item,index) in getUniqueSubtype" :key="index" class="component-section">
         <div>
-          <h3 class="component-section-header">Elements</h3>
+          <h3 class="component-section-header">{{ item.subtype }}</h3>
         </div>
         <div class="component-group">
           <component-group-item
-            v-for="(component, index) in componentList"
+            v-for="(component, index) in componentListBySubtype(item.subtype)"
             :key="index"
             :linkedTo="component.linkedTo"
             :image="component.image"
@@ -33,33 +33,66 @@ export default {
   data() {
     return {
       componentList: [
+        // Elements
         {
+          subtype : "Elements",
           linkedTo: "Avatars",
           image: "elements-avatars.svg",
           title: "Avatars",
           description: "10 components",
         },
         {
+          subtype : "Elements",
           title: "Dropdowns",
           image: "elements-dropdowns.svg",
           description: "4 components",
           linkedTo: "Dropdowns",
         },
         {
+          subtype : "Elements",
           title: "Badges",
           image: "elements-badges.svg",
           description: "7 components",
           linkedTo: "Badges",
         },
         {
+          subtype : "Elements",
           title: "Buttons",
           image: "elements-buttons.svg",
           description: "5 components",
           linkedTo: "Buttons",
         },
+        // Overlays
+        {
+          subtype : "Overlays",
+          title: "Modals",
+          image: "overlays-modals.svg",
+          description: "6 components",
+          linkedTo: "Modals",
+        },
       ],
     };
   },
+  computed : {
+    // To return unique subtype from componentlist
+    getUniqueSubtype(){
+      let unique = [];
+      this.componentList.forEach((item) => {
+        var result = unique.findIndex(x => x.subtype == item.subtype);
+        if(result <= -1){
+          unique.push({subtype : item.subtype});
+        }
+      });
+      return unique;
+    }
+  },
+  methods : {
+    // To return components by subtypes
+    componentListBySubtype(type){
+      let result = this.componentList.filter(item => item.subtype == type);
+      return result;
+    }
+  }
 };
 </script>
 

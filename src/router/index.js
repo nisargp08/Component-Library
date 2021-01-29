@@ -11,6 +11,7 @@ const routes = [
     component: Home
   },
   // Application UI
+  // Elements
   {
     path : '/elements/avatars',
     name : 'Avatars',
@@ -31,14 +32,12 @@ const routes = [
     name : 'Buttons',
     component : () => import(/* webpackChunkName : "Buttons */ '@/views/Elements/Buttons.vue')
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+  // Overlays
+  {
+    path : '/overlays/modals',
+    name : 'Modals',
+    component : () => import(/* webpackChunkName : Modals */ '@/views/Overlays/Modals.vue')
+  }
 ]
 
 const router = new VueRouter({
