@@ -77,6 +77,13 @@ export default {
           description: "6 components",
           linkedTo: "Notifications",
         },
+        {
+          subtype : "Overlays",
+          title: "slide-overs",
+          image: "overlays-slide-overs.svg",
+          description: "6 components",
+          linkedTo: "slideOvers",
+        },
       ],
     };
   },

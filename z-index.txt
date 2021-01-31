@@ -1,0 +1,2 @@
+Modal = 40;
+Notification = 10;

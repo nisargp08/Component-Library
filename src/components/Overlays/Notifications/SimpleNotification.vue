@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition-fade>
+    <transition-zoom>
       <div class="notification" v-if="!isClose">
         <div class="icon">
           <svg
@@ -41,12 +41,12 @@
           </button>
         </div>
       </div>
-    </transition-fade>
+    </transition-zoom>
   </div>
 </template>
 
 <script>
-import TransitionFade from "@general/TransitionFade.vue";
+import TransitionZoom from "@general/TransitionZoom.vue";
 
 export default {
   data() {
@@ -56,7 +56,7 @@ export default {
     };
   },
   components: {
-    TransitionFade,
+    TransitionZoom,
   },
   watch: {
     // To make notification reappear after close - Just for user interaction
@@ -78,7 +78,10 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
 .notification {
   position: absolute;
-  bottom: 10px;
+  z-index: 10;
+  // bottom: 10px;
+  bottom: 0;
+  margin-bottom: 0.75rem;
   display: flex;
   max-width: 18rem;
   background-color: $notification-bg;
@@ -88,8 +91,12 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   width: 100%;
   // Change position to top at 640
   @media (min-width: 640px) {
-    top: 1.25rem;
-    right: 1.25rem;
+    // top: 1.25rem;
+    // right: 1.25rem;
+    top: 0;
+    right: 0;
+    margin-top: 1.25rem;
+    margin-right: 1.25rem;
     bottom: auto;
     max-width: 24rem;
   }

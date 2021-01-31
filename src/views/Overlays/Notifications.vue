@@ -8,6 +8,12 @@
       >
       for animations
     </p>
+    <div class="message-alert">
+      <p>
+        Change to <code>{ position : fixed; }</code> when using in
+        your project
+      </p>
+    </div>
     <section class="section">
       <!-- Simple notification -->
       <component-box class="height-sm">

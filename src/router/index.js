@@ -44,6 +44,12 @@ const routes = [
     component : () => import(/* webpackChunkName : Notifications */ '@/views/Overlays/Notifications.vue')
   },
   {
+    path : '/overlays/slide-overs',
+    name : 'slideOvers',
+    component : () => import(/* webpackChunkName : Notifications */ '@/views/Overlays/SlideOvers.vue')
+  },
+  // Wildcard for any other path
+  {
     path : '*',
     redirect : {
       name : 'Home'

@@ -19,7 +19,9 @@ export default{
 }
 </script>
 <style lang="scss">
-
+body,#app{
+  min-height: 100vh;
+}
 #app {
   font-family: $primaryFont;
   -webkit-font-smoothing: antialiased;
@@ -30,6 +32,7 @@ export default{
   padding: 1rem;
   max-width: 1440px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 .border-t{

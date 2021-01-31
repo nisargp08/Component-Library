@@ -22,6 +22,7 @@ module.exports = {
                 // Overlays
                 '@modals' : path.resolve(__dirname,'src/components/Overlays/Modals/'),
                 '@notifications' : path.resolve(__dirname,'src/components/Overlays/Notifications/'),
+                '@slideOvers' : path.resolve(__dirname,'src/components/Overlays/SlideOvers/'),
             }
         }
     },
