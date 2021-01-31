@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <main>
-      <transition
-      mode="out-in"
-      enter-active-class="animate__animated animate__fadeIn animate__delay-150ms"
-      leave-active-class="animate__animated animate__fadeOut animate__delay-150ms"
-    >
+      <transition-fade>
       <router-view />
-      </transition>
+      </transition-fade>
     </main>
   </div>
 </template>
 
+<script>
+import TransitionFade from '@general/TransitionFade.vue'
+
+export default{
+  name : 'App',
+  components : {
+    TransitionFade
+  }
+}
+</script>
 <style lang="scss">
 
 #app {
@@ -29,7 +35,7 @@
 .border-t{
     border-top: 1px solid $text-gray-200;
 }
-.animate__delay-150ms {
+main {
   --animate-duration: 150ms;
 }
 </style>

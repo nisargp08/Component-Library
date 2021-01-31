@@ -21,6 +21,7 @@ module.exports = {
                 '@buttons' : path.resolve(__dirname,'src/components/Elements/Buttons/'),
                 // Overlays
                 '@modals' : path.resolve(__dirname,'src/components/Overlays/Modals/'),
+                '@notifications' : path.resolve(__dirname,'src/components/Overlays/Notifications/'),
             }
         }
     },

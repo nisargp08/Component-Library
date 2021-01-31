@@ -67,8 +67,15 @@ export default {
           subtype : "Overlays",
           title: "Modals",
           image: "overlays-modals.svg",
-          description: "6 components",
+          description: "2 components",
           linkedTo: "Modals",
+        },
+        {
+          subtype : "Overlays",
+          title: "Notifications",
+          image: "overlays-notifications.svg",
+          description: "6 components",
+          linkedTo: "Notifications",
         },
       ],
     };
@@ -160,15 +167,6 @@ export default {
   border: 1px solid $text-gray-900;
   opacity: 0.15;
 }
-// .component-item .abs-group-image {
-//   display: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   background: white;
-//   opacity: 0;
-// }
 // Figures text
 .figcaption {
   font-size: 1rem;

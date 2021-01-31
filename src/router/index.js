@@ -37,6 +37,11 @@ const routes = [
     path : '/overlays/modals',
     name : 'Modals',
     component : () => import(/* webpackChunkName : Modals */ '@/views/Overlays/Modals.vue')
+  },
+  {
+    path : '/overlays/notification',
+    name : 'Notifications',
+    component : () => import(/* webpackChunkName : Notifications */ '@/views/Overlays/Notifications.vue')
   }
 ]
 

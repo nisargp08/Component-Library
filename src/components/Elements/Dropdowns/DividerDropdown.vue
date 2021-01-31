@@ -17,11 +17,7 @@
         />
       </svg>
     </button>
-    <transition
-      mode="out-in"
-      enter-active-class="animate__animated animate__fadeIn animate__delay-300ms"
-      leave-active-class="animate__animated animate__fadeOut animate__delay-300ms"
-    >
+    <transition-fade>
       <div class="dropdown-menu dropdown-divide" v-if="isOpen">
         <div class="py-1">
           <a class="menu-items" href="#">Edit</a>
@@ -39,22 +35,27 @@
           <a class="menu-items" href="#">Delete</a>
         </div>
       </div>
-    </transition>
+    </transition-fade>
   </div>
 </template>
 
 <script>
+import TransitionFade from "@general/TransitionFade.vue";
+
 export default {
   data() {
     return {
       isOpen: true,
     };
   },
+  components: {
+    TransitionFade,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.animate__delay-300ms {
+.dropdown {
   --animate-duration: 300ms;
 }
 // Component css starts

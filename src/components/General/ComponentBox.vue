@@ -34,6 +34,7 @@ export default {};
   }
 }
 .component-box-body {
+  position: relative;
   padding: 3rem 2rem;
   display: flex;
   flex-wrap: wrap;

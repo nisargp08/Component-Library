@@ -4,18 +4,14 @@
       Open Single Action Modal
     </button>
     <div class="modal" :class="{ 'is-open': isOpen }">
-      <transition
-        mode="out-in"
-        enter-active-class="animate__animated animate__fadeIn animate__delay-250ms"
-        leave-active-class="animate__animated animate__fadeOut animate__delay-250ms"
-      >
+      <transition-fade>
         <div
           role="button"
           class="modal-background"
           v-if="isOpen"
           @click="isOpen = !isOpen"
         ></div>
-      </transition>
+      </transition-fade>
       <button class="modal-dismiss" @click="isOpen = false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +71,8 @@
 </template>
 
 <script>
+import TransitionFade from '@general/TransitionFade.vue'
+
 export default {
   mounted() {
     // Modal close on escape key
@@ -90,6 +88,9 @@ export default {
       isOpen: false,
     };
   },
+  components : {
+    TransitionFade
+  }
 };
 </script>
 
@@ -104,7 +105,7 @@ $bg-tint: rgb(10, 10, 10);
   right: 0;
   bottom: 0;
 }
-.animate__delay-250ms {
+.modal{
   --animate-duration: 250ms;
 }
 // Component css
