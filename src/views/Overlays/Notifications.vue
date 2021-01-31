@@ -1,39 +1,76 @@
 <template>
-<div class="notification">
+  <div class="notification">
     <div class="primary-header">Notifications</div>
     <p>
-        Using <a style="color : #e91d62" href="https://animate.style/" target="_blank">animate.css</a> for animations
+      Using
+      <a style="color : #e91d62" href="https://animate.style/" target="_blank"
+        >animate.css</a
+      >
+      for animations
     </p>
     <section class="section">
-        <!-- Simple notification -->
-        <component-box class="height-sm">
-            <template v-slot:header>
-                Simple Notification
-            </template>
-            <template v-slot:body>
-                <simple-notification></simple-notification>
-            </template>
-        </component-box>
-        <!-- Condensed notification -->
-        <component-box class="height-sm">
-            <template v-slot:header>
-                Condensed Notification
-            </template>
-            <template v-slot:body>
-                <condensed-notification></condensed-notification>
-            </template>
-        </component-box>
-        <!-- action notification -->
-        <component-box class="height-sm">
-            <template v-slot:header>
-                action Notification
-            </template>
-            <template v-slot:body>
-                <action-notification></action-notification>
-            </template>
-        </component-box>
+      <!-- Simple notification -->
+      <component-box class="height-sm">
+        <template v-slot:header>
+          Simple Notification
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <simple-notification></simple-notification>
+        </template>
+      </component-box>
+      <!-- Condensed notification -->
+      <component-box class="height-sm">
+        <template v-slot:header>
+          Condensed Notification
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <condensed-notification></condensed-notification>
+        </template>
+      </component-box>
+      <!-- action notification -->
+      <component-box class="height-sm">
+        <template v-slot:header>
+          action Notification
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <action-notification></action-notification>
+        </template>
+      </component-box>
+      <!-- avatar notification -->
+      <component-box class="height-sm">
+        <template v-slot:header>
+          avatar Notification
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <avatar-notification></avatar-notification>
+        </template>
+      </component-box>
+      <!-- split notification -->
+      <component-box class="height-sm">
+        <template v-slot:header>
+          Split Button notification
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <split-action></split-action>
+        </template>
+      </component-box>
+      <!-- button notification -->
+      <component-box class="height-sm">
+        <template v-slot:header>
+          Button notification
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <operation-notification></operation-notification>
+        </template>
+      </component-box>
     </section>
-</div>
+  </div>
 </template>
 
 <script>
@@ -42,25 +79,31 @@ import ComponentBox from "@general/ComponentBox.vue";
 import SimpleNotification from "@notifications/SimpleNotification.vue";
 import CondensedNotification from "@notifications/CondensedNotification.vue";
 import ActionNotification from "@notifications/ActionNotification.vue";
+import AvatarNotification from "@notifications/AvatarNotification.vue";
+import SplitAction from "@notifications/SplitAction.vue";
+import OperationNotification from "@notifications/OperationNotification.vue";
 
 export default {
-    components: {
-        ComponentBox,
-        SimpleNotification,
-        CondensedNotification,
-        ActionNotification
-    },
+  components: {
+    ComponentBox,
+    SimpleNotification,
+    CondensedNotification,
+    ActionNotification,
+    AvatarNotification,
+    SplitAction,
+    OperationNotification,
+  },
 };
 </script>
 
 <style lang="scss">
 .notification {
-    .component-box-body {
-        background-color: $text-gray-100;
-    }
+  .component-box-body {
+    background-color: $text-gray-100;
+  }
 
-    .height-sm .component-box-body {
-        min-height: 12rem;
-    }
+  .height-sm .component-box-body {
+    min-height: 12rem;
+  }
 }
 </style>

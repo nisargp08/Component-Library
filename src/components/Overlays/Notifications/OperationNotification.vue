@@ -2,31 +2,16 @@
   <div>
     <transition-fade>
       <div class="notification" v-if="!isClose">
-        <div class="icon">
-          <svg
-            class="w-6 h-6 text-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-            />
-          </svg>
+        <div class="rounded-avatar">
+          <img src="@/assets/images/zeke-yeager.jpg" alt="" />
         </div>
         <div class="text">
-          <h4 class="text-title">Discussion moved</h4>
-          <p class="text-data">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab.
-          </p>
+          <h4 class="text-title">Zeke Yeager</h4>
+          <p class="text-data">Sent you an invite to connect.</p>
           <div class="actions">
-            <button class="reset-btn undo">Undo</button>
-            <button class="reset-btn dismiss" @click="isClose = true">
-              Dismiss
+            <button class="btn btn-indigo" @click="isClose = true">Accept</button>
+            <button class="btn decline" @click="isClose = true">
+              Decline
             </button>
           </div>
         </div>
@@ -110,6 +95,14 @@ $action-color: #6366f1;
 .text-gray-400 {
   color: $text-gray-400;
 }
+.rounded-avatar {
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+}
 .text {
   flex: 1;
   -ms-flex: 1 0 auto;
@@ -133,11 +126,22 @@ $action-color: #6366f1;
       margin: 0;
       padding: 0;
       font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.875rem;
     }
-    .undo {
-      color: $action-color;
+    .btn-indigo {
+      color: white;
+      background-color: rgba($action-color, 1);
+      border: 1px solid rgba($action-color, 1);
+      &:hover {
+        background-color: darken($color: rgba($action-color, 1), $amount: 3%);
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba($color: rgba($action-color, 1), $alpha: 0.5);
+      }
     }
-    .dismiss {
+    .decline {
       margin-left: 0.75rem;
     }
   }

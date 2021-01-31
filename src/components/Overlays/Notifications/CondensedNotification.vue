@@ -11,7 +11,7 @@
         <div class="dismiss">
           <button class="reset-btn" @click="isClose = true">
             <svg
-              class="w-4 h-4 text-gray-500"
+              class="w-4 h-4 text-gray-400"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 20 20"
@@ -50,7 +50,7 @@ export default {
       if (value) {
         setTimeout(() => {
           this.isClose = false;
-        }, 2000);
+        }, 1000);
       }
     },
   },
@@ -86,8 +86,8 @@ $text-color: #6366f1;
 .notification {
   --animate-duration: 500ms;
 }
-.text-gray-500 {
-  color: $text-gray-500;
+.text-gray-400 {
+  color: $text-gray-400;
 }
 .text {
   flex: 1;
