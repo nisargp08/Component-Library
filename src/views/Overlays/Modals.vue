@@ -1,6 +1,9 @@
 <template>
-  <div>
+<div>
     <div class="primary-header">Modals</div>
+    <p>
+        Using <a style="color : #e91d62" href="https://animate.style/" target="_blank">animate.css</a> for animations
+    </p>
     <section class="section">
         <!-- Simple Modal -->
         <component-box>
@@ -23,7 +26,7 @@
             </template>
         </component-box>
     </section>
-  </div>
+</div>
 </template>
 
 <script>
@@ -33,11 +36,11 @@ import SimpleModal from "@modals/SimpleModal.vue";
 import SingleActionModal from "@modals/SingleActionModal.vue";
 
 export default {
-  components: {
-    ComponentBox,
-    SimpleModal,
-    SingleActionModal,
-  },
+    components: {
+        ComponentBox,
+        SimpleModal,
+        SingleActionModal,
+    },
 };
 </script>
 

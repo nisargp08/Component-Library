@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition-fade>
-    <div class="simple-notification" v-if="!isClose">
+    <div class="notification" v-if="!isClose">
       <div class="icon">
         <svg
           class="w-6 h-6 text-green-600"
@@ -75,7 +75,8 @@ export default {
 // Component css
 $notification-bg : white;
 $shadow : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-.simple-notification {
+
+.notification {
   position: absolute;
   bottom: 10px;
   display: flex;
@@ -87,14 +88,14 @@ $shadow : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   width: 100%;
   // Change position to top at 640
   @media (min-width : 640px){
-    top: 10px;
-    right: 10px;
+    top: 1.25rem;
+    right: 1.25rem;
     bottom: auto;
     max-width: 24rem;
   }
 }
 // Content design - Not required for component design
-.simple-notification{
+.notification{
   --animate-duration: 500ms;
 }
 .text-green-600 {
@@ -106,8 +107,8 @@ $shadow : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 .text{
   flex: 1;
   -ms-flex : 1 0 auto;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   .text-title{
     margin: 0;
     font-size: 1rem;
