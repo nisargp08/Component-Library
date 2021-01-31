@@ -112,7 +112,7 @@ $action-color: #6366f1;
 }
 .text {
   flex: 1;
-  -ms-flex: 1 0 auto;
+  -ms-flex: 1;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   .text-title {

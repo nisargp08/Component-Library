@@ -42,7 +42,18 @@ const routes = [
     path : '/overlays/notification',
     name : 'Notifications',
     component : () => import(/* webpackChunkName : Notifications */ '@/views/Overlays/Notifications.vue')
+  },
+  {
+    path : '*',
+    redirect : {
+      name : 'Home'
+    }
   }
+  // {
+  //   path : '*',
+  //   name : 'Catchall',
+  //   component : Home
+  // }
 ]
 
 const router = new VueRouter({
