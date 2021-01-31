@@ -6,11 +6,17 @@
       <transition-slide>
         <div class="slide-over-panel" v-if="isOpen">
           <div class="slide-over-heading">
-            <h2>Panel Heading</h2>
+            <div class="mr-2">
+              <h2>Panel Heading</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Ratione, distinctio corrupti facere incidunt tempora doloribus.
+              </p>
+            </div>
             <div class="dismiss">
               <button class="reset-btn" @click="isOpen = false">
                 <svg
-                  class="w-4 h-4 text-gray-400"
+                  class="w-6 h-6 text-gray-300"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -66,16 +72,18 @@ export default {
 // Variables
 $bg-color: white;
 $bg-tint: rgba(0, 0, 0, 0.09);
+$banner-color: $theme-color;
 $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
   0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
 .slide-over {
   display: none;
+  z-index: 10;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 10;
   justify-content: flex-end;
   &.is-open {
     //   When slide bar opened
@@ -83,11 +91,11 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
   }
   .slide-overlay {
     position: fixed;
+    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 10;
     background-color: $bg-tint;
   }
 
@@ -100,21 +108,19 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     width: calc(100vw - 4rem);
     background-color: $bg-color;
     overflow-y: auto;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     box-shadow: $shadow;
     // height: 100%;
   }
 }
 // Element design css - Not required for component
-.text-gray-400 {
-  color: $text-gray-400;
+.text-gray-300 {
+  color: $text-gray-300;
 }
 .slide-over-heading {
   display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  align-items: flex-start;
+  background-color: darken($banner-color, 3%);
+  padding: 1.25rem;
   h2 {
     flex: 1;
     -ms-flex: 1;
@@ -123,6 +129,12 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     line-height: 1.75rem;
     font-weight: 600;
     color: $text-gray-900;
+    color: white;
+  }
+  p {
+    color: $text-gray-300;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 .slide-over-content {

@@ -24,6 +24,9 @@ img {
 .ml-1 {
   margin-left: 0.25rem;
 }
+.mr-2{
+  margin-right : 0.5rem;
+}
 /* Width */
 .w-full {
   width: 100%;
@@ -134,4 +137,16 @@ img {
   color: #10b981;
   font-weight: 600;
   margin-top: 1rem;
+}
+.btn-theme {
+  color: white;
+  background-color: rgba($theme-color, 1);
+  border: 1px solid rgba($theme-color, 1);
+  &:hover {
+    background-color: darken($color: rgba($theme-color, 1), $amount: 3%);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba($color: rgba($theme-color, 1), $alpha: 0.5);
+  }
 }
