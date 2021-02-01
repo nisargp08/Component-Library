@@ -39,6 +39,16 @@
           <sticky-footer></sticky-footer>
         </template>
       </component-box>
+      <!-- Create Project Form Example -->
+      <component-box>
+        <template v-slot:header>
+          Create Project Form Example
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <create-project-form></create-project-form>
+        </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -49,6 +59,7 @@ import ComponentBox from "@general/ComponentBox";
 import SimpleSlideOver from "@slideOvers/SimpleSlideOver.vue";
 import BrandedHeader from "@slideOvers/BrandedHeader.vue";
 import StickyFooter from "@slideOvers/StickyFooter.vue";
+import CreateProjectForm from "@slideOvers/CreateProjectForm.vue";
 
 export default {
   components: {
@@ -56,6 +67,7 @@ export default {
     SimpleSlideOver,
     BrandedHeader,
     StickyFooter,
+    CreateProjectForm
   },
 };
 </script>
