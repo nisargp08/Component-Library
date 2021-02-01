@@ -8,7 +8,7 @@
         <transition-slide>
             <div class="slide-over-panel" v-if="isOpen">
                 <div class="slide-over-heading">
-                    <div class="mr-2">
+                    <div class="text-wrapper mr-2">
                         <h2>New Project</h2>
                         <p>
                             Get started by filling in the information below to create your
@@ -77,7 +77,7 @@
                             </div>
                             <div class="form-radio">
                                 <input type="radio" name="privacy" id="three" />
-                                <label for="one" class="form-label">Private to you
+                                <label for="three" class="form-label">Private to you
                                     <span class="form-description">You are the only one able to access this project.</span>
                                 </label>
                             </div>
@@ -197,6 +197,11 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     align-items: flex-start;
     background-color: darken($banner-color, 3%);
     padding: 1.25rem;
+
+    .text-wrapper {
+        flex: 1;
+        -ms-flex: 1;
+    }
 
     h2 {
         flex: 1;
@@ -345,21 +350,21 @@ textarea {
 }
 
 // Share Project
-.share-project{
+.share-project {
     border-top: 1px solid $text-gray-200;
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    .copy-link{
+    .copy-link {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        color : $theme-color;
+        color: $theme-color;
         line-height: 1.5rem;
-        font-weight: 600; 
+        font-weight: 600;
     }
 
-    .learn-more{
+    .learn-more {
         display: flex;
         align-items: center;
         flex-wrap: wrap;

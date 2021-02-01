@@ -66,7 +66,7 @@ export default {
   // Variables
   $bg-color: white;
   $border-color: rgba(209, 213, 219, 1);
-  $focus-border-color: rgba(#f97316, 1);
+  $focus-border-color: rgba($theme-color, 1);
   $ring-offset-shadow: 0 0 #0000;
   $ring-shadow: 0 0 #0000;
   $shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -89,8 +89,9 @@ export default {
   }
 
   &:focus {
-    outline: 2px solid transparent;
-    border: 2px solid $focus-border-color;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba($color: rgba($focus-border-color, 1), $alpha: 0.5);
+    border-color: transparent;
   }
 
   svg {

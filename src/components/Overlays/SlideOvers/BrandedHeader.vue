@@ -6,7 +6,7 @@
         <transition-slide>
             <div class="slide-over-panel" v-if="isOpen">
                 <div class="slide-over-heading">
-                    <div class="mr-2">
+                    <div class="text-wrapper mr-2">
                         <h2>Panel Heading</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -114,6 +114,11 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     align-items: flex-start;
     background-color: darken($banner-color, 3%);
     padding: 1.25rem;
+
+    .text-wrapper {
+        flex: 1;
+        -ms-flex: 1;
+    }
 
     h2 {
         flex: 1;
