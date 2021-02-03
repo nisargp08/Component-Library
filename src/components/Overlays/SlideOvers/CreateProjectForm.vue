@@ -47,7 +47,7 @@
                                         <img src="@/assets/images/reiner-braun.jpg" alt="" />
                                     </div>
                                     <div class="circular-avatar">
-                                        <img src="@/assets/images/levi-ackerman.jpg" alt="" />
+                                        <img src="@/assets/images/levi-ackerman.png" alt="" />
                                     </div>
                                     <div class="circular-avatar">
                                         <img src="@/assets/images/mikasa-ackerman.jpg" alt="" />
@@ -264,12 +264,13 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     align-items: flex-start;
 
     input[type="radio"] {
-        height: 1.125rem;
-        width: 1.125rem;
+        // height: 1.125rem;
+        // width: 1.125rem;
         color: $text-gray-400;
         padding: 0.75rem;
         border: 1px solid $text-gray-400;
         border-radius: 9999px;
+        margin-top: 0.25rem;
         margin-right: 0.5rem;
     }
 }

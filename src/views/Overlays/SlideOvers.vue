@@ -59,6 +59,16 @@
           <create-project-form-wide></create-project-form-wide>
         </template>
       </component-box>
+       <!-- User Profile Example -->
+      <component-box>
+        <template v-slot:header>
+          User Profile in a sidebar
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <user-profile></user-profile>
+        </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -71,6 +81,7 @@ import BrandedHeader from "@slideOvers/BrandedHeader.vue";
 import StickyFooter from "@slideOvers/StickyFooter.vue";
 import CreateProjectForm from "@slideOvers/CreateProjectForm.vue";
 import CreateProjectFormWide from "@slideOvers/CreateProjectFormWide.vue";
+import UserProfile from "@slideOvers/UserProfile.vue";
 
 export default {
   components: {
@@ -79,7 +90,8 @@ export default {
     BrandedHeader,
     StickyFooter,
     CreateProjectForm,
-    CreateProjectFormWide
+    CreateProjectFormWide,
+    UserProfile,
   },
 };
 </script>
