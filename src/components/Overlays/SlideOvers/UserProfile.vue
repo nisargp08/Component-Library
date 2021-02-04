@@ -205,9 +205,6 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 .text-gray-400 {
   color: $text-gray-400;
 }
-.info-text a {
-  color: $theme-color;
-}
 // Reset all heading tags
 h1,
 h2,
@@ -366,16 +363,16 @@ h6 {
 
       // Heading
       h5 {
-        font-size: 0.875rem;
+        font-size: 1rem;
         line-height: 1.25rem;
-        color: $text-gray-400;
+        color: $text-gray-500;
         font-weight: 600;
         text-transform: capitalize;
       }
 
       .info-text {
         font-size: 0.875rem;
-        padding-top: 0.25rem;
+        padding-top: 0.5rem;
         line-height: 1.25rem;
 
         @media (min-width: 640px) {
