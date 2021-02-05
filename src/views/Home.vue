@@ -81,7 +81,7 @@ export default {
           subtype : "Overlays",
           title: "slide-overs",
           image: "overlays-slide-overs.svg",
-          description: "6 components",
+          description: "8 components",
           linkedTo: "slideOvers",
         },
       ],

@@ -79,6 +79,16 @@
           <wide-user-profile></wide-user-profile>
         </template>
       </component-box>
+      <!-- Contact List Example -->
+      <component-box>
+        <template v-slot:header>
+          Contact List in a sidebar
+          <span class="badge badge-red ml-1">requires js</span>
+        </template>
+        <template v-slot:body>
+          <contact-list></contact-list>
+        </template>
+      </component-box>
     </section>
   </div>
 </template>
@@ -93,6 +103,7 @@ import CreateProjectForm from "@slideOvers/CreateProjectForm.vue";
 import CreateProjectFormWide from "@slideOvers/CreateProjectFormWide.vue";
 import UserProfile from "@slideOvers/UserProfile.vue";
 import WideUserProfile from "@slideOvers/WideUserProfile.vue";
+import ContactList from "@slideOvers/ContactList.vue";
 
 export default {
   components: {
@@ -104,6 +115,7 @@ export default {
     CreateProjectFormWide,
     UserProfile,
     WideUserProfile,
+    ContactList,
   },
 };
 </script>
