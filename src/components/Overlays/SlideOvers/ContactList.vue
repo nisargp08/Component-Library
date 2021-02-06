@@ -260,6 +260,10 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 <style lang="scss">
 // Navigation tabs
 .tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: hidden;
   .tab-heads {
     display: flex;
     align-items: center;
@@ -283,6 +287,9 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
       color: $theme-color;
       border-bottom-color: $theme-color;
     }
+  }
+  .tab-body{
+    overflow-y: auto;
   }
 }
 </style>

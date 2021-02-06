@@ -23,6 +23,8 @@ module.exports = {
                 '@modals' : path.resolve(__dirname,'src/components/Overlays/Modals/'),
                 '@notifications' : path.resolve(__dirname,'src/components/Overlays/Notifications/'),
                 '@slideOvers' : path.resolve(__dirname,'src/components/Overlays/SlideOvers/'),
+                // Navigation
+                '@navbars' : path.resolve(__dirname,'src/components/Navigation/Navbars/'),
             }
         }
     },

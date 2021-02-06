@@ -48,6 +48,12 @@ const routes = [
     name : 'slideOvers',
     component : () => import(/* webpackChunkName : Notifications */ '@/views/Overlays/SlideOvers.vue')
   },
+  // Navigation
+  {
+    path : '/navigation/navbars',
+    name : 'Navbars',
+    component : () => import(/* webpackChunkName : Navbars */ '@/views/Navigation/Navbars.vue')
+  },
   // Wildcard for any other path
   {
     path : '*',

@@ -1,28 +1,24 @@
 <template>
   <div class="tabs">
-    <header>
-      <ul class="tab-heads">
-        <li
-          v-for="(tab, index) in tabs"
-          @click="switchTab(tab)"
-          :key="index"
-          class="tab-head"
-          :class="{ 'tab-active': activeTab == tab }"
-        >
-          <!-- Tab Heading in named slot -->
-          <slot :name="tabHeadName(tab)">{{ tab }}</slot>
-        </li>
-      </ul>
-    </header>
-    <main>
-      <div class="tab-body">
-        <!-- For fade animation -->
-        <transition-fade>
-          <!-- Tab body/content in a named slot -->
-          <slot :name="tabBodySlot"></slot>
-        </transition-fade>
-      </div>
-    </main>
+    <ul class="tab-heads">
+      <li
+        v-for="(tab, index) in tabs"
+        @click="switchTab(tab)"
+        :key="index"
+        class="tab-head"
+        :class="{ 'tab-active': activeTab == tab }"
+      >
+        <!-- Tab Heading in named slot -->
+        <slot :name="tabHeadName(tab)">{{ tab }}</slot>
+      </li>
+    </ul>
+    <div class="tab-body">
+      <!-- For fade animation -->
+      <transition-fade>
+        <!-- Tab body/content in a named slot -->
+        <slot :name="tabBodySlot"></slot>
+      </transition-fade>
+    </div>
   </div>
 </template>
 

@@ -79,10 +79,18 @@ export default {
         },
         {
           subtype : "Overlays",
-          title: "slide-overs",
+          title: "Slide Overs",
           image: "overlays-slide-overs.svg",
           description: "8 components",
           linkedTo: "slideOvers",
+        },
+        // Navigation
+        {
+          subtype : "Navigation",
+          title: "Navbars",
+          image: "navigation-navbars.svg",
+          description: "8 components",
+          linkedTo: "Navbars",
         },
       ],
     };
