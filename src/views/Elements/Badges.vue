@@ -2,67 +2,20 @@
   <div class="badges">
     <div class="primary-header">Badges</div>
     <section class="section">
-        <!-- Basic Badges -->
-      <component-box class="wrapper">
+      <!-- Component list -->
+      <component-box
+        class="wrapper"
+        v-for="(component, index) in componentsList"
+        :key="index"
+      >
         <template v-slot:header>
-          Basic Badges
+          {{ component.title }}
+          <span v-if="component.needJS" class="badge badge-red ml-1"
+            >requires js</span
+          >
         </template>
         <template v-slot:body>
-          <basic-badges></basic-badges>
-        </template>
-      </component-box>
-      <!-- Large Badges -->
-      <component-box class="wrapper">
-        <template v-slot:header>
-          Large Badges
-        </template>
-        <template v-slot:body>
-          <large-badges></large-badges>
-        </template>
-      </component-box>
-      <!-- Dot Badges -->
-      <component-box class="wrapper">
-        <template v-slot:header>
-          Dot Badges
-        </template>
-        <template v-slot:body>
-          <dot-badges></dot-badges>
-        </template>
-      </component-box>
-      <!-- rounded Badges -->
-      <component-box class="wrapper">
-        <template v-slot:header>
-          rounded Badges
-        </template>
-        <template v-slot:body>
-          <rounded-badges></rounded-badges>
-        </template>
-      </component-box>
-      <!-- Large Rounded Badges -->
-      <component-box class="wrapper">
-        <template v-slot:header>
-          large rounded Badges
-        </template>
-        <template v-slot:body>
-          <large-rounded-badges></large-rounded-badges>
-        </template>
-      </component-box>
-      <!-- Rounded Dot Badges -->
-      <component-box class="wrapper">
-        <template v-slot:header>
-          Rounded Dot badges
-        </template>
-        <template v-slot:body>
-          <rounded-dot-badges></rounded-dot-badges>
-        </template>
-      </component-box>
-      <!-- Badge with remove button -->
-      <component-box class="wrapper">
-        <template v-slot:header>
-          Badge with remove button
-        </template>
-        <template v-slot:body>
-          <badge-with-remove></badge-with-remove>
+          <component :is="component.componentName"></component>
         </template>
       </component-box>
     </section>
@@ -80,6 +33,40 @@ import RoundedDotBadges from "@badges/RoundedDotBadges.vue";
 import BadgeWithRemove from "@badges/BadgeWithRemove.vue";
 
 export default {
+  data() {
+    return {
+      componentsList: [
+        {
+          title: "Basic Badges",
+          componentName: "BasicBadges",
+        },
+        {
+          title: "Large Badges",
+          componentName: "LargeBadges",
+        },
+        {
+          title: "Dot Badges",
+          componentName: "DotBadges",
+        },
+        {
+          title: "Rounded Badges",
+          componentName: "RoundedBadges",
+        },
+        {
+          title: "Large Rounded Badges",
+          componentName: "LargeRoundedBadges",
+        },
+        {
+          title: "Rounded Dot Badges",
+          componentName: "RoundedDotBadges",
+        },
+        {
+          title: "Badge With Remove",
+          componentName: "BadgeWithRemove",
+        },
+      ],
+    };
+  },
   components: {
     ComponentBox,
     BasicBadges,
@@ -97,7 +84,7 @@ export default {
 // Container css
 .badges {
   .wrapper {
-    .component-box-body > *{
+    .component-box-body > * {
       max-width: 100%;
       justify-content: center;
     }

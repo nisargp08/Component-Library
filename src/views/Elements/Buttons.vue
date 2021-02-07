@@ -2,39 +2,20 @@
   <div class="buttons">
     <div class="primary-header">Buttons</div>
     <section class="section">
-      <!-- Primary Buttons -->
-      <component-box class="wrapper">
-        <template v-slot:header>Primary Buttons</template>
-        <template v-slot:body>
-          <primary-buttons></primary-buttons>
+      <!-- Component list -->
+      <component-box
+        class="wrapper"
+        v-for="(component, index) in componentsList"
+        :key="index"
+      >
+        <template v-slot:header>
+          {{ component.title }}
+          <span v-if="component.needJS" class="badge badge-red ml-1"
+            >requires js</span
+          >
         </template>
-      </component-box>
-       <!-- Secondary Buttons -->
-      <component-box class="wrapper">
-        <template v-slot:header>Secondary Buttons</template>
         <template v-slot:body>
-          <secondary-buttons></secondary-buttons>
-        </template>
-      </component-box>
-      <!-- White Buttons -->
-      <component-box class="wrapper">
-        <template v-slot:header>white Buttons</template>
-        <template v-slot:body>
-          <white-buttons></white-buttons>
-        </template>
-      </component-box>
-      <!-- Rounded Buttons -->
-      <component-box class="wrapper">
-        <template v-slot:header>Rounded Buttons</template>
-        <template v-slot:body>
-          <rounded-buttons></rounded-buttons>
-        </template>
-      </component-box>
-      <!-- Circular Buttons -->
-      <component-box class="wrapper">
-        <template v-slot:header>circular Buttons</template>
-        <template v-slot:body>
-          <circular-buttons></circular-buttons>
+          <component :is="component.componentName"></component>
         </template>
       </component-box>
     </section>
@@ -50,6 +31,32 @@ import RoundedButtons from "@buttons/RoundedButtons.vue";
 import CircularButtons from "@buttons/CircularButtons.vue";
 
 export default {
+  data() {
+    return {
+      componentsList: [
+        {
+          title: "Primary Buttons",
+          componentName: "PrimaryButtons",
+        },
+        {
+          title: "Secondary Buttons",
+          componentName: "SecondaryButtons",
+        },
+        {
+          title: "white Buttons",
+          componentName: "WhiteButtons",
+        },
+        {
+          title: "Rounded Buttons",
+          componentName: "RoundedButtons",
+        },
+        {
+          title: "Circular Buttons",
+          componentName: "CircularButtons",
+        },
+      ],
+    };
+  },
   components: {
     ComponentBox,
     PrimaryButtons,

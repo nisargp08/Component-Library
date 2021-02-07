@@ -9,84 +9,16 @@
       for animations
     </p>
     <section class="section">
-        <!-- Simple Slide over -->
-      <component-box>
+      <!-- Component list -->
+      <component-box v-for="(component, index) in componentsList" :key="index">
         <template v-slot:header>
-          Simple Slide Over
-          <span class="badge badge-red ml-1">requires js</span>
+          {{ component.title }}
+          <span v-if="component.needJS" class="badge badge-red ml-1"
+            >requires js</span
+          >
         </template>
         <template v-slot:body>
-          <simple-slide-over></simple-slide-over>
-        </template>
-      </component-box>
-       <!-- Branded Header Slide over -->
-      <component-box>
-        <template v-slot:header>
-          Branded Header Slide Over
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <branded-header></branded-header>
-        </template>
-      </component-box>
-      <!-- Sticky Footer slide over -->
-      <component-box>
-        <template v-slot:header>
-          Sticky Footer slide over
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <sticky-footer></sticky-footer>
-        </template>
-      </component-box>
-      <!-- Create Project Form Example -->
-      <component-box>
-        <template v-slot:header>
-          Create Project Form Example
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <create-project-form></create-project-form>
-        </template>
-      </component-box>
-      <!-- Create Project Form Wide Example -->
-      <component-box>
-        <template v-slot:header>
-          Wide Create Project Form Example
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <create-project-form-wide></create-project-form-wide>
-        </template>
-      </component-box>
-       <!-- User Profile Example -->
-      <component-box>
-        <template v-slot:header>
-          User Profile in a sidebar
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <user-profile></user-profile>
-        </template>
-      </component-box>
-      <!-- Wide User Profile Example -->
-      <component-box>
-        <template v-slot:header>
-          Wide User Profile in a sidebar
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <wide-user-profile></wide-user-profile>
-        </template>
-      </component-box>
-      <!-- Contact List Example -->
-      <component-box>
-        <template v-slot:header>
-          Contact List in a sidebar
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <contact-list></contact-list>
+          <component :is="component.componentName"></component>
         </template>
       </component-box>
     </section>
@@ -106,6 +38,52 @@ import WideUserProfile from "@slideOvers/WideUserProfile.vue";
 import ContactList from "@slideOvers/ContactList.vue";
 
 export default {
+  data() {
+    return {
+      componentsList: [
+        {
+          title: "Simple Slide Over",
+          componentName: "SimpleSlideOver",
+          needJS: true,
+        },
+        {
+          title: "Branded Header Slide over",
+          componentName: "BrandedHeader",
+          needJS: true,
+        },
+        {
+          title: "Sticky Footer slide over",
+          componentName: "StickyFooter",
+          needJS: true,
+        },
+        {
+          title: "Create Project Form Example",
+          componentName: "CreateProjectForm",
+          needJS: true,
+        },
+        {
+          title: "Create Project Form Wide Example",
+          componentName: "CreateProjectFormWide",
+          needJS: true,
+        },
+        {
+          title: "User Profile Example",
+          componentName: "UserProfile",
+          needJS: true,
+        },
+        {
+          title: "Wide User Profile Example",
+          componentName: "WideUserProfile",
+          needJS: true,
+        },
+        {
+          title: "Contact List Example",
+          componentName: "ContactList",
+          needJS: true,
+        },
+      ],
+    };
+  },
   components: {
     ComponentBox,
     SimpleSlideOver,

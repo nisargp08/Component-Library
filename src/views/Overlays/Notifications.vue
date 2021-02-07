@@ -10,69 +10,24 @@
     </p>
     <div class="message-alert">
       <p>
-        Change to <code>{ position : fixed; }</code> when using in
-        your project
+        Change to <code>{ position : fixed; }</code> when using in your project
       </p>
     </div>
     <section class="section">
-      <!-- Simple notification -->
-      <component-box class="height-sm">
+      <!-- Component list -->
+      <component-box
+        class="height-sm"
+        v-for="(component, index) in componentsList"
+        :key="index"
+      >
         <template v-slot:header>
-          Simple Notification
-          <span class="badge badge-red ml-1">requires js</span>
+          {{ component.title }}
+          <span v-if="component.needJS" class="badge badge-red ml-1"
+            >requires js</span
+          >
         </template>
         <template v-slot:body>
-          <simple-notification></simple-notification>
-        </template>
-      </component-box>
-      <!-- Condensed notification -->
-      <component-box class="height-sm">
-        <template v-slot:header>
-          Condensed Notification
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <condensed-notification></condensed-notification>
-        </template>
-      </component-box>
-      <!-- action notification -->
-      <component-box class="height-sm">
-        <template v-slot:header>
-          action Notification
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <action-notification></action-notification>
-        </template>
-      </component-box>
-      <!-- avatar notification -->
-      <component-box class="height-sm">
-        <template v-slot:header>
-          avatar Notification
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <avatar-notification></avatar-notification>
-        </template>
-      </component-box>
-      <!-- split notification -->
-      <component-box class="height-sm">
-        <template v-slot:header>
-          Split Button notification
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <split-action></split-action>
-        </template>
-      </component-box>
-      <!-- button notification -->
-      <component-box class="height-sm">
-        <template v-slot:header>
-          Button notification
-          <span class="badge badge-red ml-1">requires js</span>
-        </template>
-        <template v-slot:body>
-          <operation-notification></operation-notification>
+          <component :is="component.componentName"></component>
         </template>
       </component-box>
     </section>
@@ -90,6 +45,42 @@ import SplitAction from "@notifications/SplitAction.vue";
 import OperationNotification from "@notifications/OperationNotification.vue";
 
 export default {
+  data() {
+    return {
+      componentsList: [
+        {
+          title: "Simple Notification",
+          componentName: "SimpleNotification",
+          needJS: true,
+        },
+        {
+          title: "Condensed notification",
+          componentName: "CondensedNotification",
+          needJS: true,
+        },
+        {
+          title: "action notification",
+          componentName: "ActionNotification",
+          needJS: true,
+        },
+        {
+          title: "avatar notification",
+          componentName: "AvatarNotification",
+          needJS: true,
+        },
+        {
+          title: "split notification",
+          componentName: "SplitAction",
+          needJS: true,
+        },
+        {
+          title: " button notification",
+          componentName: "OperationNotification",
+          needJS: true,
+        },
+      ],
+    };
+  },
   components: {
     ComponentBox,
     SimpleNotification,
