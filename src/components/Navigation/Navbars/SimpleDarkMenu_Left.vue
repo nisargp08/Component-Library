@@ -3,8 +3,10 @@
     <div class="wrapper">
       <div class="sub-wrapper">
         <div class="button-wrapper">
-          <button class="btn btn-transparent">
+          <button @click="isMenuOpen = !isMenuOpen" class="btn btn-transparent">
+            <!-- When menu is closed -->
             <svg
+              v-if="!isMenuOpen"
               class="w-6 h-6 text-gray-300"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -18,10 +20,34 @@
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
+            <!-- When menu is opened -->
+            <svg
+              v-if="isMenuOpen"
+              class="w-6 h-6 text-gray-300"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
         </div>
-        <div class="logo-wrapper">
-          <img src="@/assets/images/brand-logo-white.png" alt="Logo" />
+        <div class="multi-wrapper">
+          <div class="logo-wrapper">
+            <img src="@/assets/images/brand-logo-white.png" alt="Logo" />
+          </div>
+          <div class="links-wrapper">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Team</a>
+            <a href="#">Projects</a>
+            <a href="#">Calendar</a>
+          </div>
         </div>
         <div class="action-wrapper pr-2">
           <div class="action-item">
@@ -51,6 +77,11 @@
               >
                 <img src="@/assets/images/eren-kruger.png" alt="" />
               </button>
+              <div
+                class="dropdown-overlay"
+                @click="isUserDropdown = false"
+                v-if="isUserDropdown"
+              ></div>
             </div>
             <transition-fade>
               <div class="action-item-dropdown" v-if="isUserDropdown">
@@ -63,12 +94,12 @@
         </div>
       </div>
       <!-- Mobile links menu -->
-      <div class="links-wrapper">
-          <a href="#" class="active">Dashboard</a>
-          <a href="#">Team</a>
-          <a href="#">Projects</a>
-          <a href="#">Calendar</a>
-        </div>
+      <div class="links-wrapper mobile" v-if="isMenuOpen">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Team</a>
+        <a href="#">Projects</a>
+        <a href="#">Calendar</a>
+      </div>
     </div>
   </nav>
 </template>
@@ -79,6 +110,7 @@ export default {
   data() {
     return {
       isUserDropdown: false,
+      isMenuOpen: false,
     };
   },
   components: {
@@ -159,8 +191,19 @@ $font-color: $text-gray-300;
     position: relative;
     height: 4rem;
   }
+  // Logo & Links wrapper
+  .multi-wrapper{
+    display: flex;
+    align-items: center;
+    > :not(:first-child){
+      margin-left: 0.75rem;
+    }
+  }
   // Collapse button
   .button-wrapper {
+    @media (min-width: 640px) {
+      display: none;
+    }
   }
   // Logo
   .logo-wrapper {
@@ -181,7 +224,15 @@ $font-color: $text-gray-300;
   // Avatar action button
   .avatar-action-item {
     position: relative;
-
+    // Dropdown overlay
+    .dropdown-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: transparent;
+    }
     // Dropdown
     .action-item-dropdown {
       display: flex;
@@ -209,14 +260,20 @@ $font-color: $text-gray-300;
       }
     }
   }
-  // Mobile links menu
+  //Links menu
   .links-wrapper {
-    display: flex;
-    flex-direction: column;
-    background: $bg-color;
-    padding-top: 0.5rem;
-    padding-bottom: 0.75rem;
-    
+    display: none;
+    // Mobile
+    &.mobile {
+      display: flex;
+      flex-direction: column;
+      background: $bg-color;
+      padding-top: 0.5rem;
+      padding-bottom: 0.75rem;
+      @media(min-width : 640px){
+        display: none;
+      }
+    }
     // Individual links
     > * {
       padding: 0.75rem 0.5rem;
@@ -224,16 +281,26 @@ $font-color: $text-gray-300;
       border-radius: 0.375rem;
       font-size: 1rem;
       font-weight: 600;
-      color : $font-color;
-      &:hover{
+      color: $font-color;
+      &:hover {
         background: $text-gray-700;
         color: white;
       }
       // Active
-      &.active{
+      &.active {
         background: $text-gray-900;
         color: white;
       }
+    }
+    // After 640px
+    @media(min-width : 640px){
+        display: block;
+        > :not(:first-child){
+          margin-left: 0.75rem;
+        }
+        > * {
+          padding: 0.5rem 1rem;
+        }
     }
   }
 }

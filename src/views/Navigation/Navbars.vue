@@ -33,6 +33,9 @@ export default {
 .navbars{
   .component-box-body{
     padding: 0;
+    min-height: 12rem;
+    align-items: flex-start;
+    background: $text-gray-700;
   }
 }
 </style>
