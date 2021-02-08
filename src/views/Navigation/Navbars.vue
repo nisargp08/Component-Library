@@ -23,11 +23,17 @@ import ComponentBox from "@general/ComponentBox.vue";
 // Navbars
 import SimpleDarkLeft from "@navbars/SimpleDarkMenu_Left.vue";
 import DarkWithAction from "@navbars/DarkWithAction.vue";
+import SimpleDark from "@navbars/SimpleDark.vue";
 
 export default {
   data() {
     return {
       componentsList: [
+        {
+          title: "Simple Dark",
+          componentName: "SimpleDark",
+          needJS: true,
+        },
         {
           title: "Simple dark with menu button on left",
           componentName: "SimpleDarkLeft",
@@ -45,6 +51,7 @@ export default {
     ComponentBox,
     SimpleDarkLeft,
     DarkWithAction,
+    SimpleDark,
   },
 };
 </script>
@@ -53,7 +60,7 @@ export default {
 .navbars {
   .component-box-body {
     padding: 0;
-    min-height: 12rem;
+    min-height: 16rem;
     align-items: flex-start;
     background: $text-gray-700;
   }

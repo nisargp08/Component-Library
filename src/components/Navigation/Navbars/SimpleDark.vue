@@ -2,6 +2,17 @@
 <nav class="navbar dark">
     <div class="wrapper">
         <div class="sub-wrapper">
+            <div class="multi-wrapper">
+                <div class="logo-wrapper">
+                    <img src="@/assets/images/brand-logo-white.png" alt="Logo" />
+                </div>
+                <div class="links-wrapper" :class="[isMenuOpen ? 'flex' : 'hidden']">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">Team</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Calendar</a>
+                </div>
+            </div>
             <div class="button-wrapper">
                 <button @click="isMenuOpen = !isMenuOpen" class="btn btn-transparent">
                     <!-- When menu is closed -->
@@ -14,32 +25,20 @@
                     </svg>
                 </button>
             </div>
-            <div class="multi-wrapper">
-                <div class="logo-wrapper">
-                    <img src="@/assets/images/brand-logo-white.png" alt="Logo" />
-                </div>
-                <div class="links-wrapper">
-                    <a href="#" class="active">Dashboard</a>
-                    <a href="#">Team</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Calendar</a>
-                </div>
-            </div>
             <div class="action-wrapper pr-2">
-                <div class="action-item">
-                    <button class="btn btn-transparent btn-round">
-                        <svg class="w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="action-item avatar-action-item ml-2">
-                    <button @click="isUserDropdown = !isUserDropdown" class="btn btn-transparent btn-avatar" :class="{ 'avatar-ring': isUserDropdown }">
-                        <img src="@/assets/images/eren-kruger.png" alt="" />
-                        <svg class="w-4 h-4 text-gray-300 px-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                <div class="action-item avatar-action-item ml-3">
+                    <div class="user-info">
+                        <button @click="isUserDropdown = !isUserDropdown" class="btn btn-transparent btn-avatar" :class="{ 'avatar-ring': isUserDropdown }">
+                            <img src="@/assets/images/eren-kruger.png" alt="" />
+                            <svg class="w-4 h-4 text-gray-300 px-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="text-wrapper">
+                            <p class="text-title">Eren Kruger</p>
+                            <p class="text-description">Undercover@eldian.com</p>
+                        </div>
+                    </div>
                     <div class="dropdown-overlay" @click="isUserDropdown = false" v-if="isUserDropdown"></div>
 
                     <transition-fade>
@@ -52,13 +51,6 @@
                     </transition-fade>
                 </div>
             </div>
-        </div>
-        <!-- Mobile links menu -->
-        <div class="links-wrapper mobile" v-if="isMenuOpen">
-            <a href="#" class="active">Dashboard</a>
-            <a href="#">Team</a>
-            <a href="#">Projects</a>
-            <a href="#">Calendar</a>
         </div>
     </div>
 </nav>
@@ -123,10 +115,6 @@ $font-color: $text-gray-300;
         }
     }
 
-    .btn-round {
-        border-radius: 9999px;
-    }
-
     .btn-avatar {
         padding: 0;
         border-radius: 9999px;
@@ -166,26 +154,46 @@ $font-color: $text-gray-300;
     //SubWrapper
     .sub-wrapper {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: space-between;
         position: relative;
         min-height: 4rem;
+
+        @media(min-width : 640px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        >* {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
     }
 
     // Logo & Links wrapper
     .multi-wrapper {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         flex: 1;
         -ms-flex: 1;
 
         > :not(:first-child) {
             margin-left: 0.75rem;
         }
+
+        @media(min-width : 640px) {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     // Collapse button
     .button-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0.25rem;
+
         @media (min-width: 640px) {
             display: none;
         }
@@ -206,9 +214,15 @@ $font-color: $text-gray-300;
 
     // Action Buttons
     .action-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        border-top: 1px solid $text-gray-700;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        @media(min-width : 640px) {
+            border: none;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
     }
 
     // Avatar action button
@@ -218,77 +232,121 @@ $font-color: $text-gray-300;
 
         // Dropdown overlay
         .dropdown-overlay {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-color: transparent;
+            display: none;
+
+            @media(min-width : 640px) {
+                position: fixed;
+                display: block;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-color: transparent;
+            }
         }
 
         // Dropdown
         .action-item-dropdown {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            right: 0;
-            transform-origin: top right;
-            width: 12rem;
-            background-color: white;
-            border-radius: 0.375rem;
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
             margin-top: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-                0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-            &::after {
-                position: absolute;
-                display: inline-block;
-                content: "";
-                border: 7px solid transparent;
-                border-bottom-color: white;
-                top: -14px;
-                right: 10px;
-                left: auto;
-            }
 
             > :first-child {
-                border-bottom: 1px solid $text-gray-200;
-                margin-bottom: 0.5rem;
+                display: none;
             }
 
             >* {
-                color: $text-gray-700;
-                padding: 0.5rem 1rem;
+                display: block;
+                color: $font-color;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
                 font-size: 0.875rem;
                 cursor: pointer;
                 font-weight: 500;
+            }
 
-                &:hover {
-                    background-color: $text-gray-100;
+            @media(min-width : 640px) {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+                transform-origin: top right;
+                width: 12rem;
+                background-color: white;
+                border-radius: 0.375rem;
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+                margin-top: 0.5rem;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+                &::after {
+                    position: absolute;
+                    display: inline-block;
+                    content: "";
+                    border: 7px solid transparent;
+                    border-bottom-color: white;
+                    top: -14px;
+                    right: 10px;
+                    left: auto;
                 }
+
+                > :first-child {
+                    border-bottom: 1px solid $text-gray-200;
+                    margin-bottom: 0.5rem;
+                    display: block;
+                }
+
+                >* {
+                    color: $text-gray-700;
+                    padding: 0.5rem 1rem;
+
+                    &:hover {
+                        background-color: $text-gray-100;
+                    }
+                }
+            }
+        }
+    }
+
+    // Avatar info
+    .user-info {
+        display: flex;
+
+        .text-wrapper {
+            margin-left: 0.75rem;
+
+            @media (min-width: 640px) {
+                display: none;
+            }
+
+            .text-title {
+                color: $font-color;
+                font-weight: 600;
+                font-size: 1rem;
+            }
+
+            .text-description {
+                color: $text-gray-400;
+                font-size: 0.75rem;
             }
         }
     }
 
     //Links menu
     .links-wrapper {
-        display: none;
+        display: flex;
         flex: 1;
         -ms-flex: 1;
+        flex-direction: column;
+        padding-top: 0.5rem;
+        padding-bottom: 0.75rem;
 
-        // Mobile
-        &.mobile {
+        // Hidden and flex class - to hide/show wrapper
+        &.flex {
             display: flex;
-            flex-direction: column;
-            background: $bg-color;
-            padding-top: 0.5rem;
-            padding-bottom: 0.75rem;
+        }
 
-            @media (min-width: 640px) {
-                display: none;
-            }
+        &.hidden {
+            display: none;
         }
 
         // Individual links
@@ -314,7 +372,8 @@ $font-color: $text-gray-300;
 
         // After 640px
         @media (min-width: 640px) {
-            display: flex;
+            display: flex !important;
+            flex-direction: row;
             flex-wrap: wrap;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
