@@ -25,6 +25,7 @@ import SimpleDarkLeft from "@navbars/SimpleDarkMenu_Left.vue";
 import DarkWithAction from "@navbars/DarkWithAction.vue";
 import SimpleDark from "@navbars/SimpleDark.vue";
 import SimpleLight from "@navbars/SimpleLight.vue";
+import SimpleLightSearch from "@navbars/SimpleLightSearch.vue";
 
 export default {
   data() {
@@ -50,6 +51,11 @@ export default {
           componentName: "SimpleLight",
           needJS: true,
         },
+        {
+          title: "Simple Light Search",
+          componentName: "SimpleLightSearch",
+          needJS: true,
+        },
       ],
     };
   },
@@ -59,6 +65,7 @@ export default {
     DarkWithAction,
     SimpleDark,
     SimpleLight,
+    SimpleLightSearch,
   },
 };
 </script>
