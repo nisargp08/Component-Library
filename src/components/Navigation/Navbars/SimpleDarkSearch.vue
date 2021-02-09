@@ -5,14 +5,14 @@
             <div class="multi-wrapper">
                 <div class="flex align-center">
                     <div class="logo-wrapper">
-                        <img src="@/assets/images/brand-logo-black.png" alt="Logo" />
+                        <img src="@/assets/images/brand-logo-white.png" alt="Logo" />
                     </div>
                     <!-- Search -->
                     <div class="action-item search-action-item ml-3 flex-1 mobile">
                         <form action="#">
                             <div class="search-group">
                                 <div class="search-icon">
-                                    <svg class="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg class="w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
                                 </div>
@@ -24,11 +24,11 @@
                     <div class="button-wrapper ml-3">
                         <button @click="isMenuOpen = !isMenuOpen" class="btn btn-transparent">
                             <!-- When menu is closed -->
-                            <svg v-if="!isMenuOpen" class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg v-if="!isMenuOpen" class="w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                             <!-- When menu is opened -->
-                            <svg v-if="isMenuOpen" class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg v-if="isMenuOpen" class="w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
@@ -47,7 +47,7 @@
                     <form action="#">
                         <div class="search-group">
                             <div class="search-icon">
-                                <svg class="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-4 h-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                             </div>
@@ -59,7 +59,7 @@
                     <!-- Notification -->
                     <div class="action-item ml-3 self-start">
                         <button class="btn btn-transparent btn-round">
-                            <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                             </svg>
                         </button>
@@ -69,7 +69,7 @@
                         <div class="user-info">
                             <button @click="isUserDropdown = !isUserDropdown" class="btn btn-transparent btn-avatar" :class="{ 'avatar-ring': isUserDropdown }">
                                 <img src="@/assets/images/eren-kruger.png" alt="" />
-                                <svg class="w-4 h-4 text-gray-700 px-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-4 h-4 text-gray-300 px-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
@@ -117,15 +117,15 @@ export default {
 }
 
 // Variables
-$bg-color: white;
-$font-color: $text-gray-600;
-$action-color : $theme-color;
-$action-hover-color : $text-gray-200;
-$action-font-color : $text-gray-50;
-$ring-color : $theme-color;
+$bg-color: $text-gray-800;
+$font-color: $text-gray-300;
+$action-color : $text-gray-900;
+$action-hover-color : $text-gray-700;
+$action-font-color : white;
+$ring-color : white;
 // Utilities
-.text-gray-700 {
-    color: $text-gray-700;
+.text-gray-300 {
+    color: $text-gray-300;
 }
 
 .ml-2 {

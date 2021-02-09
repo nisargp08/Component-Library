@@ -89,7 +89,7 @@ export default {
           subtype : "Navigation",
           title: "Navbars",
           image: "navigation-navbars.svg",
-          description: "8 components",
+          description: "6 components",
           linkedTo: "Navbars",
         },
       ],

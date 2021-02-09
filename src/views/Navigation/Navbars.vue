@@ -26,6 +26,7 @@ import DarkWithAction from "@navbars/DarkWithAction.vue";
 import SimpleDark from "@navbars/SimpleDark.vue";
 import SimpleLight from "@navbars/SimpleLight.vue";
 import SimpleLightSearch from "@navbars/SimpleLightSearch.vue";
+import SimpleDarkSearch from "@navbars/SimpleDarkSearch.vue";
 
 export default {
   data() {
@@ -34,6 +35,21 @@ export default {
         {
           title: "Simple Dark",
           componentName: "SimpleDark",
+          needJS: true,
+        },
+        {
+          title: "Simple Light",
+          componentName: "SimpleLight",
+          needJS: true,
+        },
+        {
+          title: "Simple Dark Search",
+          componentName: "SimpleDarkSearch",
+          needJS: true,
+        },
+        {
+          title: "Simple Light Search",
+          componentName: "SimpleLightSearch",
           needJS: true,
         },
         {
@@ -46,16 +62,6 @@ export default {
           componentName: "DarkWithAction",
           needJS: true,
         },
-        {
-          title: "Simple Light",
-          componentName: "SimpleLight",
-          needJS: true,
-        },
-        {
-          title: "Simple Light Search",
-          componentName: "SimpleLightSearch",
-          needJS: true,
-        },
       ],
     };
   },
@@ -66,6 +72,7 @@ export default {
     SimpleDark,
     SimpleLight,
     SimpleLightSearch,
+    SimpleDarkSearch,
   },
 };
 </script>
