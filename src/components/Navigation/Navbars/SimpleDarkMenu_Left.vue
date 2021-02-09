@@ -119,7 +119,7 @@ $font-color: $text-gray-300;
         padding: 0.5rem;
 
         &:focus {
-            box-shadow: 0 0 0 0.15rem rgba($color: $font-color, $alpha: 1);
+            box-shadow: 0 0 0 0.15rem rgba($color: $font-color, $alpha: 0.5);
         }
     }
 
@@ -299,6 +299,7 @@ $font-color: $text-gray-300;
             font-size: 1rem;
             font-weight: 600;
             color: $font-color;
+            transition: all .15s ease-in-out;
 
             &:hover {
                 background: $text-gray-700;

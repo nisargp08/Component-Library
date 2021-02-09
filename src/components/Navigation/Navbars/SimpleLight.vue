@@ -1,10 +1,10 @@
 <template>
-<nav class="navbar dark">
+<nav class="navbar light">
     <div class="wrapper">
         <div class="sub-wrapper">
             <div class="multi-wrapper">
                 <div class="logo-wrapper">
-                    <img src="@/assets/images/brand-logo-white.png" alt="Logo" />
+                    <img src="@/assets/images/brand-logo-black.png" alt="Logo" />
                 </div>
                 <div class="links-wrapper" :class="[isMenuOpen ? 'flex' : 'hidden']">
                     <a href="#" class="active">Dashboard</a>
@@ -16,11 +16,11 @@
             <div class="button-wrapper">
                 <button @click="isMenuOpen = !isMenuOpen" class="btn btn-transparent">
                     <!-- When menu is closed -->
-                    <svg v-if="!isMenuOpen" class="w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg v-if="!isMenuOpen" class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                     <!-- When menu is opened -->
-                    <svg v-if="isMenuOpen" class="w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg v-if="isMenuOpen" class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -30,7 +30,7 @@
                     <div class="user-info">
                         <button @click="isUserDropdown = !isUserDropdown" class="btn btn-transparent btn-avatar" :class="{ 'avatar-ring': isUserDropdown }">
                             <img src="@/assets/images/eren-kruger.png" alt="" />
-                            <svg class="w-4 h-4 text-gray-300 px-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-4 h-4 text-gray-700 px-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -77,12 +77,14 @@ export default {
 }
 
 // Variables
-$bg-color: $text-gray-800;
-$font-color: $text-gray-300;
-
+$bg-color: white;
+$font-color: $text-gray-600;
+$action-color : $theme-color;
+$action-hover-color : $text-gray-200;
+$action-font-color : $text-gray-50;
 // Utilities
 .text-gray-300 {
-    color: $text-gray-300;
+    color: $text-gray-700;
 }
 
 .ml-2 {
@@ -103,6 +105,7 @@ $font-color: $text-gray-300;
     display: block;
     width: 100%;
     max-width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
     // Buttons
     .btn-transparent {
@@ -111,7 +114,7 @@ $font-color: $text-gray-300;
         padding: 0.5rem;
 
         &:focus {
-            box-shadow: 0 0 0 0.15rem rgba($color: $font-color, $alpha: 0.5);
+            box-shadow: 0 0 0 0.15rem rgba($color: $action-color, $alpha: 0.5);
         }
     }
 
@@ -135,12 +138,12 @@ $font-color: $text-gray-300;
 
         // When active
         &.avatar-ring {
-            box-shadow: 0 0 0 0.15rem rgba($color: $font-color, $alpha: 1);
+            box-shadow: 0 0 0 0.15rem rgba($color: $action-color, $alpha: 1);
         }
     }
 
     // Scheme
-    &.dark {
+    &.light {
         background-color: $bg-color;
         color: $font-color;
     }
@@ -214,7 +217,7 @@ $font-color: $text-gray-300;
 
     // Action Buttons
     .action-wrapper {
-        border-top: 1px solid $text-gray-700;
+        border-top: 1px solid darken($color: $bg-color, $amount: 20);
         padding-top: 1rem;
         padding-bottom: 1rem;
 
@@ -325,7 +328,7 @@ $font-color: $text-gray-300;
             }
 
             .text-description {
-                color: $text-gray-400;
+                color: lighten($color: $font-color, $amount: 20%);
                 font-size: 0.75rem;
             }
         }
@@ -353,21 +356,21 @@ $font-color: $text-gray-300;
         >* {
             padding: 0.75rem 0.5rem;
             font-size: 0.875rem;
-            border-radius: 0.375rem;
             font-size: 1rem;
+            border-radius: 0.375rem;
             font-weight: 600;
             color: $font-color;
             transition: all .15s ease-in-out;
 
             &:hover {
-                background: $text-gray-700;
-                color: white;
+                // color: $action-font-color;
+                background: $action-hover-color;
             }
 
             // Active
             &.active {
-                background: $text-gray-900;
-                color: white;
+                color: $action-font-color;
+                background: $action-color;
             }
         }
 
