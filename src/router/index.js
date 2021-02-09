@@ -54,6 +54,11 @@ const routes = [
     name : 'Navbars',
     component : () => import(/* webpackChunkName : Navbars */ '@/views/Navigation/Navbars.vue')
   },
+  {
+    path : '/navigation/pagination',
+    name : 'Pagination',
+    component : () => import(/* webpackChunkName : Pagination */ '@/views/Navigation/Pagination.vue')
+  },
   // Wildcard for any other path
   {
     path : '*',

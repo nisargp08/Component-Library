@@ -92,6 +92,13 @@ export default {
           description: "6 components",
           linkedTo: "Navbars",
         },
+        {
+          subtype : "Navigation",
+          title: "Pagination",
+          image: "navigation-pagination.svg",
+          description: "3 components",
+          linkedTo: "Pagination",
+        },
       ],
     };
   },
@@ -130,7 +137,7 @@ export default {
 .section {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  row-gap: 2rem;
+  row-gap: 4rem;
   margin-top: 1.5rem;
 }
 .component-section {

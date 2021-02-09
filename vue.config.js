@@ -25,6 +25,7 @@ module.exports = {
                 '@slideOvers' : path.resolve(__dirname,'src/components/Overlays/SlideOvers/'),
                 // Navigation
                 '@navbars' : path.resolve(__dirname,'src/components/Navigation/Navbars/'),
+                '@pagination' : path.resolve(__dirname,'src/components/Navigation/Pagination/'),
             }
         }
     },
