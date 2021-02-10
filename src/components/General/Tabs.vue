@@ -16,7 +16,7 @@
       <!-- For fade animation -->
       <transition-fade>
         <!-- Tab body/content in a named slot -->
-        <slot :name="tabBodySlot"></slot>
+        <div><slot :name="tabBodySlot"></slot></div>
       </transition-fade>
     </div>
   </div>
@@ -34,14 +34,19 @@ export default {
   components: {
     TransitionFade,
   },
+  mounted() {
+    if(!this.initialTab){
+      this.activeTab = this.tabs[0];
+    } else {
+      this.activeTab = this.initialTab;
+    }
+  },
   props: {
     tabs: {
       type: Array,
       required: true,
     },
-    initialTab: {
-      required: true,
-    },
+    initialTab: {},
   },
   methods: {
     tabHeadName(name) {

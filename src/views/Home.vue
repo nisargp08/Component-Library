@@ -99,6 +99,13 @@ export default {
           description: "3 components",
           linkedTo: "Pagination",
         },
+        {
+          subtype : "Navigation",
+          title: "Tabs",
+          image: "navigation-tabs.svg",
+          description: "3 components",
+          linkedTo: "Tabs",
+        },
       ],
     };
   },
@@ -138,7 +145,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 4rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 .component-section {
   display: grid;

@@ -26,6 +26,7 @@ module.exports = {
                 // Navigation
                 '@navbars' : path.resolve(__dirname,'src/components/Navigation/Navbars/'),
                 '@pagination' : path.resolve(__dirname,'src/components/Navigation/Pagination/'),
+                '@tabs' : path.resolve(__dirname,'src/components/Navigation/Tabs/'),
             }
         }
     },

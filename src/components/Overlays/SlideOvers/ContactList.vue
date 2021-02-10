@@ -257,9 +257,10 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 </style>
 
 <!-- Not scoped as the css is for imported component -->
-<style lang="scss">
+<style lang="scss" scoped>
 // Navigation tabs
-.tabs {
+// /deep/ for applying css to child component as it is scoped
+/deep/ .tabs {
   display: flex;
   flex-direction: column;
   height: 100%;
