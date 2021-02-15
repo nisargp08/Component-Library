@@ -56,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 $font-color : $text-gray-500;
 $active-color : $theme-color;
-$border-color : $text-gray-400;
+$border-color : $text-gray-200;
 
 // /deep/ for applying css to child component as it is scoped
 .w-5 {
@@ -83,9 +83,15 @@ $border-color : $text-gray-400;
         border-bottom: 1px solid $border-color;
 
         >* {
-            padding: 0.5rem 1.5rem;
+            margin: 0.5rem 1.5rem;
         }
 
+        > :first-child{
+            @media(min-width : 640px){
+                margin-left: 0;
+            }
+        }
+        
         .tab-head {
             display: flex;
             align-items: center;
@@ -93,6 +99,7 @@ $border-color : $text-gray-400;
             line-height: 1.25rem;
             font-weight: 600;
             padding-bottom: 1rem;
+            padding-top: 1rem;
             color: $font-color;
             margin-bottom: -1px;
             border-bottom: 2px solid transparent;

@@ -50,14 +50,11 @@ $border-color : $text-gray-200;
         border-bottom: 1px solid $border-color;
         
         > *{
-            margin: 0.5rem 1.25rem;
+            padding: 0.5rem 1.25rem;
+            text-align: center;
+            flex-grow: 1;
         }
 
-        > :first-child{
-            @media(min-width : 640px){
-                margin-left: 0;
-            }
-        }
         .tab-head {
             font-size: 1rem;
             line-height: 1.25rem;

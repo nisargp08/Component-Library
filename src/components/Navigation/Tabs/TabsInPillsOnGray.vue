@@ -22,7 +22,6 @@ import Tabs from "@general/Tabs.vue";
 export default {
     data() {
         return {
-            // tabs: ['My Account', 'Company', 'Team Members', 'Billing'],
             tabs: ['account', 'company', 'members', 'billing'],
             initialTab: "members",
         }
@@ -34,9 +33,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$font-color : $text-gray-500;
-$active-color : $theme-color;
-$border-color : $text-gray-200;
+$tabs-bg : $text-gray-100;
+$font-color : $text-gray-600;
+$active-bg-color : $text-gray-200;
+$active-font-color : $text-gray-900;
+
 // /deep/ for applying css to child component as it is scoped
 /deep/ .tabs {
     display: flex;
@@ -45,41 +46,37 @@ $border-color : $text-gray-200;
 
     .tab-heads {
         display: flex;
+        background-color: $tabs-bg;
+        border-radius: 0.375rem;
         flex-wrap: wrap;
         align-items: center;
-        border-bottom: 1px solid $border-color;
-        
-        > *{
-            margin: 0.5rem 1.25rem;
+        padding: 1rem 0.5rem;
+
+        >* {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
         }
 
-        > :first-child{
-            @media(min-width : 640px){
-                margin-left: 0;
-            }
-        }
         .tab-head {
             font-size: 1rem;
             line-height: 1.25rem;
             font-weight: 600;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
             color: $font-color;
-            margin-bottom: -1px;
-            border-bottom: 2px solid transparent;
+            border-radius: 0.375rem;
             transition: all .15s ease-in-out;
 
-            &:hover{
-                color: $active-color;
+            &:hover {
+                color: $active-font-color;
             }
         }
 
         .tab-active {
-            color: $active-color;
-            border-bottom-color: $active-color;
+            background-color: $active-bg-color;
+            color: $active-font-color;
         }
     }
-    .tab-body{
+
+    .tab-body {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }

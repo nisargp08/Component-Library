@@ -36,6 +36,7 @@ export default {
 <style lang="scss" scoped>
 $font-color : $text-gray-500;
 $active-color : $theme-color;
+$tabs-bg : white;
 $border-color : $text-gray-200;
 // /deep/ for applying css to child component as it is scoped
 /deep/ .tabs {
@@ -46,24 +47,41 @@ $border-color : $text-gray-200;
     .tab-heads {
         display: flex;
         flex-wrap: wrap;
+        background-color: $tabs-bg;
+        box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 0.375rem;
         align-items: center;
-        border-bottom: 1px solid $border-color;
+        margin: 0 auto;
         
         > *{
-            margin: 0.5rem 1.25rem;
+            padding: 0.75rem 3rem;
+            padding-left: 1rem;
+            width: 100%;
+            @media(min-width : 640px){
+                width: auto;
+                padding-left: 3rem;
+            }
+        }
+
+        > :not(:first-child){
+            border-top: 1px solid $border-color;
+            @media(min-width : 640px){
+                border-left: 1px solid $border-color;
+                border-top: none;
+            }
         }
 
         > :first-child{
-            @media(min-width : 640px){
-                margin-left: 0;
-            }
+            margin-left: 0.25rem;
+        }
+
+        > :last-child{
+            margin-right: 0.25rem;
         }
         .tab-head {
-            font-size: 1rem;
+            font-size: 0.875rem;
             line-height: 1.25rem;
             font-weight: 600;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
             color: $font-color;
             margin-bottom: -1px;
             border-bottom: 2px solid transparent;
@@ -80,8 +98,11 @@ $border-color : $text-gray-200;
         }
     }
     .tab-body{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 0.375rem;
+        background-color: white;
     }
 }
 </style>
