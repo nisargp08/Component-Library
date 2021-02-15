@@ -13,6 +13,9 @@ module.exports = {
     configureWebpack : {
         resolve:{
             alias:{
+                // Views
+                '@v-includes' : path.resolve(__dirname,'src/views/Includes/'),
+                // Components
                 '@general' : path.resolve(__dirname,'src/components/General/'),
                 // Elements
                 '@avatars' : path.resolve(__dirname,'src/components/Elements/Avatars/'),

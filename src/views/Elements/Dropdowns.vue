@@ -1,14 +1,18 @@
 <template>
-  <div class="dropdowns">
-    <h2 class="primary-header mb-0">Dropdowns</h2>
-    <p>
-      Using
-      <a style="color : #e91d62" href="https://animate.style/" target="_blank"
-        >animate.css</a
-      >
-      for animations
-    </p>
-    <section class="section">
+  <component-layout class="dropdowns">
+    <template v-slot:page-header>
+      <p>Dropdowns</p>
+    </template>
+    <template v-slot:page-description>
+      <p>
+        Using
+        <a style="color : #e91d62" href="https://animate.style/" target="_blank"
+          >animate.css</a
+        >
+        for animations
+      </p>
+    </template>
+    <template v-slot:page-body>
       <!-- Component list -->
       <component-box
         :class="component.class"
@@ -25,11 +29,12 @@
           <component :is="component.componentName"></component>
         </template>
       </component-box>
-    </section>
-  </div>
+    </template>
+  </component-layout>
 </template>
 
 <script>
+import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Dropdown Components
 import SimpleDropdown from "@dropdowns/Simple.vue";
@@ -46,30 +51,31 @@ export default {
           title: "Simple Dropdown",
           componentName: "SimpleDropdown",
           needJS: true,
-          class : 'height-sm',
+          class: "height-sm",
         },
         {
           title: "Dropdown With Dividers",
           componentName: "DividerDropdown",
           needJS: true,
-          class : 'height-lg',
+          class: "height-lg",
         },
         {
           title: "Dropdown With Icons ",
           componentName: "IconsDropdown",
           needJS: true,
-          class : 'height-lg',
+          class: "height-lg",
         },
         {
           title: "Dropdown With Header",
           componentName: "HeaderDropdown",
           needJS: true,
-          class : 'height-md',
+          class: "height-md",
         },
       ],
     };
   },
   components: {
+    ComponentLayout,
     ComponentBox,
     SimpleDropdown,
     DividerDropdown,

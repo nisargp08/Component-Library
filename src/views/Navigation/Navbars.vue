@@ -1,7 +1,9 @@
 <template>
-  <div class="navbars">
-    <div class="primary-header">Navbars</div>
-    <section class="section">
+  <component-layout class="navbars">
+    <template v-slot:page-header>
+      <p>Navbars</p>
+    </template>
+    <template v-slot:page-body>
       <!-- Component list -->
       <component-box v-for="(component, index) in componentsList" :key="index">
         <template v-slot:header>
@@ -14,11 +16,12 @@
           <component :is="component.componentName"></component>
         </template>
       </component-box>
-    </section>
-  </div>
+    </template>
+  </component-layout>
 </template>
 
 <script>
+import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Navbars
 import SimpleDarkLeft from "@navbars/SimpleDarkMenu_Left.vue";
@@ -66,6 +69,7 @@ export default {
     };
   },
   components: {
+    ComponentLayout,
     ComponentBox,
     SimpleDarkLeft,
     DarkWithAction,

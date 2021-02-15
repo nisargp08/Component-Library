@@ -1,7 +1,9 @@
 <template>
-  <div class="badges">
-    <div class="primary-header">Badges</div>
-    <section class="section">
+  <component-layout class="badges">
+    <template v-slot:page-header>
+      <p>Badges</p>
+    </template>
+    <template v-slot:page-body>
       <!-- Component list -->
       <component-box
         class="wrapper"
@@ -18,12 +20,14 @@
           <component :is="component.componentName"></component>
         </template>
       </component-box>
-    </section>
-  </div>
+    </template>
+  </component-layout>
 </template>
 
 <script>
+import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
+// Badges
 import BasicBadges from "@badges/BasicBadges.vue";
 import LargeBadges from "@badges/LargeBadges.vue";
 import DotBadges from "@badges/DotBadges.vue";
@@ -68,6 +72,7 @@ export default {
     };
   },
   components: {
+    ComponentLayout,
     ComponentBox,
     BasicBadges,
     LargeBadges,

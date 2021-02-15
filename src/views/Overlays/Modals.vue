@@ -1,14 +1,18 @@
 <template>
-  <div>
-    <div class="primary-header">Modals</div>
-    <p>
-      Using
-      <a style="color : #e91d62" href="https://animate.style/" target="_blank"
-        >animate.css</a
-      >
-      for animations
-    </p>
-    <section class="section">
+ <component-layout class="modal">
+    <template v-slot:page-header>
+      <p>Modals</p>
+    </template>
+    <template v-slot:page-description>
+      <p>
+        Using
+        <a style="color : #e91d62" href="https://animate.style/" target="_blank"
+          >animate.css</a
+        >
+        for animations
+      </p>
+    </template>
+    <template v-slot:page-body>
       <!-- Component list -->
       <component-box
         class="height-sm"
@@ -25,11 +29,12 @@
           <component :is="component.componentName"></component>
         </template>
       </component-box>
-    </section>
-  </div>
+    </template>
+  </component-layout>
 </template>
 
 <script>
+import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 //Modals
 import SimpleModal from "@modals/SimpleModal.vue";
@@ -53,6 +58,7 @@ export default {
     };
   },
   components: {
+    ComponentLayout,
     ComponentBox,
     SimpleModal,
     SingleActionModal,

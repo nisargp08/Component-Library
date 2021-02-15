@@ -1,19 +1,24 @@
 <template>
-  <div class="notification">
-    <div class="primary-header">Notifications</div>
-    <p>
-      Using
-      <a style="color : #e91d62" href="https://animate.style/" target="_blank"
-        >animate.css</a
-      >
-      for animations
-    </p>
-    <div class="message-alert">
+  <component-layout class="notification">
+    <template v-slot:page-header>
+      <p>Notifications</p>
+    </template>
+    <template v-slot:page-description>
       <p>
-        Change to <code>{ position : fixed; }</code> when using in your project
+        Using
+        <a style="color : #e91d62" href="https://animate.style/" target="_blank"
+          >animate.css</a
+        >
+        for animations
       </p>
-    </div>
-    <section class="section">
+      <div class="message-alert">
+        <p>
+          Change to <code>{ position : fixed; }</code> when using in your
+          project
+        </p>
+      </div>
+    </template>
+    <template v-slot:page-body>
       <!-- Component list -->
       <component-box
         class="height-sm"
@@ -30,11 +35,12 @@
           <component :is="component.componentName"></component>
         </template>
       </component-box>
-    </section>
-  </div>
+    </template>
+  </component-layout>
 </template>
 
 <script>
+import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Notifications
 import SimpleNotification from "@notifications/SimpleNotification.vue";
@@ -82,6 +88,7 @@ export default {
     };
   },
   components: {
+    ComponentLayout,
     ComponentBox,
     SimpleNotification,
     CondensedNotification,

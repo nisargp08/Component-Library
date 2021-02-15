@@ -1,14 +1,18 @@
 <template>
-  <div class="slide-overs">
-    <div class="primary-header">Slide Overs</div>
-    <p>
-      Using
-      <a style="color : #e91d62" href="https://animate.style/" target="_blank"
-        >animate.css</a
-      >
-      for animations
-    </p>
-    <section class="section">
+  <component-layout class="slide-overs">
+    <template v-slot:page-header>
+      <p>Slide Overs</p>
+    </template>
+    <template v-slot:page-description>
+      <p>
+        Using
+        <a style="color : #e91d62" href="https://animate.style/" target="_blank"
+          >animate.css</a
+        >
+        for animations
+      </p>
+    </template>
+    <template v-slot:page-body>
       <!-- Component list -->
       <component-box v-for="(component, index) in componentsList" :key="index">
         <template v-slot:header>
@@ -21,11 +25,12 @@
           <component :is="component.componentName"></component>
         </template>
       </component-box>
-    </section>
-  </div>
+    </template>
+  </component-layout>
 </template>
 
 <script>
+import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox";
 // Slide overs
 import SimpleSlideOver from "@slideOvers/SimpleSlideOver.vue";
@@ -85,6 +90,7 @@ export default {
     };
   },
   components: {
+    ComponentLayout,
     ComponentBox,
     SimpleSlideOver,
     BrandedHeader,
