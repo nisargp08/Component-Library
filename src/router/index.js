@@ -45,7 +45,7 @@ const routes = [
   },
   {
     path : '/overlays/slide-overs',
-    name : 'slideOvers',
+    name : 'SlideOvers',
     component : () => import(/* webpackChunkName : Notifications */ '@/views/Overlays/SlideOvers.vue')
   },
   // Navigation
@@ -63,6 +63,11 @@ const routes = [
     path : '/navigation/tabs',
     name : 'Tabs',
     component : () => import(/* webpackChunkName : Tabs */ '@/views/Navigation/Tabs.vue')
+  },
+  {
+    path : '/navigation/vertical-navigation',
+    name : 'VerticalNavigation',
+    component : () => import(/* webpackChunkName : VerticalNavigation */ '@/views/Navigation/VerticalNavigation.vue')
   },
   // Wildcard for any other path
   {

@@ -22,7 +22,8 @@ export default {};
   padding: 1.25rem 1rem;
   border-bottom: 1px solid $text-gray-200;
   font-size: 1rem;
-  border-radius: 0.375rem;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
   line-height: 1.75rem;
   font-weight: 700;
   color: $text-gray-900;
@@ -52,7 +53,7 @@ export default {};
     gap: 0.5rem;
     width: 100%;
     max-width: 32rem;
-    margin: 0 auto;
+    // margin: 0 auto;
     flex-wrap: wrap;
     @media (min-width: 768px) {
       gap: 1rem;

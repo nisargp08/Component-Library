@@ -82,7 +82,7 @@ export default {
           title: "Slide Overs",
           image: "overlays-slide-overs.svg",
           description: "8 components",
-          linkedTo: "slideOvers",
+          linkedTo: "SlideOvers",
         },
         // Navigation
         {
@@ -103,8 +103,15 @@ export default {
           subtype : "Navigation",
           title: "Tabs",
           image: "navigation-tabs.svg",
-          description: "3 components",
+          description: "6 components",
           linkedTo: "Tabs",
+        },
+         {
+          subtype : "Navigation",
+          title: "Vertical Navigation",
+          image: "navigation-vertical-navigation.svg",
+          description: "5 components",
+          linkedTo: "VerticalNavigation",
         },
       ],
     };

@@ -83,6 +83,9 @@ export default {
 /deep/ .wrapper .component-box-body>* {
     max-width: 100%;
 }
+/deep/ .wrapper .component-box-body{
+    padding: 1rem 1.5rem;
+}
 .smokebg{
   background-color: whitesmoke;
 }
