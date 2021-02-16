@@ -106,12 +106,19 @@ export default {
           description: "6 components",
           linkedTo: "Tabs",
         },
-         {
+        {
           subtype : "Navigation",
           title: "Vertical Navigation",
           image: "navigation-vertical-navigation.svg",
           description: "5 components",
           linkedTo: "VerticalNavigation",
+        },
+        {
+          subtype : "Navigation",
+          title: "Sidebar Navigation",
+          image: "navigation-sidebar-navigation.svg",
+          description: "5 components",
+          linkedTo: "SidebarNavigation",
         },
       ],
     };

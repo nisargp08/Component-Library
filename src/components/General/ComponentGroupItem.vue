@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: linkedTo }" class="component-item-wrapper">
+  <router-link @click.native="scrollToTop()" :to="{ name: linkedTo }" class="component-item-wrapper">
     <figure class="m-0">
       <div class="component-item transition transform">
         <img class="w-full h-auto rounded-md" :src="imagePath" alt="Avatars" />
@@ -33,6 +33,11 @@ export default {
       else return "";
     },
   },
+  methods : {
+    scrollToTop(){
+      window.scrollTo(0,0);
+    }
+  }
 };
 </script>
 

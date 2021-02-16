@@ -31,6 +31,7 @@ module.exports = {
                 '@pagination' : path.resolve(__dirname,'src/components/Navigation/Pagination/'),
                 '@tabs' : path.resolve(__dirname,'src/components/Navigation/Tabs/'),
                 '@verticalNavigation' : path.resolve(__dirname,'src/components/Navigation/VerticalNavigation/'),
+                '@sidebarNavigation' : path.resolve(__dirname,'src/components/Navigation/SidebarNavigation/'),
             }
         }
     },

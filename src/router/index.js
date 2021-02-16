@@ -69,6 +69,11 @@ const routes = [
     name : 'VerticalNavigation',
     component : () => import(/* webpackChunkName : VerticalNavigation */ '@/views/Navigation/VerticalNavigation.vue')
   },
+  {
+    path : '/navigation/sidebar-navigation',
+    name : 'SidebarNavigation',
+    component : () => import(/* webpackChunkName : SidebarNavigation */ '@/views/Navigation/SidebarNavigation.vue')
+  },
   // Wildcard for any other path
   {
     path : '*',
