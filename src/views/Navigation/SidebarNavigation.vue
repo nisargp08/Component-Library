@@ -32,6 +32,8 @@ import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Sidebar Navigation
 import SimpleWithIconsAndBadges from "@sidebarNavigation/SimpleWithIconsAndBadges.vue";
+import SimpleWithBrandColor from "@sidebarNavigation/SimpleWithBrandColor.vue";
+import SimpleWithProfileSection from "@sidebarNavigation/SimpleWithProfileSection.vue";
 
 export default {
     data() {
@@ -41,14 +43,14 @@ export default {
                     componentName: "SimpleWithIconsAndBadges",
                     needJS : true,
                 },
-                // {
-                //     title: "Simple With badges",
-                //     componentName: "SimpleWithBadges",
-                // },
-                //  {
-                //     title: "Simple With Icons",
-                //     componentName: "SimpleWithIcons",
-                // },
+                {
+                    title: "Simple with icons and brand color",
+                    componentName: "SimpleWithBrandColor",
+                },
+                 {
+                    title: "Simple with icons, badges, and profile section",
+                    componentName: "SimpleWithProfileSection",
+                },
                 // {
                 //     title: "Simple With Icons And Badges",
                 //     componentName: "SimpleWithIconsAndBadges",
@@ -64,8 +66,8 @@ export default {
         ComponentLayout,
         ComponentBox,
         SimpleWithIconsAndBadges,
-        // SimpleWithBadges,
-        // SimpleWithIcons,
+        SimpleWithBrandColor,
+        SimpleWithProfileSection,
         // SimpleWithIconsAndBadges,
         // SimpleWithSecondaryNavigation
     },
