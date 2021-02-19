@@ -101,18 +101,20 @@ export default {
 
 <style lang="scss" scoped>
 // Variables
-$sidebar-bg : white;
+$sidebar-bg : $text-gray-800;
 $sidebar-width : 20rem;
-$heading-color : $text-gray-800;
-$font-color : $text-gray-500;
-$active-bg-color : $text-gray-100;
-$active-font-color : $text-gray-700;
+$heading-color : $text-gray-100;
+$font-color : $text-gray-300;
+$active-bg-color : $text-gray-900;
+$active-font-color : $text-gray-100;
 
-$badge-bg : $text-gray-100;
-$badge-font-color : $text-gray-600;
-$active-badge-bg : white;
-$active-badge-font-color : $text-gray-700;
+$badge-bg : $text-gray-900;
+$badge-font-color : $text-gray-300;
+$active-badge-bg : $text-gray-700;
+$active-badge-font-color : $text-gray-300;
 
+$footer-bg : $text-gray-700;
+$footer-border : transparent;
 // Utilities
 .relative {
     position: relative;
@@ -186,15 +188,16 @@ $active-badge-font-color : $text-gray-700;
         margin-left: 1rem;
     }
 }
-.navigation-content{
+
+.navigation-content {
     flex: 1;
     -ms-flex: 0 1 auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.navigation-footer{
 
-}
+.navigation-footer {}
+
 .vertical-navigation {
     display: flex;
     flex-direction: column;
@@ -254,7 +257,8 @@ $active-badge-font-color : $text-gray-700;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border-top: 1px solid $text-gray-200;
+    background-color: $footer-bg;
+    border-top: 1px solid $footer-border;
     padding: 1rem;
 
     img {
@@ -265,7 +269,7 @@ $active-badge-font-color : $text-gray-700;
     }
 
     .text-title {
-        color: $text-gray-900;
+        color: $font-color;
         font-weight: 600;
         line-height: 1.5rem;
         font-size: 1rem;

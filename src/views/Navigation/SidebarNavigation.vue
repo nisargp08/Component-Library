@@ -34,6 +34,9 @@ import ComponentBox from "@general/ComponentBox.vue";
 import SimpleWithIconsAndBadges from "@sidebarNavigation/SimpleWithIconsAndBadges.vue";
 import SimpleWithBrandColor from "@sidebarNavigation/SimpleWithBrandColor.vue";
 import SimpleWithProfileSection from "@sidebarNavigation/SimpleWithProfileSection.vue";
+import DarkWithProfileSection from "@sidebarNavigation/DarkWithProfileSection.vue";
+import BrandedSidebar from "@sidebarNavigation/BrandedSidebar.vue";
+import SecondaryNavigation from "@sidebarNavigation/SecondaryNavigation.vue";
 
 export default {
     data() {
@@ -51,14 +54,18 @@ export default {
                     title: "Simple with icons, badges, and profile section",
                     componentName: "SimpleWithProfileSection",
                 },
-                // {
-                //     title: "Simple With Icons And Badges",
-                //     componentName: "SimpleWithIconsAndBadges",
-                // },
-                // {
-                //     title: "Simple With Secondary Navigation",
-                //     componentName: "SimpleWithSecondaryNavigation",
-                // },
+                {
+                    title: "Dark with icons, badges, and profile section",
+                    componentName: "DarkWithProfileSection",
+                },
+                {
+                    title: "Brand with icons, badges, and profile section",
+                    componentName: "BrandedSidebar",
+                },
+                {
+                    title: "Sidebar with Secondary Navigation",
+                    componentName: "SecondaryNavigation",
+                },
             ],
         };
     },
@@ -68,8 +75,9 @@ export default {
         SimpleWithIconsAndBadges,
         SimpleWithBrandColor,
         SimpleWithProfileSection,
-        // SimpleWithIconsAndBadges,
-        // SimpleWithSecondaryNavigation
+        DarkWithProfileSection,
+        BrandedSidebar,
+        SecondaryNavigation,
     },
 };
 </script>

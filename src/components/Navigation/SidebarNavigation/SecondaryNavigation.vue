@@ -64,6 +64,20 @@
                                 <span class="ml-3">Reports</span>
                             </div>
                         </a>
+                        <div class="secondary-navigation">
+                            <p class="heading">projects</p>
+                            <a class="nav-links" href="#">Paradis Invasion</a>
+                            <a class="nav-links" href="#">Undercover in Marley</a>
+                            <a class="nav-links" href="#">Fukuro</a>
+                            <a class="nav-links" href="#">Attack Titan candidates</a>
+                        </div>
+                        <div class="secondary-navigation">
+                            <p class="heading">Team members</p>
+                            <a class="nav-links" href="#">Grisha Yeager</a>
+                            <a class="nav-links" href="#">Zeke Yeager</a>
+                            <a class="nav-links" href="#">Dina Fritz</a>
+                            <a class="nav-links" href="#">Eren Yeager</a>
+                        </div>
                     </div>
                 </div>
                 <div class="navigation-footer">
@@ -186,15 +200,16 @@ $active-badge-font-color : $text-gray-700;
         margin-left: 1rem;
     }
 }
-.navigation-content{
+
+.navigation-content {
     flex: 1;
     -ms-flex: 0 1 auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.navigation-footer{
 
-}
+.navigation-footer {}
+
 .vertical-navigation {
     display: flex;
     flex-direction: column;
@@ -247,6 +262,36 @@ $active-badge-font-color : $text-gray-700;
         font-weight: 600;
         background-color: $badge-bg;
         color: $badge-font-color;
+    }
+}
+
+.secondary-navigation {
+    margin-top: 1rem;
+    border-top: 1px solid $text-gray-200;
+
+    .heading {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.875rem;
+        letter-spacing: 0.075rem;
+        padding: 1rem;
+        padding-bottom: 1rem;
+        color: $active-font-color;
+    }
+
+    .nav-links {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+
+        // Active state
+        &.active {
+            background-color: transparent;
+        }
+
+        // Hover State
+        &:hover {
+            background-color: transparent;
+        }
     }
 }
 
