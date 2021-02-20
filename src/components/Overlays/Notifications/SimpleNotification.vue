@@ -83,12 +83,12 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   bottom: 0;
   margin-bottom: 0.75rem;
   display: flex;
-  max-width: 18rem;
+  max-width: 24rem;
   background-color: $notification-bg;
   border-radius: 0.375rem;
   padding: 1rem 1rem;
   box-shadow: $shadow;
-  width: 100%;
+  width: calc(100vw - 6rem);
   // Change position to top at 640
   @media (min-width: 640px) {
     // top: 1.25rem;
@@ -98,7 +98,6 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     margin-top: 1.25rem;
     margin-right: 1.25rem;
     bottom: auto;
-    max-width: 24rem;
   }
 }
 // Content design - Not required for component design

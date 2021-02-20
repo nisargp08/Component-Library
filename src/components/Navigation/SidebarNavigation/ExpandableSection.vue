@@ -277,6 +277,7 @@ $active-badge-font-color: $text-gray-700;
     .sub-menu-heading {
         position: relative;
         width: 100%;
+        box-sizing: border-box;
         padding: 0.5rem 1rem;
 
         >* {

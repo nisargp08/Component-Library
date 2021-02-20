@@ -74,6 +74,11 @@ const routes = [
     name : 'SidebarNavigation',
     component : () => import(/* webpackChunkName : SidebarNavigation */ '@/views/Navigation/SidebarNavigation.vue')
   },
+  {
+    path : '/navigation/breadcrumbs',
+    name : 'Breadcrumbs',
+    component : () => import(/* webpackChunkName : Breadcrumbs */ '@/views/Navigation/Breadcrumbs.vue')
+  },
   // Wildcard for any other path
   {
     path : '*',

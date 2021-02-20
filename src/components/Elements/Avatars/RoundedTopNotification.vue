@@ -118,8 +118,8 @@ $ringColor: white;
     height: 4rem;
   }
   .notification-dot {
-    width: 1rem;
-    height: 1rem;
+    width: 0.90rem;
+    height: 0.90rem;
     background: $bg-green;
   }
 }

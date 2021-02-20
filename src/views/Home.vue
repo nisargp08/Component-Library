@@ -120,6 +120,13 @@ export default {
           description: "7 components",
           linkedTo: "SidebarNavigation",
         },
+        {
+          subtype : "Navigation",
+          title: "Breadcrumbs",
+          image: "navigation-breadcrumbs.svg",
+          description: "4 components",
+          linkedTo: "Breadcrumbs",
+        },
       ],
     };
   },
