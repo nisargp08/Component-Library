@@ -117,7 +117,7 @@ export default {
           subtype : "Navigation",
           title: "Sidebar Navigation",
           image: "navigation-sidebar-navigation.svg",
-          description: "5 components",
+          description: "7 components",
           linkedTo: "SidebarNavigation",
         },
       ],

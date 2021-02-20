@@ -37,6 +37,7 @@ import SimpleWithProfileSection from "@sidebarNavigation/SimpleWithProfileSectio
 import DarkWithProfileSection from "@sidebarNavigation/DarkWithProfileSection.vue";
 import BrandedSidebar from "@sidebarNavigation/BrandedSidebar.vue";
 import SecondaryNavigation from "@sidebarNavigation/SecondaryNavigation.vue";
+import ExpandableSection from "@sidebarNavigation/ExpandableSection.vue";
 
 export default {
     data() {
@@ -44,7 +45,6 @@ export default {
             componentsList: [{
                     title: "Simple Sidebar Navigation with Icons & Badges",
                     componentName: "SimpleWithIconsAndBadges",
-                    needJS : true,
                 },
                 {
                     title: "Simple with icons and brand color",
@@ -66,6 +66,11 @@ export default {
                     title: "Sidebar with Secondary Navigation",
                     componentName: "SecondaryNavigation",
                 },
+                {
+                    title: "Simple with Expandable sections",
+                    componentName: "ExpandableSection",
+                    needJS : true,
+                },
             ],
         };
     },
@@ -78,6 +83,7 @@ export default {
         DarkWithProfileSection,
         BrandedSidebar,
         SecondaryNavigation,
+        ExpandableSection,
     },
 };
 </script>

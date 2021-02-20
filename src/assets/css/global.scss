@@ -1,5 +1,7 @@
 // This file contains common classes and utilities used throughout the project
-
+*,*::after,*::before{
+  box-sizing: border-box;
+}
 /* Common Pre builts*/
 img {
   max-width: 100%;
