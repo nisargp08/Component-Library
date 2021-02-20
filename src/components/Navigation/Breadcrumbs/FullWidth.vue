@@ -7,7 +7,9 @@
             </svg>
         </a>
         <a href="#">Projects</a>
-        <a href="#" class="active">The Rumbling</a>
+        <a href="#">The Rumbling</a>
+        <a href="#">At Paradis</a>
+        <a href="#" class="active">To Marley</a>
     </div>
 </div>
 </template>
@@ -41,6 +43,7 @@ $active-color : $theme-color;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     align-items: center;
     color: $font-color;
     font-weight: 600;

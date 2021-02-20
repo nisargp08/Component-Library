@@ -21,7 +21,6 @@ export default {
 <style lang="scss" scoped>
 // Variables
 $font-color : $text-gray-500;
-$breadcrumb-bg : white;
 $active-color : $theme-color;
 
 // Component css
@@ -46,10 +45,8 @@ $active-color : $theme-color;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    background: $breadcrumb-bg;
     border-radius: 8px;
-    padding: 0.75rem 1rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 0.5rem 1rem;
     row-gap: 0.75rem;
 
     > :not(:first-child) {

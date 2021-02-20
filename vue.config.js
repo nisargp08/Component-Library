@@ -32,6 +32,7 @@ module.exports = {
                 '@tabs' : path.resolve(__dirname,'src/components/Navigation/Tabs/'),
                 '@verticalNavigation' : path.resolve(__dirname,'src/components/Navigation/VerticalNavigation/'),
                 '@sidebarNavigation' : path.resolve(__dirname,'src/components/Navigation/SidebarNavigation/'),
+                '@breadcrumbs' : path.resolve(__dirname,'src/components/Navigation/Breadcrumbs/'),
             }
         }
     },
