@@ -156,11 +156,11 @@ export default {
 <style lang="scss">
 /* Global - Common Classes */
 .primary-header {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 700;
   font-family: $primaryFont;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
 }
 .section {
   display: grid;

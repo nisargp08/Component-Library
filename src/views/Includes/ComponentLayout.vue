@@ -2,6 +2,7 @@
   <div class="my-4">
       <!-- Page Title and description -->
       <section>
+          <breadcrumbs />
           <div class="primary-header">
             <slot name="page-header"></slot>
           </div>
@@ -16,8 +17,12 @@
 </template>
 
 <script>
-export default {
+import Breadcrumbs from "@general/Breadcrumbs.vue";
 
+export default {
+components : {
+  Breadcrumbs,
+}
 }
 </script>
 
