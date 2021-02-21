@@ -127,6 +127,13 @@ export default {
           description: "4 components",
           linkedTo: "Breadcrumbs",
         },
+        {
+          subtype : "Navigation",
+          title: "Steps",
+          image: "navigation-steps.svg",
+          description: "7 components",
+          linkedTo: "Steps",
+        },
       ],
     };
   },

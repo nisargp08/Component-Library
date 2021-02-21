@@ -157,6 +157,17 @@ const routes = [
       ]
     }
   },
+  {
+    path : '/navigation/steps',
+    name : 'Steps',
+    component : () => import(/* webpackChunkName : Steps */ '@/views/Navigation/Steps.vue'),
+    meta : {
+      breadcrumb : [
+        { name : 'Home' , link : 'Home'},
+        { name : 'Steps'}
+      ]
+    }
+  },
   // Wildcard for any other path
   {
     path : '*',

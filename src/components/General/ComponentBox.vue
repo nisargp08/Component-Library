@@ -25,7 +25,7 @@ export default {};
   border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
   line-height: 1.75rem;
-  font-weight: 700;
+  font-weight: 600;
   color: $text-gray-900;
   background-color: white;
   text-transform: capitalize;
