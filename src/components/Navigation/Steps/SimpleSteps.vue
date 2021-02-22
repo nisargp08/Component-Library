@@ -37,31 +37,43 @@ export default {
 
 <style lang="scss" scoped>
 // Variables
-$steps-theme : $theme-color;
-$steps-inactive : $text-gray-300;
+$steps-finished : $theme-color;
+$steps-unfinished : $text-gray-200;
 $font-color : $text-gray-900;
 // Component css
 .steps {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
     flex-wrap: wrap;
-    align-items: center;
+
+    @media(min-width : 640px){
+        align-items: center;
+        flex-direction: row;
+    }
 }
 
 .step-item {
     flex-grow: 1;
-    border-top: 3px solid $steps-inactive;
-    padding-top: 1rem;
-    margin: 1rem;
     cursor: default;
+    margin: 1rem;
+    border-left: 3px solid $steps-unfinished;
+    padding-left: 1rem;
     word-break: break-word;
 
+    @media(min-width : 640px){
+        border-top: 3px solid $steps-unfinished;
+        border-left: none;
+        padding-top: 1rem;
+        padding-left: none;
+    }
     .step-marker {
         text-transform: uppercase;
         font-size: 0.75rem;
         line-height: 1rem;
         font-weight: 700;
-        color: $steps-theme;
+        color: $steps-finished;
     }
 
     .step-title {
@@ -73,6 +85,6 @@ $font-color : $text-gray-900;
 }
 // Change top border color for finished steps
 .step-item.finished{
-  border-top-color: $steps-theme;
+  border-color: $steps-finished;
 }
 </style>

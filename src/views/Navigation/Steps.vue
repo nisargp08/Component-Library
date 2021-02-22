@@ -23,20 +23,27 @@ import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Steps
 import SimpleSteps from "@steps/SimpleSteps.vue";
+import PanelSteps from "@steps/PanelSteps.vue";
 
 export default {
     data() {
         return {
             componentsList: [{
-                title: "Simple",
-                componentName: "SimpleSteps",
-            }, ],
+                    title: "Simple Steps",
+                    componentName: "SimpleSteps",
+                },
+                {
+                    title: "Steps in Panels",
+                    componentName: "PanelSteps",
+                },
+            ],
         }
     },
     components: {
         ComponentLayout,
         ComponentBox,
         SimpleSteps,
+        PanelSteps,
     }
 }
 </script>
