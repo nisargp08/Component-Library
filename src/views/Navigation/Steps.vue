@@ -5,7 +5,7 @@
     </template>
     <template v-slot:page-body>
         <!-- Component list -->
-        <component-box v-for="(component, index) in componentsList" :key="index" class="wrapper" :class="component.class">
+        <component-box v-for="(component, index) in componentsList" :key="index" :class="component.class">
             <template v-slot:header>
                 {{ component.title }}
                 <span v-if="component.needJS" class="badge badge-red ml-1">requires js</span>
@@ -24,6 +24,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 // Steps
 import SimpleSteps from "@steps/SimpleSteps.vue";
 import PanelSteps from "@steps/PanelSteps.vue";
+import BulletSteps from "@steps/BulletSteps.vue";
 
 export default {
     data() {
@@ -31,10 +32,16 @@ export default {
             componentsList: [{
                     title: "Simple Steps",
                     componentName: "SimpleSteps",
+                    class : "wrapper",
                 },
                 {
                     title: "Steps in Panels",
                     componentName: "PanelSteps",
+                    class : "wrapper",
+                },
+                 {
+                    title: "Bullet Steps",
+                    componentName: "BulletSteps",
                 },
             ],
         }
@@ -44,6 +51,7 @@ export default {
         ComponentBox,
         SimpleSteps,
         PanelSteps,
+        BulletSteps,
     }
 }
 </script>
