@@ -94,8 +94,15 @@ $border-color : $text-gray-200;
 .step-wrapper {
     position: relative;
     display: flex;
+    max-width: 100%;
+    width: 100%;
     align-items: center;
     flex-grow: 1;
+
+    @media(min-width : 640px){
+        flex: 0 0 auto;
+        width: 33%;
+    }
 }
 
 // Apply to all step-wrapper except the first one(border-top : MOBILE)

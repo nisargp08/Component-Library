@@ -25,6 +25,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 import SimpleSteps from "@steps/SimpleSteps.vue";
 import PanelSteps from "@steps/PanelSteps.vue";
 import BulletSteps from "@steps/BulletSteps.vue";
+import BorderedPanelSteps from "@steps/BorderedPanelSteps.vue";
 
 export default {
     data() {
@@ -39,9 +40,14 @@ export default {
                     componentName: "PanelSteps",
                     class : "wrapper",
                 },
-                 {
+                {
                     title: "Bullet Steps",
                     componentName: "BulletSteps",
+                },
+                {
+                    title: "Panels with border",
+                    componentName: "BorderedPanelSteps",
+                    class : "wrapper",
                 },
             ],
         }
@@ -52,6 +58,7 @@ export default {
         SimpleSteps,
         PanelSteps,
         BulletSteps,
+        BorderedPanelSteps,
     }
 }
 </script>
