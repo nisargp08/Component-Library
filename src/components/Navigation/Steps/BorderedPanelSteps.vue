@@ -161,6 +161,8 @@ $border-color : $text-gray-200;
     flex-grow: 1;
     cursor: default;
     word-break: break-word;
+    height: 100%;
+    box-sizing: border-box;
 
     @media(min-width : 640px){
         border-left: none;

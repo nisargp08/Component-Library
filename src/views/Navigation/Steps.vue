@@ -26,6 +26,7 @@ import SimpleSteps from "@steps/SimpleSteps.vue";
 import PanelSteps from "@steps/PanelSteps.vue";
 import BulletSteps from "@steps/BulletSteps.vue";
 import BorderedPanelSteps from "@steps/BorderedPanelSteps.vue";
+import CircleSteps from "@steps/CircleSteps.vue";
 
 export default {
     data() {
@@ -49,6 +50,11 @@ export default {
                     componentName: "BorderedPanelSteps",
                     class : "wrapper",
                 },
+                {
+                    title: "Circle Steps",
+                    componentName: "CircleSteps",
+                    class : "wrapper",
+                },
             ],
         }
     },
@@ -59,6 +65,7 @@ export default {
         PanelSteps,
         BulletSteps,
         BorderedPanelSteps,
+        CircleSteps,
     }
 }
 </script>
