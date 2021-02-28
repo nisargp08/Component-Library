@@ -53,8 +53,9 @@ export default {
 //Variables
 $steps-finished : $theme-color;
 $steps-unfinished : $text-gray-200;
-$text-color : $text-gray-500;
 $svg-color : white;
+$font-color-primary: black;
+$font-color-secondary: $text-gray-500;
 
 // Components css
 .w-point-80 {
@@ -98,7 +99,7 @@ $svg-color : white;
         .step-text {
             margin-left: 0.75rem;
             font-size: 0.875rem;
-            color: $text-color;
+            color: $font-color-secondary;
             font-weight: 600;
         }
     }
@@ -116,6 +117,9 @@ $svg-color : white;
                 display: block;
                 color: $svg-color;
             }
+        }
+        .step-text{
+            color : $font-color-primary;
         }
     }
 

@@ -28,6 +28,7 @@ import BulletSteps from "@steps/BulletSteps.vue";
 import BorderedPanelSteps from "@steps/BorderedPanelSteps.vue";
 import CircleSteps from "@steps/CircleSteps.vue";
 import BulletWithText from "@steps/BulletWithText.vue";
+import CirclesWithText from "@steps/CirclesWithText.vue";
 
 export default {
     data() {
@@ -60,6 +61,10 @@ export default {
                     title: "Bullets With Text",
                     componentName: "BulletWithText",
                 },
+                {
+                    title: "Circles With Text",
+                    componentName: "CirclesWithText",
+                },
             ],
         }
     },
@@ -71,7 +76,8 @@ export default {
         BulletSteps,
         BorderedPanelSteps,
         CircleSteps,
-        BulletWithText
+        BulletWithText,
+        CirclesWithText,
     }
 }
 </script>
