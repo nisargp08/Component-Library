@@ -170,6 +170,18 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Alerts" }],
     },
   },
+  //Forms
+  {
+    path: "/forms/form-layouts",
+    name: "FormLayouts",
+    component: () =>
+      import(
+        /* webpackChunkName : FormLayouts */ "@/views/Forms/FormLayouts.vue"
+      ),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Form Layouts" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",

@@ -36,6 +36,8 @@ module.exports = {
                 '@steps' : path.resolve(__dirname,'src/components/Navigation/Steps/'),
                 // Feedback
                 '@alerts' : path.resolve(__dirname,'src/components/Feedback/Alerts/'),
+                // Forms
+                '@formLayouts' : path.resolve(__dirname,'src/components/Forms/FormLayouts/'),
             }
         }
     },
