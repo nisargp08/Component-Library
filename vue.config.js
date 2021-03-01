@@ -34,6 +34,8 @@ module.exports = {
                 '@sidebarNavigation' : path.resolve(__dirname,'src/components/Navigation/SidebarNavigation/'),
                 '@breadcrumbs' : path.resolve(__dirname,'src/components/Navigation/Breadcrumbs/'),
                 '@steps' : path.resolve(__dirname,'src/components/Navigation/Steps/'),
+                // Feedback
+                '@alerts' : path.resolve(__dirname,'src/components/Feedback/Alerts/'),
             }
         }
     },

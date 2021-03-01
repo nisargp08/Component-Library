@@ -134,6 +134,14 @@ export default {
           description: "7 components",
           linkedTo: "Steps",
         },
+        // Feedback
+        {
+          subtype : "Feedback",
+          title: "Alerts",
+          image: "feedback-alerts.svg",
+          description: "6 components",
+          linkedTo: "Alerts",
+        },
       ],
     };
   },
@@ -147,7 +155,12 @@ export default {
           unique.push({subtype : item.subtype});
         }
       });
-      return unique;
+      // Sort object
+      return unique.sort(function(a,b){
+        if(a.subtype < b.subtype){ return -1;}
+        if(a.subtype > b.subtype){ return 1;}
+        return 0;
+      });
     }
   },
   methods : {
@@ -173,7 +186,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 4rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .component-section {
   display: grid;

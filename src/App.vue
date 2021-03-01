@@ -29,7 +29,7 @@ body,#app{
   word-break: break-word;
   box-sizing: border-box;
   color: $text-gray-900;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   max-width: 1440px;
   width: 100%;
   height: 100%;
