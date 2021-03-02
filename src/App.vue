@@ -29,11 +29,14 @@ body,#app{
   word-break: break-word;
   box-sizing: border-box;
   color: $text-gray-900;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   max-width: 1440px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  @media(min-width : 640px){
+    padding: 1rem 2rem;
+  }
 }
 .border-t{
     border-top: 1px solid $text-gray-200;

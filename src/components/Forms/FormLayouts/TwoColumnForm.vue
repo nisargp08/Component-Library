@@ -4,7 +4,7 @@
         <!-- Section grid -->
         <div class="form-section">
             <div class="section-row">
-                <div class="col-span-1">
+                <div class="col-span-1 px-4-md-only">
                     <h3 class="section-title">Profile</h3>
                     <p class="section-description">This information will be displayed publicly so be careful what you share.</p>
                 </div>
@@ -99,6 +99,7 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     color: $text-gray-400;
 }
 
+// Width
 .w-12 {
     width: 3rem;
 }
@@ -107,6 +108,7 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     height: 3rem;
 }
 
+// Margin
 .ml-1 {
     margin-left: 0.25rem
 }
@@ -120,6 +122,18 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     margin-right: auto;
 }
 
+// Padding
+.px-4-md-only {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media(min-width : 768px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Flex
 .flex {
     display: flex;
 }
@@ -130,16 +144,29 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
 
 // Component css
 .form-layout {
-    padding: 1.5rem 2rem;
     max-width: $form-max-width;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     box-sizing: border-box;
+
+    @media(min-width : 768px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @media(min-width : 1024px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     // Containers
     .section-row {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5rem;
+        @media(min-width : 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
     }
 
     .col-span-1 {
@@ -168,34 +195,46 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
 
     .form-card {
         width: 100%;
-        border-radius: 0.375rem;
         box-shadow: $shadow-md;
         background-color: $card-bg;
+        margin-top: 1.25rem;
 
+        @media(min-width : 768px) {
+            margin-top: 0;
+            border-radius: 0.375rem;
+        }
     }
 
     .form-fields {
-        padding: 1.5rem;
+        padding: 1.25rem 1rem;
 
         > :not(:first-child) {
             margin-top: 1.75rem;
         }
+
+        @media(min-width : 768px) {
+            padding: 1.5rem;
+        }
     }
-    .form-action{
+
+    .form-action {
         background-color: $text-gray-50;
         padding: 0.75rem 1rem;
         text-align: right;
         border-bottom-left-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
 
-        @media(min-width : 640px){
+        @media(min-width : 640px) {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
     }
+
     .grid-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        @media(min-width : 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
     }
 
     // Form elements
