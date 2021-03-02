@@ -12,7 +12,7 @@
                     <form action="#">
                         <div class="form-card">
                             <div class="form-fields">
-                                <div class="form-row grid-wrapper">
+                                <div class="form-row grid-col-3">
                                     <div class="col-span-2">
                                         <label for="website">Website</label>
                                         <div class="input-wrapper">
@@ -71,6 +71,165 @@
                 </div>
             </div>
         </div>
+        <!-- Section divider -->
+        <div class="form-section-divider">
+            <div class="py-6">
+                <div class="hr"></div>
+            </div>
+        </div>
+        <!-- Section grid -->
+        <div class="form-section">
+            <div class="section-row">
+                <div class="col-span-1 px-4-md-only">
+                    <h3 class="section-title">Personal Information</h3>
+                    <p class="section-description">Use a permanent address where you can receive mail.</p>
+                </div>
+                <div class="col-span-2">
+                    <form action="#">
+                        <div class="form-card">
+                            <div class="form-fields">
+                                <div class="form-row grid-col-6">
+                                    <div class="col-span-3">
+                                        <label for="firstname">First name</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" id="firstname">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3">
+                                        <label for="lastname">Last name</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" id="lastname">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-4">
+                                        <label for="email">Email address</label>
+                                        <div class="input-wrapper">
+                                            <input type="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-3">
+                                        <label for="country">Country / Region</label>
+                                        <div class="input-wrapper">
+                                            <select name="country" id="country">
+                                                <option selected disabled hidden value="">-- Please select --</option>
+                                                <option value="PAR">Paradis</option>
+                                                <option value="MAR">Marley</option>
+                                                <option value="HIZ">Hizuru</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-6">
+                                        <label for="address">Street address</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" id="address">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-2">
+                                        <label for="city">City</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" id="city">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-2">
+                                        <label for="state">State / Province</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" id="state">
+                                        </div>
+                                    </div>
+                                    <div class="col-span-2">
+                                        <label for="zipcode">ZIP / Postal</label>
+                                        <div class="input-wrapper">
+                                            <input type="text" id="zipcode">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-action">
+                                <button class="btn btn-theme">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Section divider -->
+        <div class="form-section-divider">
+            <div class="py-6">
+                <div class="hr"></div>
+            </div>
+        </div>
+        <!-- Section grid -->
+        <div class="form-section">
+            <div class="section-row">
+                <div class="col-span-1 px-4-md-only">
+                    <h3 class="section-title">Notifications</h3>
+                    <p class="section-description">Decide which communications you'd like to receive and how.</p>
+                </div>
+                <div class="col-span-2">
+                    <form action="#">
+                        <div class="form-card">
+                            <div class="form-fields">
+                                <fieldset>
+                                    <legend>By Email</legend>
+                                    <div class="space-y-4">
+                                        <div class="flex">
+                                            <div class="flex items-center h-5"><input type="checkbox" name="comments" id="comments"></div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="comments">Comments</label>
+                                                <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex items-center h-5"><input type="checkbox" name="candidates" id="candidates"></div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="candidates">Candidates</label>
+                                                <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex items-center h-5"><input type="checkbox" name="offers" id="offers"></div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="offers">Offers</label>
+                                                <p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="text-sm">
+                                        <legend>Push Notifications</legend>
+                                        <p class="text-gray-500 text-weight-500">These are delivered via SMS to your mobile phone.</p>
+                                    </div>
+                                    <div class="mt-6 space-y-4">
+                                        <div class="flex">
+                                            <div class="flex items-center h-5"><input type="radio" name="push_notification" id="everything"></div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="everything">Everything</label>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex items-center h-5"><input type="radio" name="push_notification" id="sameAsEmail"></div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="sameAsEmail">Same as email</label>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex items-center h-5"><input type="radio" name="push_notification" id="noPushNotifications"></div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="noPushNotifications">No push notifications</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="form-action">
+                                <button class="btn btn-theme">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </template>
@@ -99,6 +258,10 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     color: $text-gray-400;
 }
 
+.text-gray-500 {
+    color: $text-gray-500;
+}
+
 // Width
 .w-12 {
     width: 3rem;
@@ -108,15 +271,31 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     height: 3rem;
 }
 
+// Height
+.h-5 {
+    height: 1.25rem;
+}
+
 // Margin
 .ml-1 {
-    margin-left: 0.25rem
+    margin-left: 0.25rem;
+}
+
+.ml-3 {
+    margin-left: 0.75rem;
 }
 
 .ml-5 {
     margin-left: 1.25rem;
 }
-
+.mt-6{
+    margin-top: 1.5rem;
+}
+.space-y-4{
+    > * {
+        margin-top: 1rem;
+    }
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -133,6 +312,14 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     }
 }
 
+// Font
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.text-weight-500{
+    font-weight : 500;
+}
 // Flex
 .flex {
     display: flex;
@@ -156,11 +343,38 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
+
     @media(min-width : 1024px) {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
     // Containers
+    .form-section:not(:first-of-type) {
+        margin-top: 2.5rem;
+
+        @media(min-width : 768px) {
+            margin-top: 0;
+        }
+    }
+
+    .form-section-divider {
+        display: none;
+
+        .py-6 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .hr {
+            border-top: 1px solid $text-gray-200;
+        }
+
+        @media(min-width : 768px) {
+            display: block;
+        }
+    }
+
     .section-row {
         @media(min-width : 768px) {
             display: grid;
@@ -170,11 +384,43 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
     }
 
     .col-span-1 {
-        grid-column: span 1 / span 1;
+        grid-column: 1 / -1;
+
+        @media (min-width : 768px) {
+            grid-column: span 1 / span 1;
+        }
     }
 
     .col-span-2 {
-        grid-column: span 2 / span 2;
+        grid-column: 1 / -1;
+
+        @media (min-width : 768px) {
+            grid-column: span 2 / span 2;
+        }
+    }
+
+    .col-span-3 {
+        grid-column: 1 / -1;
+
+        @media (min-width : 768px) {
+            grid-column: span 3 / span 3;
+        }
+    }
+
+    .col-span-4 {
+        grid-column: 1 / -1;
+
+        @media (min-width : 768px) {
+            grid-column: span 4 / span 4;
+        }
+    }
+
+    .col-span-6 {
+        grid-column: 1 / -1;
+
+        @media (min-width : 768px) {
+            grid-column: span 6 / span 6;
+        }
     }
 
     .section-title {
@@ -183,6 +429,11 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         line-height: 1.5rem;
         font-weight: 600;
         color: $text-gray-900;
+
+        @media(min-width : 640px) {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
     }
 
     .section-description {
@@ -209,7 +460,7 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         padding: 1.25rem 1rem;
 
         > :not(:first-child) {
-            margin-top: 1.75rem;
+            margin-top: 1.5rem;
         }
 
         @media(min-width : 768px) {
@@ -221,19 +472,33 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         background-color: $text-gray-50;
         padding: 0.75rem 1rem;
         text-align: right;
-        border-bottom-left-radius: 0.375rem;
-        border-bottom-right-radius: 0.375rem;
 
         @media(min-width : 640px) {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
+
+        @media(min-width : 768px) {
+            border-bottom-left-radius: 0.375rem;
+            border-bottom-right-radius: 0.375rem;
+        }
     }
 
-    .grid-wrapper {
+    .grid-col-3 {
+        display: grid;
+        gap: 1.5rem;
+
         @media(min-width : 768px) {
-            display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .grid-col-6 {
+        display: grid;
+        gap: 1.5rem;
+
+        @media(min-width : 768px) {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
         }
     }
 
@@ -274,9 +539,16 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         border-top-left-radius: 0.375rem;
         border-bottom-left-radius: 0.375rem;
         background-color: $text-gray-50;
+
+        +input {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
     }
 
     input[type="text"],
+    input[type="email"],
+    select,
     textarea {
         display: block;
         font-size: 0.875rem;
@@ -285,8 +557,7 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         flex: 1 1 0%;
         padding: 0.5rem 0.75rem;
         font-weight: 500;
-        border-top-right-radius: 0.375rem;
-        border-bottom-right-radius: 0.375rem;
+        border-radius: 0.375rem;
         border: 1px solid $text-gray-300;
         background-clip: padding-box;
         transition: box-shadow 0.15s ease-in-out;
@@ -309,8 +580,28 @@ $shadow-md : 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         }
     }
 
-    textarea {
-        border-radius: 0.375rem;
+    select {
+        width: 100%;
+        padding-right: 2.25rem;
+        background-color: #fff;
+        background-image: url('../../../assets/images/chevron-down.svg');
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 16px 20px;
+    }
+
+    fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    legend {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0;
+        font-weight: 600;
+        color: $text-gray-900;
     }
 
     .photo-display {

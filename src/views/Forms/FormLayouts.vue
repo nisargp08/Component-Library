@@ -49,6 +49,8 @@ export default {
         background-color: $text-gray-50;
         max-width: 100%;
         justify-content: flex-start;
+        border-bottom-left-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
     }
 }
 </style>
