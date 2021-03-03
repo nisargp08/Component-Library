@@ -25,6 +25,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 import TwoColumnForm from "@formLayouts/TwoColumnForm.vue"
 import LabelsOnLeft from "@formLayouts/LabelsOnLeft.vue"
 import SimpleStacked from "@formLayouts/SimpleStacked.vue"
+import FullWidthCards from "@formLayouts/FullWidthCards.vue"
 
 export default {
     data() {
@@ -42,6 +43,11 @@ export default {
                     title: "Simple Stacked Form",
                     componentName: "SimpleStacked",
                 },
+                {
+                    title: "Two-column in full-width cards",
+                    componentName: "FullWidthCards",
+                    class : "bg-whitesmoke",
+                },
             ],
         }
     },
@@ -51,6 +57,7 @@ export default {
         TwoColumnForm,
         LabelsOnLeft,
         SimpleStacked,
+        FullWidthCards,
     }
 }
 </script>
@@ -64,6 +71,10 @@ export default {
         justify-content: flex-start;
         border-bottom-left-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
+    }
+    
+    *{
+        box-sizing: border-box;
     }
 }
 /deep/ .bg-whitesmoke{
