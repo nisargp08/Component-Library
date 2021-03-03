@@ -26,6 +26,7 @@ import TwoColumnForm from "@formLayouts/TwoColumnForm.vue"
 import LabelsOnLeft from "@formLayouts/LabelsOnLeft.vue"
 import SimpleStacked from "@formLayouts/SimpleStacked.vue"
 import FullWidthCards from "@formLayouts/FullWidthCards.vue"
+import FormWithSidebar from "@formLayouts/FormWithSidebar.vue"
 
 export default {
     data() {
@@ -48,6 +49,11 @@ export default {
                     componentName: "FullWidthCards",
                     class : "bg-whitesmoke",
                 },
+                {
+                    title: "Two-column cards with sidebar",
+                    componentName: "FormWithSidebar",
+                    class : "bg-whitesmoke",
+                },
             ],
         }
     },
@@ -58,6 +64,7 @@ export default {
         LabelsOnLeft,
         SimpleStacked,
         FullWidthCards,
+        FormWithSidebar
     }
 }
 </script>
