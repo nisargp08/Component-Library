@@ -23,34 +23,44 @@ import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Alerts
 import TwoColumnForm from "@formLayouts/TwoColumnForm.vue"
+import LabelsOnLeft from "@formLayouts/LabelsOnLeft.vue"
 
 export default {
     data() {
         return {
             componentsList: [{
-                title: "Two-column cards with separate submit actions",
-                componentName: "TwoColumnForm",
-            }, ],
+                    title: "Two-column cards with separate submit actions",
+                    componentName: "TwoColumnForm",
+                    class : "bg-whitesmoke",
+                },
+                {
+                    title: "Labels on Left",
+                    componentName: "LabelsOnLeft",
+                },
+            ],
         }
     },
     components: {
         ComponentLayout,
         ComponentBox,
-        TwoColumnForm
+        TwoColumnForm,
+        LabelsOnLeft,
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
 /deep/ .component-box-body {
     padding: 0;
+
     >* {
-        background-color: $text-gray-50;
         max-width: 100%;
         justify-content: flex-start;
         border-bottom-left-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
     }
+}
+/deep/ .bg-whitesmoke{
+        background-color: $text-gray-50;
 }
 </style>

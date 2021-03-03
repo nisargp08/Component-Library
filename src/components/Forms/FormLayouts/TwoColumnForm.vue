@@ -29,7 +29,7 @@
                                     <p class="description">Brief description for your profile. URLs are hyperlinked.</p>
                                 </div>
                                 <div class="form-row">
-                                    <label for="photo">Photo</label>
+                                    <label for="profilePhoto">Photo</label>
                                     <div class="input-wrapper items-center">
                                         <span class="photo-display">
                                             <svg class="text-gray-300" fill="currentColor" viewBox="0 0 24 24">
