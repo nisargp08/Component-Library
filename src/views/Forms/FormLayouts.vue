@@ -24,6 +24,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 // Alerts
 import TwoColumnForm from "@formLayouts/TwoColumnForm.vue"
 import LabelsOnLeft from "@formLayouts/LabelsOnLeft.vue"
+import SimpleStacked from "@formLayouts/SimpleStacked.vue"
 
 export default {
     data() {
@@ -37,6 +38,10 @@ export default {
                     title: "Labels on Left",
                     componentName: "LabelsOnLeft",
                 },
+                 {
+                    title: "Simple Stacked Form",
+                    componentName: "SimpleStacked",
+                },
             ],
         }
     },
@@ -45,6 +50,7 @@ export default {
         ComponentBox,
         TwoColumnForm,
         LabelsOnLeft,
+        SimpleStacked,
     }
 }
 </script>
