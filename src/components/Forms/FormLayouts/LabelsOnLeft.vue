@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="form-layout">
-        <form action="#">
+        <form action="#" class="child-border-t">
             <!-- Section grid -->
             <div class="form-section">
                 <div class="section-row">
@@ -84,12 +84,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Section divider -->
-            <div class="form-section-divider">
-                <div class="py-6">
-                    <div class="hr"></div>
                 </div>
             </div>
             <!-- Section grid -->
@@ -196,12 +190,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Section divider -->
-            <div class="form-section-divider">
-                <div class="py-6">
-                    <div class="hr"></div>
-                </div>
-            </div>
             <!-- Section grid -->
             <div class="form-section">
                 <div class="section-row">
@@ -222,7 +210,7 @@
                                                 <div class="flex">
                                                     <div class="flex items-center h-5"><input type="checkbox" name="comments" id="l-comments"></div>
                                                     <div class="ml-3 text-sm">
-                                                        <label for="l-comments" >Comments</label>
+                                                        <label for="l-comments">Comments</label>
                                                         <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
                                                     </div>
                                                 </div>
@@ -398,6 +386,14 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 // Component css
+.child-border-t {
+    > :not(:first-child) {
+        border-top: 1px solid #e5e7eb;
+        padding-top: 2.5rem;
+        margin-top: 1.5rem;
+    }
+}
+
 .form-layout {
     max-width: $form-max-width;
     width: 100%;
@@ -412,24 +408,6 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     }
 
     // Containers
-    .form-section:not(:first-of-type) {
-
-        @media(min-width : 768px) {
-            margin-top: 1rem;
-        }
-    }
-
-    .form-section-divider {
-
-        .py-6 {
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
-
-        .hr {
-            border-top: 1px solid $text-gray-200;
-        }
-    }
 
     .section-row {
         @media(min-width : 768px) {
@@ -522,18 +500,15 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     }
 
     .form-action {
-        margin-top: 1rem;
         padding: 1.25rem 1rem;
-        border-top: 1px solid $text-gray-200;
         text-align: right;
 
         @media(min-width : 640px) {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
-
         @media(min-width : 768px) {
-            margin-top: 2rem;
+            padding-top: 1rem;
         }
     }
 
