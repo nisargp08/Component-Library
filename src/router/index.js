@@ -182,6 +182,17 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Form Layouts" }],
     },
   },
+  {
+    path: "/forms/select-menus",
+    name: "SelectMenus",
+    component: () =>
+      import(
+        /* webpackChunkName : SelectMenus */ "@/views/Forms/SelectMenus.vue"
+      ),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Select Menus" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",

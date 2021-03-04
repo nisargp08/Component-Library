@@ -38,6 +38,8 @@ module.exports = {
                 '@alerts' : path.resolve(__dirname,'src/components/Feedback/Alerts/'),
                 // Forms
                 '@formLayouts' : path.resolve(__dirname,'src/components/Forms/FormLayouts/'),
+                '@selectMenus' : path.resolve(__dirname,'src/components/Forms/SelectMenus/'),
+
             }
         }
     },

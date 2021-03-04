@@ -143,6 +143,13 @@ export default {
                     description: "5 components",
                     linkedTo: "FormLayouts",
                 },
+                {
+                    subtype: "Forms",
+                    title: "Select Menus",
+                    image: "forms-select-menus.svg",
+                    description: "6 components",
+                    linkedTo: "SelectMenus",
+                },
             ],
         };
     },
