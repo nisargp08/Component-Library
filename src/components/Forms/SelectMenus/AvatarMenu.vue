@@ -1,11 +1,15 @@
 <template>
   <div>
     <div class="wrapper">
-      <label id="assignedTo">Assigned to</label>
+      <label id="assignedTo" @click="toggleVisibility">Assigned to</label>
       <div class="select-menu">
         <!-- First visible option / By default/selected option -->
         <button
-          @click="isMenuOpen = !isMenuOpen"
+          @click="toggleVisibility"
+          @keydown.shift.tab="hideMenu"
+          @keydown.tab.exact="startArrowKeys"
+          @keydown.up.exact.prevent="startArrowKeys"
+          @keydown.down.exact.prevent="startArrowKeys"
           class="btn"
           aria-haspopup="listbox"
           aria-labelledby="assignedTo assignedButton"
@@ -34,10 +38,16 @@
         </button>
         <!-- Option list -->
         <transition-fade>
-          <div aria-expanded="false" role="list" class="select-options-wrapper" v-show="isMenuOpen">
+          <div
+            aria-expanded="false"
+            role="list"
+            class="select-options-wrapper"
+            v-show="isMenuOpen"
+          >
             <ul
               id="assignedToList"
               tabindex="-1"
+              ref="listbox"
               role="listbox"
               aria-labelledby="assignedTo"
               :aria-activedescendant="'listbox-item-' + selectedUser.id"
@@ -46,6 +56,12 @@
               <!-- Loop through user list -->
               <li
                 @click="updateSelectedUser(user)"
+                @keydown.enter.exact="updateSelectedUser(user)"
+                @keydown.shift.tab="focusPrevious(false)"
+                @keydown.tab.exact="focusNext(false)"
+                @keydown.up.exact.prevent="focusPrevious(true)"
+                @keydown.down.exact.prevent="focusNext(true)"
+                @mouseenter="onHover(index)"
                 v-for="(user, index) in userList"
                 :key="index"
                 :id="'listbox-item-' + index"
@@ -87,6 +103,7 @@ export default {
     return {
       isMenuOpen: true,
       selectedUser: {},
+      focusedIndex: 0,
       userList: [
         {
           id: 1,
@@ -159,11 +176,57 @@ export default {
       }
     });
   },
-  beforeDestroy() {
-    // Remove event listener
-    window.removeEventListener("keyup");
-  },
   methods: {
+    // Toggle open/close state
+    toggleVisibility() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    // Hide select menu
+    hideMenu() {
+      this.isMenuOpen = false;
+      // this.focusedIndex = 0;
+    },
+    // Keyboard accessibility - Arrow keys & Mouseenter - STARTS
+    startArrowKeys() {
+      if (this.isMenuOpen) {
+        this.focusItem();
+        // this.$refs.listbox.children[0].focus();
+      }
+    },
+    focusPrevious(isArrowKey) {
+      // isArrowKey - To check if up key was pressed or not. Only focus when up key is pressed as shift tab default behaviour focus the element.
+      if (this.focusedIndex > 0) {
+        this.focusedIndex -= 1;
+        if (isArrowKey) {
+          this.focusItem();
+        }
+      }
+    },
+    focusNext(isArrowKey) {
+      // isArrowKey - To check if down key was pressed or not. Only focus when down key is pressed as tab default behaviour focus the element.
+      if (this.focusedIndex < this.userList.length - 1) {
+        this.focusedIndex += 1;
+        if (isArrowKey) {
+          this.focusItem();
+        }
+      } else {
+        // case where it's on last item and we want tab to hide select menu when 'tab' is pressed
+        if (!isArrowKey) {
+          this.hideMenu();
+        }
+      }
+    },
+    onHover(index){
+      // Make the passed index focused
+      this.focusedIndex = index;
+      this.focusItem();
+    },
+    focusItem() {
+      this.$refs.listbox.children[this.focusedIndex].focus();
+    },
+    // Keyboard accessibility - Arrow keys & Mouseenter - ENDS
+
+
     // Function to resolve image path when fetching dynamically
     imgPath(path) {
       return require(`@/assets/images/${path}`);
@@ -240,6 +303,7 @@ label {
   position: relative;
   justify-content: flex-start;
   padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  user-select: none;
   font-weight: 500;
 
   &:hover {
@@ -302,8 +366,13 @@ label {
     padding: 0.25rem 0;
     max-height: $max-height;
     list-style: none;
+    border-radius: 0.375rem;
     margin: 0;
     overflow: auto;
+    &:focus{
+      outline: none;
+      box-shadow: 0 0 0 0.10rem rgba($color: $action-color, $alpha: 0.5);
+    }
   }
 
   // Options
@@ -316,6 +385,9 @@ label {
     padding-bottom: 0.5rem;
     padding-left: 0.75rem;
     padding-right: 2.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    border-radius: 0.375rem;
     font-weight: 500;
 
     // Check icon
@@ -330,13 +402,14 @@ label {
       pointer-events: none;
     }
 
-    // Hover state
-    &:hover {
+    // Focused state
+    &:focus {
+      outline: none;
       background: $action-color;
       color: $action-hover-color;
     }
 
-    // Selected state
+    // // Selected state
     &.selected {
       font-weight: 600;
 
@@ -346,8 +419,8 @@ label {
         color: $action-color;
       }
 
-      // Hover state
-      &:hover {
+      // Focused state
+      &:focus {
         .check-icon {
           color: $action-hover-color;
         }
