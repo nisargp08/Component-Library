@@ -21,7 +21,7 @@
 <script>
 import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
-// Alerts
+// Form Layouts
 import TwoColumnForm from "@formLayouts/TwoColumnForm.vue"
 import LabelsOnLeft from "@formLayouts/LabelsOnLeft.vue"
 import SimpleStacked from "@formLayouts/SimpleStacked.vue"

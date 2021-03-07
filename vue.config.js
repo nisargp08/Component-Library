@@ -39,7 +39,7 @@ module.exports = {
                 // Forms
                 '@formLayouts' : path.resolve(__dirname,'src/components/Forms/FormLayouts/'),
                 '@selectMenus' : path.resolve(__dirname,'src/components/Forms/SelectMenus/'),
-
+                '@signInForms' : path.resolve(__dirname,'src/components/Forms/SignInForms/'),
             }
         }
     },

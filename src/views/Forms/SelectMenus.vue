@@ -1,5 +1,5 @@
 <template>
-  <component-layout class="form-layouts-container">
+  <component-layout class="select-menu-container">
     <template v-slot:page-header>
       <p>Select Menus</p>
     </template>
@@ -27,7 +27,7 @@
 <script>
 import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
-// Alerts
+// Select Menus
 import AvatarMenu from "@selectMenus/AvatarMenu.vue";
 import SimpleNative from "@selectMenus/SimpleNative.vue";
 import StatusIndicator from "@selectMenus/StatusIndicator.vue";

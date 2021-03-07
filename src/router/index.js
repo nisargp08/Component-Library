@@ -193,6 +193,17 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Select Menus" }],
     },
   },
+  {
+    path: "/forms/sign-in-forms",
+    name: "SignInForms",
+    component: () =>
+      import(
+        /* webpackChunkName : SignInForms */ "@/views/Forms/SignInForms.vue"
+      ),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Sign-in and Registration" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",

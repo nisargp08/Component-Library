@@ -150,6 +150,13 @@ export default {
                     description: "5 components",
                     linkedTo: "SelectMenus",
                 },
+                {
+                    subtype: "Forms",
+                    title: "Sign-in and registration",
+                    image: "forms-sign-in-forms.svg",
+                    description: "3 components",
+                    linkedTo: "SignInForms",
+                },
             ],
         };
     },
