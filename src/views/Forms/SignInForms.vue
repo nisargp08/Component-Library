@@ -23,6 +23,7 @@ import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Sign in forms
 import SimpleForm from "@signInForms/SimpleForm.vue";
+import SimpleCard from "@signInForms/SimpleCard.vue";
 
 export default {
     data() {
@@ -30,6 +31,10 @@ export default {
             componentsList: [{
                 title: "Simple form",
                 componentName: "SimpleForm",
+            },
+            {
+                title: "Form in a card",
+                componentName: "SimpleCard",
             }, ],
         };
     },
@@ -37,6 +42,7 @@ export default {
         ComponentLayout,
         ComponentBox,
         SimpleForm,
+        SimpleCard
     },
 };
 </script>

@@ -21,8 +21,8 @@
                         <input type="password" id="password" placeholder="Password" required/>
                     </div>
                 </div>
-                <div class="flex items-center space-between text-sm">
-                    <div>
+                <div class="flex items-center space-between text-sm flex-wrap">
+                    <div class="flex items-center">
                         <input type="checkbox" id="remember-me">
                         <label for="remember-me" class="ml-2">Remember me</label>
                     </div>
@@ -90,7 +90,9 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 .items-center {
     align-items: center;
 }
-
+.flex-wrap {
+    flex-wrap: wrap;
+}
 .space-between {
     justify-content: space-between;
 }
