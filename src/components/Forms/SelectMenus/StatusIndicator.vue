@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <label id="assignedTo">Assigned to</label>
-      <div class="select-menu" id="select-menu">
+      <div class="select-menu" id="select-menu-2">
         <!-- First visible option / By default/selected option -->
         <button
           @click="toggleVisibility"
@@ -16,7 +16,7 @@
           id="assignedButton"
         >
           <span class="selected-value">
-            <img :src="imgPath(this.selectedUser.photo)" alt="" />
+            <span class="status" :class="selectedUser.status"></span>
             <span class="truncate">{{ this.selectedUser.name }}</span>
           </span>
           <span class="toggle-icon">
@@ -71,7 +71,7 @@
                 :class="{ selected: user.id === selectedUser.id }"
               >
                 <div class="flex items-center">
-                  <img :src="imgPath(user.photo)" alt="" />
+                 <span class="status" :class="user.status"></span>
                   <span>{{ user.name }}</span>
                 </div>
                 <div class="check-icon">
@@ -110,57 +110,57 @@ export default {
         {
           id: 1,
           name: "Erwin Smith",
-          photo: "erwin-smith.png",
+          status : "offline",
         },
         {
           id: 2,
           name: "Zeke Yeager",
-          photo: "zeke-yeager.jpg",
+          status : "online",
         },
         {
           id: 3,
           name: "Eren Yeager",
-          photo: "eren-yeager.jpg",
+          status : "online",
         },
         {
           id: 4,
           name: "Eren Kruger",
-          photo: "eren-kruger.png",
+          status : "online",
         },
         {
           id: 5,
           name: "Levi Ackerman",
-          photo: "levi-ackerman.png",
+          status : "online",
         },
         {
           id: 6,
           name: "Reiner Braun",
-          photo: "reiner-braun.jpg",
+          status : "offline",
         },
         {
           id: 7,
           name: "Mikasa Ackerman",
-          photo: "mikasa-ackerman.jpg",
+          status : "online",
         },
         {
           id: 8,
           name: "Jean Kirstein",
-          photo: "jean-kirstein.png",
+          status : "offline",
         },
         {
           id: 9,
           name: "Armin Arlert",
-          photo: "armin-arlert.jpg",
+          status : "online",
         },
         {
           id: 10,
           name: "Sasha Braus",
-          photo: "sasha-braus.jpg",
+          status : "offline",
         },
         {
           id: 11,
           name: "Annie Leonhart",
-          photo: "annie-leonhart.png",
+          status : "offline",
         },
       ],
     };
@@ -178,7 +178,7 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("select-menu",this.hideMenu);
+    this.detectClickOutside("select-menu-2",this.hideMenu);
   },
   methods: {
     // Toggle open/close state
@@ -230,10 +230,6 @@ export default {
     },
     // Keyboard accessibility - Arrow keys & Mouseenter - ENDS
 
-    // Function to resolve image path when fetching dynamically
-    imgPath(path) {
-      return require(`@/assets/images/${path}`);
-    },
     // Update selected user from the user
     updateSelectedUser(user) {
       // Set this.selectedUser to the passed user
@@ -266,7 +262,8 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
 $select-bg: white;
 $max-height: 14rem;
 $option-color: $text-gray-900;
-
+$online-color : #32c48d;
+$offline-color : $text-gray-300;
 // Components css
 .h-5 {
   height: 1.25rem;
@@ -324,11 +321,19 @@ label {
     display: flex;
     align-items: center;
 
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
-      flex-shrink: 0;
+    .status {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 9999px;
+      margin-left: 0; 
+      
+      &.online{
+          background-color : $online-color;
+      }
+      &.offline{
+          background-color : $offline-color;
+      }
     }
 
     span {

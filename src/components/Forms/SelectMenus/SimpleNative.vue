@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="wrapper">
-      <label id="assignedTo">Assigned to</label>
-      <div class="select-menu" id="select-menu">
+      <label id="location">Location</label>
+      <div class="select-menu" id="native-menu">
         <!-- First visible option / By default/selected option -->
         <button
           @click="toggleVisibility"
@@ -12,12 +12,11 @@
           @keydown.down.exact.prevent="startArrowKeys"
           class="btn"
           aria-haspopup="listbox"
-          aria-labelledby="assignedTo assignedButton"
-          id="assignedButton"
+          aria-labelledby="location locationButton"
+          id="locationButton"
         >
           <span class="selected-value">
-            <img :src="imgPath(this.selectedUser.photo)" alt="" />
-            <span class="truncate">{{ this.selectedUser.name }}</span>
+            <span class="truncate">{{ this.selectedOption.name }}</span>
           </span>
           <span class="toggle-icon">
             <svg
@@ -45,34 +44,33 @@
             v-show="isMenuOpen"
           >
             <ul
-              id="assignedToList"
+              id="locationList"
               tabindex="-1"
               ref="listbox"
               role="listbox"
-              aria-labelledby="assignedTo"
-              :aria-activedescendant="'listbox-item-' + selectedUser.id"
+              aria-labelledby="location"
+              :aria-activedescendant="'listbox-item-' + selectedOption.id"
               class="select-options"
             >
-              <!-- Loop through user list -->
+              <!-- Loop through options list -->
               <li
-                @click="updateSelectedUser(user)"
-                @keydown.enter.exact="updateSelectedUser(user)"
+                @click="updateSelectedOption(option)"
+                @keydown.enter.exact="updateSelectedOption(option)"
                 @keydown.shift.tab="focusPrevious(false)"
                 @keydown.tab.exact="focusNext(false)"
                 @keydown.up.exact.prevent="focusPrevious(true)"
                 @keydown.down.exact.prevent="focusNext(true)"
                 @mouseenter="onHover(index)"
-                v-for="(user, index) in userList"
+                v-for="(option, index) in optionList"
                 :key="index"
                 :id="'listbox-item-' + index"
                 role="option"
                 class="option"
                 tabindex="0"
-                :class="{ selected: user.id === selectedUser.id }"
+                :class="{ selected: option.id === selectedOption.id }"
               >
                 <div class="flex items-center">
-                  <img :src="imgPath(user.photo)" alt="" />
-                  <span>{{ user.name }}</span>
+                  <span>{{ option.name }}</span>
                 </div>
                 <div class="check-icon">
                   <svg
@@ -104,70 +102,111 @@ export default {
   data() {
     return {
       isMenuOpen: true,
-      selectedUser: {},
+      selectedOption: {},
       focusedIndex: 0,
-      userList: [
+      optionList: [
         {
           id: 1,
-          name: "Erwin Smith",
-          photo: "erwin-smith.png",
+          name: "Australia",
         },
         {
           id: 2,
-          name: "Zeke Yeager",
-          photo: "zeke-yeager.jpg",
+          name: "Bangladesh",
         },
         {
           id: 3,
-          name: "Eren Yeager",
-          photo: "eren-yeager.jpg",
+          name: "Canada",
         },
         {
           id: 4,
-          name: "Eren Kruger",
-          photo: "eren-kruger.png",
+          name: "Denmark",
         },
         {
           id: 5,
-          name: "Levi Ackerman",
-          photo: "levi-ackerman.png",
+          name: "Estonia",
         },
         {
           id: 6,
-          name: "Reiner Braun",
-          photo: "reiner-braun.jpg",
+          name: "Finland",
         },
         {
           id: 7,
-          name: "Mikasa Ackerman",
-          photo: "mikasa-ackerman.jpg",
+          name: "Germany",
         },
         {
           id: 8,
-          name: "Jean Kirstein",
-          photo: "jean-kirstein.png",
+          name: "Haiti",
         },
         {
           id: 9,
-          name: "Armin Arlert",
-          photo: "armin-arlert.jpg",
+          name: "India",
         },
         {
           id: 10,
-          name: "Sasha Braus",
-          photo: "sasha-braus.jpg",
+          name: "Japan",
         },
         {
           id: 11,
-          name: "Annie Leonhart",
-          photo: "annie-leonhart.png",
+          name: "Kenya",
+        },
+        {
+          id: 12,
+          name: "Lebanon",
+        },
+        {
+          id: 13,
+          name: "Morocco",
+        },
+        {
+          id: 14,
+          name: "Nigeria",
+        },
+        {
+          id: 15,
+          name: "Oman",
+        },
+        {
+          id: 16,
+          name: "Poland",
+        },
+        {
+          id: 17,
+          name: "Qatar",
+        },
+        {
+          id: 18,
+          name: "Russia",
+        },
+        {
+          id: 19,
+          name: "South Korea",
+        },
+        {
+          id: 20,
+          name: "Turkey",
+        },
+        {
+          id: 21,
+          name: "United States of America",
+        },
+        {
+          id: 22,
+          name: "Vietnam",
+        },
+        {
+          id: 23,
+          name: "Yemen",
+        },
+        {
+          id: 24,
+          name: "Zambia",
         },
       ],
     };
   },
   created() {
     // To set the default menu selection item on creation
-    this.setSelectedUser();
+    this.setSelectedOption();
   },
   mounted() {
     //Escape key event listener
@@ -178,7 +217,7 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("select-menu",this.hideMenu);
+    this.detectClickOutside("native-menu",this.hideMenu);
   },
   methods: {
     // Toggle open/close state
@@ -188,13 +227,11 @@ export default {
     // Hide select menu
     hideMenu() {
       this.isMenuOpen = false;
-      // this.focusedIndex = 0;
     },
     // Keyboard accessibility - Arrow keys & Mouseenter - STARTS
     startArrowKeys() {
       if (this.isMenuOpen) {
         this.focusItem();
-        // this.$refs.listbox.children[0].focus();
       }
     },
     focusPrevious(isArrowKey) {
@@ -208,7 +245,7 @@ export default {
     },
     focusNext(isArrowKey) {
       // isArrowKey - To check if down key was pressed or not. Only focus when down key is pressed as tab default behaviour focus the element.
-      if (this.focusedIndex < this.userList.length - 1) {
+      if (this.focusedIndex < this.optionList.length - 1) {
         this.focusedIndex += 1;
         if (isArrowKey) {
           this.focusItem();
@@ -230,23 +267,18 @@ export default {
     },
     // Keyboard accessibility - Arrow keys & Mouseenter - ENDS
 
-    // Function to resolve image path when fetching dynamically
-    imgPath(path) {
-      return require(`@/assets/images/${path}`);
-    },
-    // Update selected user from the user
-    updateSelectedUser(user) {
-      // Set this.selectedUser to the passed user
-      this.selectedUser = user;
-      // Close the menu once the user is updated
+    // Update selected option from the optionList
+    updateSelectedOption(option) {
+      // Set this.selectedOption to the passed option
+      this.selectedOption = option;
+      // Close the menu once the option is updated
       this.isMenuOpen = false;
     },
-    // Fetch and return currently selected user
-    setSelectedUser() {
+    setSelectedOption() {
       // If object empty then set the first index object from the array as the default value
-      if (!Object.keys(this.selectedUser).length) {
-        this.selectedUser = this.userList[0];
-        return this.userList[0];
+      if (!Object.keys(this.selectedOption).length) {
+        this.selectedOption = this.optionList[0];
+        return this.optionList[0];
       }
     },
   },
@@ -324,15 +356,7 @@ label {
     display: flex;
     align-items: center;
 
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
-      flex-shrink: 0;
-      border-radius: 9999px;
-    }
-
     span {
-      margin-left: 0.75rem;
       display: block;
       text-overflow: ellipsis;
       overflow: hidden;

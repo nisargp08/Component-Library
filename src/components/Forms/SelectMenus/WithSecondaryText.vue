@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <label id="assignedTo">Assigned to</label>
-      <div class="select-menu" id="select-menu">
+      <div class="select-menu" id="select-menu-3">
         <!-- First visible option / By default/selected option -->
         <button
           @click="toggleVisibility"
@@ -16,8 +16,8 @@
           id="assignedButton"
         >
           <span class="selected-value">
-            <img :src="imgPath(this.selectedUser.photo)" alt="" />
             <span class="truncate">{{ this.selectedUser.name }}</span>
+            <span class="subtitle">- @{{ this.selectedUser.handle }}</span>
           </span>
           <span class="toggle-icon">
             <svg
@@ -71,8 +71,8 @@
                 :class="{ selected: user.id === selectedUser.id }"
               >
                 <div class="flex items-center">
-                  <img :src="imgPath(user.photo)" alt="" />
                   <span>{{ user.name }}</span>
+                  <span class="subtitle">- @{{ user.handle }}</span>
                 </div>
                 <div class="check-icon">
                   <svg
@@ -110,57 +110,57 @@ export default {
         {
           id: 1,
           name: "Erwin Smith",
-          photo: "erwin-smith.png",
+          handle: "TheGambler",
         },
         {
           id: 2,
           name: "Zeke Yeager",
-          photo: "zeke-yeager.jpg",
+          handle: "MrMiscalculation",
         },
         {
           id: 3,
           name: "Eren Yeager",
-          photo: "eren-yeager.jpg",
+          handle: "TheDevil",
         },
         {
           id: 4,
           name: "Eren Kruger",
-          photo: "eren-kruger.png",
+          handle: "TheOwl",
         },
         {
           id: 5,
           name: "Levi Ackerman",
-          photo: "levi-ackerman.png",
+          handle: "FidgetSpinner",
         },
         {
           id: 6,
           name: "Reiner Braun",
-          photo: "reiner-braun.jpg",
+          handle: "LetMeDieInPiece",
         },
         {
           id: 7,
           name: "Mikasa Ackerman",
-          photo: "mikasa-ackerman.jpg",
+          handle: "Ereh...",
         },
         {
           id: 8,
           name: "Jean Kirstein",
-          photo: "jean-kirstein.png",
+          handle: "ErenLookAlike",
         },
         {
           id: 9,
           name: "Armin Arlert",
-          photo: "armin-arlert.jpg",
+          handle: "Umie",
         },
         {
           id: 10,
           name: "Sasha Braus",
-          photo: "sasha-braus.jpg",
+          handle: "ONiku",
         },
         {
           id: 11,
           name: "Annie Leonhart",
-          photo: "annie-leonhart.png",
+          handle: "MissBadass",
         },
       ],
     };
@@ -178,7 +178,7 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("select-menu",this.hideMenu);
+    this.detectClickOutside("select-menu-3", this.hideMenu);
   },
   methods: {
     // Toggle open/close state
@@ -230,10 +230,6 @@ export default {
     },
     // Keyboard accessibility - Arrow keys & Mouseenter - ENDS
 
-    // Function to resolve image path when fetching dynamically
-    imgPath(path) {
-      return require(`@/assets/images/${path}`);
-    },
     // Update selected user from the user
     updateSelectedUser(user) {
       // Set this.selectedUser to the passed user
@@ -266,7 +262,8 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
 $select-bg: white;
 $max-height: 14rem;
 $option-color: $text-gray-900;
-
+$subtitle-color: $text-gray-500;
+$subtitle-action-color: $text-gray-100;
 // Components css
 .h-5 {
   height: 1.25rem;
@@ -324,15 +321,15 @@ label {
     display: flex;
     align-items: center;
 
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
-      flex-shrink: 0;
-      border-radius: 9999px;
+    .subtitle {
+      display: inline-block;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: $subtitle-color;
+      margin-left: 0.25rem;
     }
 
     span {
-      margin-left: 0.75rem;
       display: block;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -407,6 +404,9 @@ label {
       outline: none;
       background: $action-color;
       color: $action-hover-color;
+      .subtitle {
+        color: $subtitle-action-color;
+      }
     }
 
     // Selected state
@@ -420,6 +420,10 @@ label {
         display: flex;
         // color: $action-color;
         color: $action-hover-color;
+      }
+
+      .subtitle {
+        color: $subtitle-action-color;
       }
     }
   }

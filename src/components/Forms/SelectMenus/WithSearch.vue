@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <label id="assignedTo">Assigned to</label>
-      <div class="select-menu" id="select-menu">
+      <div class="select-menu" id="select-menu-4">
         <!-- First visible option / By default/selected option -->
         <button
           @click="toggleVisibility"
@@ -44,6 +44,34 @@
             class="select-options-wrapper"
             v-show="isMenuOpen"
           >
+            <!-- Search bar -->
+            <form action="#">
+              <div class="search-group">
+                <div class="search-icon">
+                  <svg
+                    class="w-4 h-4 text-gray-700"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  name="search"
+                  v-model="searchString"
+                  id="search"
+                />
+              </div>
+            </form>
             <ul
               id="assignedToList"
               tabindex="-1"
@@ -62,7 +90,7 @@
                 @keydown.up.exact.prevent="focusPrevious(true)"
                 @keydown.down.exact.prevent="focusNext(true)"
                 @mouseenter="onHover(index)"
-                v-for="(user, index) in userList"
+                v-for="(user, index) in filteredUserList()"
                 :key="index"
                 :id="'listbox-item-' + index"
                 role="option"
@@ -87,6 +115,8 @@
                   </svg>
                 </div>
               </li>
+              <!-- Empty state -->
+              <!-- <li class="option empty-message"><p class="text-center w-full">No users found</p></li> -->
             </ul>
           </div>
         </transition-fade>
@@ -106,6 +136,7 @@ export default {
       isMenuOpen: true,
       selectedUser: {},
       focusedIndex: 0,
+      searchString: "",
       userList: [
         {
           id: 1,
@@ -178,9 +209,19 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("select-menu",this.hideMenu);
+    this.detectClickOutside("select-menu-4", this.hideMenu);
   },
+  computed: {},
   methods: {
+    // Function to return user list according to search string
+    filteredUserList() {
+      return this.userList.filter((user) => {
+        // Remove whitespace from the search string and user name
+        let username = user.name.replace(/\s+/g, "");
+        let searchString = this.searchString.replace(/\s+/g, "");
+        return username.toLowerCase().includes(searchString.toLowerCase());
+      });
+    },
     // Toggle open/close state
     toggleVisibility() {
       this.isMenuOpen = !this.isMenuOpen;
@@ -276,8 +317,16 @@ $option-color: $text-gray-900;
   width: 1.5rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .text-gray-400 {
   color: $text-gray-400;
+}
+
+.text-gray-700 {
+  color: $text-gray-700;
 }
 
 .flex {
@@ -286,6 +335,10 @@ $option-color: $text-gray-900;
 
 .items-center {
   align-items: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .wrapper {
@@ -340,6 +393,12 @@ label {
     }
   }
 
+  //Empty state message when no search results found
+  .empty-message {
+    text-align: center;
+    padding: 0.5rem 0.75rem !important;
+  }
+
   // Toggle icon
   .toggle-icon {
     position: absolute;
@@ -351,6 +410,54 @@ label {
     padding-right: 0.5rem;
     margin-left: 0.75rem;
     pointer-events: none;
+  }
+
+  .search-group {
+    position: relative;
+    margin: 0.25rem 0.25rem 0 0.25rem;
+  }
+
+  //Search icon
+  .search-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+  }
+
+  //   Search bar
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2rem 0.375rem 2.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid $text-gray-400;
+    background-clip: padding-box;
+    transition: box-shadow 0.15s ease-in-out;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.15rem
+        rgba($color: rgba($action-color, 1), $alpha: 0.3);
+      border: 1px solid $action-color;
+    }
   }
 
   // Containers

@@ -147,7 +147,7 @@ export default {
                     subtype: "Forms",
                     title: "Select Menus",
                     image: "forms-select-menus.svg",
-                    description: "6 components",
+                    description: "5 components",
                     linkedTo: "SelectMenus",
                 },
             ],
