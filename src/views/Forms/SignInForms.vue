@@ -24,6 +24,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 // Sign in forms
 import SimpleForm from "@signInForms/SimpleForm.vue";
 import SimpleCard from "@signInForms/SimpleCard.vue";
+import SplitScreen from "@signInForms/SplitScreen.vue";
 
 export default {
     data() {
@@ -35,6 +36,10 @@ export default {
             {
                 title: "Form in a card",
                 componentName: "SimpleCard",
+            },
+            {
+                title: "Split Screen",
+                componentName: "SplitScreen",
             }, ],
         };
     },
@@ -42,7 +47,8 @@ export default {
         ComponentLayout,
         ComponentBox,
         SimpleForm,
-        SimpleCard
+        SimpleCard,
+        SplitScreen,
     },
 };
 </script>
