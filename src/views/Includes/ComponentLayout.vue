@@ -13,15 +13,18 @@
           <slot name="page-body"></slot>
       </section>
       <!-- Page footer -->
+      <site-footer></site-footer>
   </div>
 </template>
 
 <script>
 import Breadcrumbs from "@general/Breadcrumbs.vue";
+import SiteFooter from "@general/Footer.vue";
 
 export default {
 components : {
   Breadcrumbs,
+  SiteFooter
 }
 }
 </script>

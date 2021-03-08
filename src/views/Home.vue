@@ -12,16 +12,20 @@
             </div>
         </div>
     </section>
+
+    <site-footer></site-footer>
 </div>
 </template>
 
 <script>
 import ComponentGroupItem from "@general/ComponentGroupItem.vue";
+import SiteFooter from "@general/Footer.vue";
 
 export default {
     name: "Home",
     components: {
         ComponentGroupItem,
+        SiteFooter,
     },
     data() {
         return {

@@ -96,7 +96,7 @@ $font-type: $ternaryFont;
 $primary-color: #f59e0b;
 $form-bg: white;
 $lg-form-max-width: 28rem;
-$xl-form-max-width: 30rem;
+$xl-form-max-width: 32rem;
 $form-min-height: 100vh;
 $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 $shadow-md : 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -183,11 +183,9 @@ $shadow-md : 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     padding: 3rem 1rem;
     max-width: $lg-form-max-width;
     width: 100%;
-
-    @media (min-width: 425px) {
-        box-shadow: $shadow-md;
-        border-radius: 0.375rem;
-    }
+    box-shadow: $shadow-md;
+    border-radius: 0.375rem;
+    margin: 1rem 0.25rem;
 
     @media (min-width: 640px) {
         padding-left: 1.5rem;
@@ -201,6 +199,7 @@ $shadow-md : 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         padding-right: 2rem;
         box-shadow: none;
         border-radius: 0;
+        margin : 0;
     }
 
     @media (min-width: 1440px) {
