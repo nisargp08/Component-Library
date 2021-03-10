@@ -1,6 +1,6 @@
 <template>
   <div class="site-footer">
-      <p>Made with ❤️‍ by <a href="https://www.github.com/nisargp08" target="_blank">Nisarg Patel</a></p>
+      <p>Designed by <a class="tailwind" href="https://github.com/tailwindlabs" target="_blank">Tailwind Labs</a> made with ❤️‍ by <a href="https://www.github.com/nisargp08" target="_blank">Nisarg Patel</a></p>
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$tailwind-color : #21d0ee;
 .site-footer{
     font-size: 0.875rem;
     line-height : 1.25rem;
@@ -23,6 +24,9 @@ export default {
 
     a{
         color: $theme-color;
+    }
+    .tailwind{
+        color : $tailwind-color;
     }
 }
 </style>
