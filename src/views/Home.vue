@@ -161,6 +161,13 @@ export default {
                     description: "3 components",
                     linkedTo: "SignInForms",
                 },
+                {
+                    subtype: "Forms",
+                    title: "Radio Groups",
+                    image: "forms-radio-groups.svg",
+                    description: "3 components",
+                    linkedTo: "RadioGroups",
+                },
             ],
         };
     },

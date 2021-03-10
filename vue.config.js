@@ -40,6 +40,8 @@ module.exports = {
                 '@formLayouts' : path.resolve(__dirname,'src/components/Forms/FormLayouts/'),
                 '@selectMenus' : path.resolve(__dirname,'src/components/Forms/SelectMenus/'),
                 '@signInForms' : path.resolve(__dirname,'src/components/Forms/SignInForms/'),
+                '@radioGroups' : path.resolve(__dirname,'src/components/Forms/RadioGroups/'),
+
             }
         }
     },

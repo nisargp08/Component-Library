@@ -204,6 +204,17 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Sign-in and Registration" }],
     },
   },
+  {
+    path: "/forms/radio-groups",
+    name: "RadioGroups",
+    component: () =>
+      import(
+        /* webpackChunkName : RadioGroups */ "@/views/Forms/RadioGroups.vue"
+      ),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Radio Groups" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",
