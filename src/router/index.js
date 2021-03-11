@@ -215,6 +215,17 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Radio Groups" }],
     },
   },
+  {
+    path: "/forms/toggles",
+    name: "Toggles",
+    component: () =>
+      import(
+        /* webpackChunkName : Toggles */ "@/views/Forms/Toggles.vue"
+      ),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Toggles" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",

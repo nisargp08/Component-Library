@@ -168,6 +168,13 @@ export default {
                     description: "3 components",
                     linkedTo: "RadioGroups",
                 },
+                {
+                    subtype: "Forms",
+                    title: "Toggles",
+                    image: "forms-toggles.svg",
+                    description: "5 components",
+                    linkedTo: "Toggles",
+                },
             ],
         };
     },

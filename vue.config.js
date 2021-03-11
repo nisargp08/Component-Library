@@ -13,6 +13,8 @@ module.exports = {
     configureWebpack : {
         resolve:{
             alias:{
+                // Root
+                '@root' : path.resolve(__dirname,'/'),
                 // Views
                 '@v-includes' : path.resolve(__dirname,'src/views/Includes/'),
                 // Components
@@ -41,7 +43,7 @@ module.exports = {
                 '@selectMenus' : path.resolve(__dirname,'src/components/Forms/SelectMenus/'),
                 '@signInForms' : path.resolve(__dirname,'src/components/Forms/SignInForms/'),
                 '@radioGroups' : path.resolve(__dirname,'src/components/Forms/RadioGroups/'),
-
+                '@toggles' : path.resolve(__dirname,'src/components/Forms/Toggles/'),
             }
         }
     },
