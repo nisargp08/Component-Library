@@ -10,10 +10,12 @@ const componentList = [];
 // Looping through ctx to get name
 IterableCtx.forEach(element => {
     if(element.default){
-        let filePath = element.default.__file.split("/");
-        let fileName = filePath[filePath.length - 1].split(".")[0];
+        // Commenting as '__file' property is not available on production build
+        // let filePath = element.default.__file.split("/");
+        // let fileName = filePath[filePath.length - 1].split(".")[0];
+        let fileScopeId = element.default._scopeId;
         // Push component name in the new array
-        componentList.push({name : fileName});
+        componentList.push({scopeId : fileScopeId});
     }
 });
 // Push source code of all components
@@ -21,15 +23,15 @@ for(let i = 0 ; i < componentList.length ; i++){
     componentList[i].source = components_source[i].default;
 }
 
-// Function returns the component details by name
-function getComponentByName(name){
+// Function returns the component details by scopeId
+function getComponentByScopeId(id){
     for(let component of componentList){
-        if(component.name == name){
+        if(component.scopeId == id){
             return component;
         }
     }
 }
 
 export default {
-    getComponentByName
+    getComponentByScopeId
 }

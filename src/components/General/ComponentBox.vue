@@ -25,7 +25,7 @@
             <slot name="body" v-if="isPreview"></slot>
             <!-- Code body -->
             <div class="code-body" v-else>
-                <codemirror ref="cmEditor" :value="currentComponentDetails.source"  /> 
+                <codemirror ref="cmEditor" :value="currentComponentDetails.source" />
                 <!-- :options="cmOptions" -->
             </div>
         </transition-fade>
@@ -38,10 +38,10 @@ import TransitionFade from "@general/TransitionFade.vue";
 import ComponentRegistry from "/src/component-registry.js";
 
 // Language mode
-import 'codemirror/mode/vue/vue.js'
+import "codemirror/mode/vue/vue.js";
 
 export default {
-    props: ['details'],
+    props: ["details"],
     data() {
         return {
             isPreview: true,
@@ -61,11 +61,13 @@ export default {
         // Function to set currect component details by name
         setComponentDetails() {
             if (this.details) {
-                let filePath = this.details.__file.split("/");
-                let fileName = filePath[filePath.length - 1].split(".")[0];
-                // Get component source code from 'ComponentRegistry' file by passing it the component name
+                // Commenting as '__file' property is not available on production build
+                // let filePath = this.details.__file.split("/");
+                // let fileName = filePath[filePath.length - 1].split(".")[0];
+                let fileScopeId = this.details._scopeId;
+                // Get component source code from 'ComponentRegistry' file by passing it the component scopeId
                 // And then set it to 'currentComponentDetails'
-                this.currentComponentDetails = ComponentRegistry.getComponentByName(fileName);
+                this.currentComponentDetails = ComponentRegistry.getComponentByScopeId(fileScopeId);
             }
         },
     },
@@ -145,9 +147,9 @@ export default {
             max-width: 100%;
         }
 
-        /deep/ .CodeMirror{
-          height: 600px;
-          font-size: 16px;
+        /deep/ .CodeMirror {
+            height: 600px;
+            font-size: 16px;
         }
     }
 }
