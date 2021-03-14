@@ -1,21 +1,28 @@
 <template>
-<component-layout class="sign-in-forms-container">
+  <component-layout class="sign-in-forms-container">
     <template v-slot:page-header>
-        <p>Sign-in and Registration</p>
+      <p>Sign-in and Registration</p>
     </template>
     <template v-slot:page-body>
-        <!-- Component list -->
-        <component-box v-for="(component, index) in componentsList" :key="index" :class="component.class">
-            <template v-slot:header>
-                {{ component.title }}
-                <span v-if="component.needJS" class="badge badge-red ml-1">requires js</span>
-            </template>
-            <template v-slot:body>
-                <component :is="component.componentName"></component>
-            </template>
-        </component-box>
+      <!-- Component list -->
+      <component-box
+        v-for="(component, index) in componentsList"
+        :key="index"
+        :class="component.class"
+        :details="component.componentName"
+      >
+        <template v-slot:header>
+          {{ component.title }}
+          <span v-if="component.needJS" class="badge badge-red ml-1"
+            >requires js</span
+          >
+        </template>
+        <template v-slot:body>
+          <component :is="component.componentName"></component>
+        </template>
+      </component-box>
     </template>
-</component-layout>
+  </component-layout>
 </template>
 
 <script>
@@ -27,44 +34,46 @@ import SimpleCard from "@signInForms/SimpleCard.vue";
 import SplitScreen from "@signInForms/SplitScreen.vue";
 
 export default {
-    data() {
-        return {
-            componentsList: [{
-                title: "Simple form",
-                componentName: "SimpleForm",
-            },
-            {
-                title: "Form in a card",
-                componentName: "SimpleCard",
-            },
-            {
-                title: "Split Screen",
-                componentName: "SplitScreen",
-            }, ],
-        };
-    },
-    components: {
-        ComponentLayout,
-        ComponentBox,
-        SimpleForm,
-        SimpleCard,
-        SplitScreen,
-    },
+  data() {
+    return {
+      componentsList: [
+        {
+          title: "Simple form",
+          componentName: SimpleForm,
+        },
+        {
+          title: "Form in a card",
+          componentName: SimpleCard,
+        },
+        {
+          title: "Split Screen",
+          componentName: SplitScreen,
+        },
+      ],
+    };
+  },
+  components: {
+    ComponentLayout,
+    ComponentBox,
+    SimpleForm,
+    SimpleCard,
+    SplitScreen,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 /deep/ .component-box-body {
-    padding: 0;
+  padding: 0;
 
-    >* {
-        max-width: 100%;
-        width: 100%;
-        align-items: flex-start;
-    }
+  > * {
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
 
-    * {
-        box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+  }
 }
 </style>
