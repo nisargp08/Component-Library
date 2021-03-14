@@ -1,58 +1,22 @@
 <template>
   <div class="grouped-stacked">
     <div class="avatar-group avatar-group-sm">
-      <img
-        src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-        alt=""
-      />
+      <img src="@/assets/images/eren-kruger.png" alt="" />
+      <img src="@/assets/images/zeke-yeager.jpg" alt="" />
+      <img src="@/assets/images/eren-yeager.jpg" alt="" />
+      <img src="@/assets/images/levi-ackerman.png" alt="" />
     </div>
     <div class="avatar-group avatar-group-md">
-      <img
-        src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-        alt=""
-      />
+      <img src="@/assets/images/eren-kruger.png" alt="" />
+      <img src="@/assets/images/zeke-yeager.jpg" alt="" />
+      <img src="@/assets/images/eren-yeager.jpg" alt="" />
+      <img src="@/assets/images/levi-ackerman.png" alt="" />
     </div>
     <div class="avatar-group avatar-group-lg">
-      <img
-        src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGF2YXRhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=60"
-        alt=""
-      />
-      <img
-        src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-        alt=""
-      />
+      <img src="@/assets/images/eren-kruger.png" alt="" />
+      <img src="@/assets/images/zeke-yeager.jpg" alt="" />
+      <img src="@/assets/images/eren-yeager.jpg" alt="" />
+      <img src="@/assets/images/levi-ackerman.png" alt="" />
     </div>
   </div>
 </template>
@@ -75,7 +39,7 @@ export default {};
 $ringColor: #b5b5b5;
 // Default Group
 .avatar-group {
-  display: flex;
+  display: inline-flex;
   overflow: hidden;
   > *:not(:first-child) {
     margin-left: -0.5rem;

@@ -23,6 +23,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+// Variables
 $bg-color: #94a3b8;
 $text-color: white;
 
