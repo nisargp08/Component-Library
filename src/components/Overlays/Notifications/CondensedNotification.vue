@@ -112,4 +112,11 @@ $text-color: #6366f1;
   color: $text-color;
   font-weight: 600;
 }
+.reset-btn{
+ &:focus{
+   svg{
+     color: $theme-color;
+   }
+ }
+}
 </style>

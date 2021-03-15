@@ -21,9 +21,10 @@
     <template v-slot:page-body>
       <!-- Component list -->
       <component-box
-        class="height-sm"
+        :class="component.class"
         v-for="(component, index) in componentsList"
         :key="index"
+        :details="component.componentName"
       >
         <template v-slot:header>
           {{ component.title }}
@@ -56,32 +57,32 @@ export default {
       componentsList: [
         {
           title: "Simple Notification",
-          componentName: "SimpleNotification",
+          componentName: SimpleNotification,
           needJS: true,
         },
         {
           title: "Condensed notification",
-          componentName: "CondensedNotification",
+          componentName: CondensedNotification,
           needJS: true,
         },
         {
           title: "action notification",
-          componentName: "ActionNotification",
+          componentName: ActionNotification,
           needJS: true,
         },
         {
           title: "avatar notification",
-          componentName: "AvatarNotification",
+          componentName: AvatarNotification,
           needJS: true,
         },
         {
           title: "split notification",
-          componentName: "SplitAction",
+          componentName: SplitAction,
           needJS: true,
         },
         {
           title: " button notification",
-          componentName: "OperationNotification",
+          componentName: OperationNotification,
           needJS: true,
         },
       ],
@@ -100,14 +101,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.notification {
-  .component-box-body {
-    background-color: $text-gray-100;
-  }
-
-  .height-sm .component-box-body {
-    min-height: 12rem;
+<style lang="scss" scoped>
+/deep/ .component-box-body {
+  background-color: $text-gray-100;
+  min-height: 18rem;
+  * {
+    box-sizing: border-box;
   }
 }
 </style>

@@ -162,6 +162,7 @@ $bg-tint: rgb(10, 10, 10);
     color: white;
     &:focus {
       outline: none;
+      box-shadow: 0 0 0 0.15rem rgba($color: white, $alpha: 1);
     }
   }
 }

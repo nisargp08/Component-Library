@@ -1,5 +1,5 @@
 <template>
- <component-layout class="modal">
+  <component-layout class="modal">
     <template v-slot:page-header>
       <p>Modals</p>
     </template>
@@ -15,9 +15,10 @@
     <template v-slot:page-body>
       <!-- Component list -->
       <component-box
-        class="height-sm"
+        :class="component.class"
         v-for="(component, index) in componentsList"
         :key="index"
+        :details="component.componentName"
       >
         <template v-slot:header>
           {{ component.title }}
@@ -46,12 +47,12 @@ export default {
       componentsList: [
         {
           title: "Simple Modal",
-          componentName: "SimpleModal",
+          componentName: SimpleModal,
           needJS: true,
         },
         {
           title: "Centered with single action",
-          componentName: "SingleActionModal",
+          componentName: SingleActionModal,
           needJS: true,
         },
       ],
@@ -66,4 +67,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+/deep/ .component-box-body {
+  box-sizing: border-box;
+
+  > * {
+    padding: 3rem 2rem;
+  }
+}
+</style>

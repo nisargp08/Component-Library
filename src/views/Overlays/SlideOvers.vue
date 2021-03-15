@@ -14,7 +14,12 @@
     </template>
     <template v-slot:page-body>
       <!-- Component list -->
-      <component-box v-for="(component, index) in componentsList" :key="index">
+      <component-box
+        :class="component.class"
+        v-for="(component, index) in componentsList"
+        :key="index"
+        :details="component.componentName"
+      >
         <template v-slot:header>
           {{ component.title }}
           <span v-if="component.needJS" class="badge badge-red ml-1"
@@ -48,42 +53,42 @@ export default {
       componentsList: [
         {
           title: "Simple Slide Over",
-          componentName: "SimpleSlideOver",
+          componentName: SimpleSlideOver,
           needJS: true,
         },
         {
           title: "Branded Header Slide over",
-          componentName: "BrandedHeader",
+          componentName: BrandedHeader,
           needJS: true,
         },
         {
           title: "Sticky Footer slide over",
-          componentName: "StickyFooter",
+          componentName: StickyFooter,
           needJS: true,
         },
         {
           title: "Create Project Form Example",
-          componentName: "CreateProjectForm",
+          componentName: CreateProjectForm,
           needJS: true,
         },
         {
           title: "Create Project Form Wide Example",
-          componentName: "CreateProjectFormWide",
+          componentName: CreateProjectFormWide,
           needJS: true,
         },
         {
           title: "User Profile Example",
-          componentName: "UserProfile",
+          componentName: UserProfile,
           needJS: true,
         },
         {
           title: "Wide User Profile Example",
-          componentName: "WideUserProfile",
+          componentName: WideUserProfile,
           needJS: true,
         },
         {
           title: "Contact List Example",
-          componentName: "ContactList",
+          componentName: ContactList,
           needJS: true,
         },
       ],
@@ -104,4 +109,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+/deep/ .component-box-body {
+  > * {
+    padding: 3rem 2rem;
+  }
+}
+</style>

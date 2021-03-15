@@ -149,4 +149,11 @@ $action-color: #6366f1;
     }
   }
 }
+.reset-btn{
+ &:focus{
+   svg{
+     color: $theme-color;
+   }
+ }
+}
 </style>

@@ -451,4 +451,11 @@ h6 {
     }
   }
 }
+.reset-btn{
+ &:focus{
+   svg{
+     color: $theme-color;
+   }
+ }
+}
 </style>

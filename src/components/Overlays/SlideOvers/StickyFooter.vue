@@ -238,4 +238,11 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     color: $text-gray-500;
   }
 }
+.reset-btn{
+ &:focus{
+   svg{
+     color: $theme-color;
+   }
+ }
+}
 </style>
