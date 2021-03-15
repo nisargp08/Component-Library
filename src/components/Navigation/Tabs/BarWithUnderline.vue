@@ -39,6 +39,7 @@ $font-color: $text-gray-500;
 $active-color: $theme-color;
 $tabs-bg: white;
 $border-color: $text-gray-200;
+$box-shadow : $shadow;
 // /deep/ for applying css to child component as it is scoped
 /deep/ .tabs {
   display: flex;
@@ -49,7 +50,7 @@ $border-color: $text-gray-200;
     display: flex;
     flex-wrap: wrap;
     background-color: $tabs-bg;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: $box-shadow;
     border-radius: 0.375rem;
     align-items: center;
     margin: 0 auto;

@@ -172,6 +172,7 @@ $heading-color: $text-gray-800;
 $font-color: $text-gray-500;
 $active-bg-color: lighten($theme-color, 30%);
 $active-font-color: $theme-color;
+$box-shadow : $shadow;
 
 $badge-bg: $text-gray-100;
 $badge-font-color: $text-gray-600;
@@ -215,7 +216,7 @@ $active-badge-font-color: $text-gray-700;
   max-width: $sidebar-width;
   min-width: $sidebar-width;
   width: calc(100vw - 4rem);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: $box-shadow;
 
   .inner-navigation {
     padding: 1rem 0rem;

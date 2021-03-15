@@ -180,7 +180,8 @@ $active-font-color: $theme-color;
     }
 
     // Hover State
-    &:hover {
+    &:hover,&:focus {
+      outline: none;
       color: $active-font-color;
       background-color: $active-bg-color;
     }

@@ -183,6 +183,7 @@ $heading-color: $text-gray-100;
 $font-color: $text-gray-200;
 $active-bg-color: rgba(255, 255, 255, 0.2);
 $active-font-color: $text-gray-100;
+$box-shadow : $shadow;
 
 $badge-bg: rgba(255, 255, 255, 0.2);
 $badge-font-color: $text-gray-300;
@@ -229,7 +230,7 @@ $footer-border: rgba(255, 255, 255, 0.2);
   max-width: $sidebar-width;
   min-width: $sidebar-width;
   width: calc(100vw - 4rem);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: $box-shadow;
 }
 
 .inner-navigation {

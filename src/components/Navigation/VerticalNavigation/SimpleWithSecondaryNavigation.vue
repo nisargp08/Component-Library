@@ -188,7 +188,8 @@ $border-color: $text-gray-200;
     }
 
     // Hover State
-    &:hover {
+    &:hover,&:focus {
+      outline: none;
       color: $active-font-color;
       background-color: $active-bg-color;
     }
@@ -217,7 +218,7 @@ $border-color: $text-gray-200;
       }
 
       // Hover State
-      &:hover {
+      &:hover,&:focus {
         background-color: transparent;
       }
     }

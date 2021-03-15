@@ -46,9 +46,10 @@ $active-font-color: $theme-color;
     }
 
     // Hover State
-    &:hover {
+    &:hover,&:focus {
       color: $active-font-color;
       background-color: $active-bg-color;
+      outline: none;
     }
   }
 }
