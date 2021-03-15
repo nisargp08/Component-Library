@@ -6,9 +6,10 @@
     <template v-slot:page-body>
       <!-- Component list -->
       <component-box
-        class="wrapper"
+        :class="component.class"
         v-for="(component, index) in componentsList"
         :key="index"
+        :details="component.componentName"
       >
         <template v-slot:header>
           {{ component.title }}
@@ -42,31 +43,31 @@ export default {
       componentsList: [
         {
           title: "Basic Badges",
-          componentName: "BasicBadges",
+          componentName: BasicBadges,
         },
         {
           title: "Large Badges",
-          componentName: "LargeBadges",
+          componentName: LargeBadges,
         },
         {
           title: "Dot Badges",
-          componentName: "DotBadges",
+          componentName: DotBadges,
         },
         {
           title: "Rounded Badges",
-          componentName: "RoundedBadges",
+          componentName: RoundedBadges,
         },
         {
           title: "Large Rounded Badges",
-          componentName: "LargeRoundedBadges",
+          componentName: LargeRoundedBadges,
         },
         {
           title: "Rounded Dot Badges",
-          componentName: "RoundedDotBadges",
+          componentName: RoundedDotBadges,
         },
         {
           title: "Badge With Remove",
-          componentName: "BadgeWithRemove",
+          componentName: BadgeWithRemove,
         },
       ],
     };
@@ -85,14 +86,16 @@ export default {
 };
 </script>
 
-<style lang="scss">
-// Container css
-.badges {
-  .wrapper {
-    .component-box-body > * {
-      max-width: 100%;
-      justify-content: center;
-    }
+<style lang="scss" scoped>
+// Css for containers - not required for component function
+/deep/ .component-box-body {
+  * {
+    box-sizing: border-box;
+  }
+
+  > * {
+    padding: 3rem 2rem;
+    justify-content: center;
   }
 }
 </style>

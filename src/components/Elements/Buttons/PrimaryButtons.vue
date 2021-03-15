@@ -28,7 +28,7 @@ $bg-color: #3b82f6;
 $text-color: white;
 $ring-offset-shadow: 0 0 #0000;
 $ring-shadow: 0 0 #0000;
-$shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow: $shadow-sm;
 /* Button */
 .btn {
   display: inline-flex;
@@ -54,7 +54,7 @@ $shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 0.25rem rgba($color: $bg-color, $alpha: 0.5);
+    box-shadow: 0 0 0 0.15rem rgba($color: $bg-color, $alpha: 0.5);
   }
 }
 // Sizes
