@@ -6,10 +6,10 @@
     <template v-slot:page-body>
       <!-- Component list -->
       <component-box
+        :class="component.class"
         v-for="(component, index) in componentsList"
         :key="index"
-        class="wrapper"
-        :class="component.class"
+        :details="component.componentName"
       >
         <template v-slot:header>
           {{ component.title }}
@@ -36,16 +36,16 @@ export default {
       componentsList: [
         {
           title: "Card footer with page footer",
-          componentName: "CardFooter",
+          componentName: CardFooter,
         },
         {
           title: "Centered page numbers",
-          componentName: "CenteredPageNumber",
+          componentName: CenteredPageNumber,
           class: "no_padding",
         },
         {
           title: "Simple Card Footer",
-          componentName: "SimpleCardFooter",
+          componentName: SimpleCardFooter,
         },
       ],
     };
@@ -60,12 +60,18 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.paginations .wrapper .component-box-body {
+<style lang="scss" scoped>
+/deep/ .component-box-body {
   background-color: whitesmoke;
+  * {
+    box-sizing: border-box;
+  }
+  > * {
+    padding: 3rem 2rem;
+  }
 }
 
-.paginations .no_padding .component-box-body {
+/deep/ .no_padding .component-box-body {
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;

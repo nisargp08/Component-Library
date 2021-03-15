@@ -1,12 +1,14 @@
 <template>
   <!-- Pagination as simple card footer -->
-  <div class="pagination">
-    <div class="pagination-stats">
-      <p>Showing <b>1</b> to <b>10</b> of <b>20</b> results</p>
-    </div>
-    <div class="pagination-buttons">
-      <button class="btn">Previous</button>
-      <button class="btn ml-3">Next</button>
+  <div>
+    <div class="pagination">
+      <div class="pagination-stats">
+        <p>Showing <b>1</b> to <b>10</b> of <b>20</b> results</p>
+      </div>
+      <div class="pagination-buttons">
+        <button class="btn">Previous</button>
+        <button class="btn ml-3">Next</button>
+      </div>
     </div>
   </div>
 </template>
@@ -16,6 +18,8 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+$box-shadow: $shadow;
+
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -23,13 +27,14 @@ export default {};
   display: flex;
   align-items: center;
   max-width: 100%;
+  width: 100%;
   align-self: flex-end;
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
   justify-content: space-between;
   border-radius: 0.375rem;
   background-color: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: $box-shadow;
 }
 
 // Component css

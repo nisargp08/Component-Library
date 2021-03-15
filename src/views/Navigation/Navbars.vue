@@ -86,19 +86,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.navbars {
-  .component-box-body {
-    padding: 0;
-    min-height: 16rem;
-    align-items: flex-start;
-    // background: $text-gray-700;
-  }
-}
-</style>
 <style lang="scss" scoped>
 /deep/ .component-box-body {
   min-height: 16rem;
+  align-items: flex-start;
 
   * {
     box-sizing: border-box;

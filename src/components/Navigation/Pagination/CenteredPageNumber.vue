@@ -1,54 +1,56 @@
 <template>
   <!-- Pagination as centered page number -->
-  <div class="pagination">
-    <div class="left">
-      <a href="#">
-        <svg
-          class="w-5 h-5"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M7 16l-4-4m0 0l4-4m-4 4h18"
-          />
-        </svg>
-        <span class="ml-2">Previous</span>
-      </a>
-    </div>
-    <div class="center">
-      <ul class="pagination-buttons">
-        <li><a class="page-link" href="#">1</a></li>
-        <li><a class="page-link" href="#">2</a></li>
-        <li><a class="page-link" href="#">3</a></li>
-        <li class="active"><a class="page-link" href="#">4</a></li>
-        <li><a class="page-link" href="#">5</a></li>
-        <li><a class="page-link" href="#">6</a></li>
-        <li><a class="page-link" href="#">7</a></li>
-      </ul>
-    </div>
-    <div class="right">
-      <a href="#">
-        <span class="mr-2">Next</span>
-        <svg
-          class="w-5 h-5"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"
-          />
-        </svg>
-      </a>
+  <div>
+    <div class="pagination">
+      <div class="left">
+        <a href="#">
+          <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M7 16l-4-4m0 0l4-4m-4 4h18"
+            />
+          </svg>
+          <span class="ml-2">Previous</span>
+        </a>
+      </div>
+      <div class="center">
+        <ul class="pagination-buttons">
+          <li><a class="page-link" href="#">1</a></li>
+          <li><a class="page-link" href="#">2</a></li>
+          <li><a class="page-link" href="#">3</a></li>
+          <li class="active"><a class="page-link" href="#">4</a></li>
+          <li><a class="page-link" href="#">5</a></li>
+          <li><a class="page-link" href="#">6</a></li>
+          <li><a class="page-link" href="#">7</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="#">
+          <span class="mr-2">Next</span>
+          <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -67,6 +69,7 @@ $active-border-color: $theme-color;
   display: flex;
   align-items: center;
   max-width: 100%;
+  width: 100%;
   align-self: flex-end;
   flex-wrap: wrap;
   margin: 1.5rem;
