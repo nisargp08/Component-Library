@@ -1,52 +1,82 @@
 <template>
-  <div class="dropdown">
-    <button @click="isOpen = !isOpen" type="button" class="btn">
-      Options
-      <!-- Heroicon class: chevron-down -->
-      <svg
-        class="-mr-1 ml-2 h-5 w-5"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        aria-hidden="true"
+  <div class="parent">
+    <div class="dropdown" id="divide-dropdown">
+      <button
+        @click="toggleVisibility()"
+        @keydown.shift.tab="hideMenu()"
+        type="button"
+        class="btn"
       >
-        <path
-          fill-rule="evenodd"
-          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </button>
-    <transition-fade>
-      <div class="dropdown-menu dropdown-divide" v-if="isOpen">
-        <div class="py-1">
-          <a class="menu-items" href="#">Edit</a>
-          <a class="menu-items" href="#">Duplicate</a>
+        Options
+        <!-- Heroicon class: chevron-down -->
+        <svg
+          class="-mr-1 ml-2 h-5 w-5"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <transition-fade>
+        <div class="dropdown-menu dropdown-divide" v-if="isOpen">
+          <div class="py-1">
+            <a class="menu-items" href="#">Edit</a>
+            <a class="menu-items" href="#">Duplicate</a>
+          </div>
+          <div class="py-1">
+            <a class="menu-items" href="#">Archive</a>
+            <a class="menu-items" href="#">Move</a>
+          </div>
+          <div class="py-1">
+            <a class="menu-items" href="#">Share</a>
+            <a class="menu-items" href="#">Add to favorites</a>
+          </div>
+          <div class="py-1">
+            <a class="menu-items" href="#">Delete</a>
+          </div>
         </div>
-        <div class="py-1">
-          <a class="menu-items" href="#">Archive</a>
-          <a class="menu-items" href="#">Move</a>
-        </div>
-        <div class="py-1">
-          <a class="menu-items" href="#">Share</a>
-          <a class="menu-items" href="#">Add to favorites</a>
-        </div>
-        <div class="py-1">
-          <a class="menu-items" href="#">Delete</a>
-        </div>
-      </div>
-    </transition-fade>
+      </transition-fade>
+    </div>
   </div>
 </template>
 
 <script>
 import TransitionFade from "@general/TransitionFade.vue";
+import { detectOutside } from "@general/DetectClickOutside.js";
 
 export default {
+  mixins: [detectOutside],
   data() {
     return {
       isOpen: true,
     };
+  },
+  mounted() {
+    // Close on escape key event listener
+    window.addEventListener("keyup", (e) => {
+      if (e.code == "Escape") {
+        this.hideMenu();
+      }
+    });
+    // Clickaway listener - Needs 'id' and action
+    this.detectClickOutside("divide-dropdown", this.hideMenu);
+  },
+  methods: {
+    // Toggle open/close state
+    toggleVisibility() {
+      this.isOpen = !this.isOpen;
+    },
+    // Hide select menu
+    hideMenu() {
+      this.isOpen = false;
+      this.focusedIndex = 0;
+    },
   },
   components: {
     TransitionFade,
@@ -55,6 +85,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div.parent {
+  justify-content: flex-end;
+  @media (min-width: 640px) {
+    justify-content: center;
+  }
+}
 .dropdown {
   --animate-duration: 300ms;
 }
@@ -69,7 +105,7 @@ export default {
   $focus-border-color: rgba($theme-color, 1);
   $ring-offset-shadow: 0 0 #0000;
   $ring-shadow: 0 0 #0000;
-  $shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  $shadow: $shadow-sm;
 
   display: inline-flex;
   justify-content: center;
@@ -90,7 +126,8 @@ export default {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 0.25rem rgba($color: rgba($focus-border-color, 1), $alpha: 0.5);
+    box-shadow: 0 0 0 0.15rem
+      rgba($color: rgba($focus-border-color, 1), $alpha: 0.5);
     border-color: transparent;
   }
 
@@ -102,13 +139,12 @@ export default {
   }
 }
 
-.dropdown {
+div.dropdown {
   $dropdown-bg: white;
   color: $text-gray-700;
   $ring-offset-shadow: 0 0 #0000;
   $ring-shadow: 0 0 #0000;
-  $shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  $shadow: $shadow-lg;
 
   display: inline-block;
   position: relative;
@@ -131,9 +167,15 @@ export default {
       font-size: 0.875rem;
       line-height: 1.25rem;
       font-weight: 500;
+      margin: 0 0.25rem;
+      border-radius: 0.375rem;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $text-gray-100;
+      }
+      &:focus {
+        outline: none;
       }
     }
   }

@@ -11,7 +11,7 @@
                 </svg>
                 <span class="ml-1">Preview</span>
             </button>
-            <button @click="makePreviewActive(false)" class="btn" title="Component code" :class="{ active: !isPreview }">
+            <button @click="makePreviewActive(false)" class="btn ml-2" title="Component code" :class="{ active: !isPreview }">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
@@ -179,6 +179,10 @@ export default {
             background-color: transparent;
             color: $theme-color;
         }
+
+        &:focus{
+            box-shadow: 0 0 0 0.15rem rgba($color: $theme-color, $alpha: 0.5);
+        }
     }
 
     .btn.active {
@@ -187,7 +191,7 @@ export default {
 
         &:focus {
             outline: none;
-            box-shadow: none;
+            box-shadow: 0 0 0 0.15rem rgba($color: $theme-color, $alpha: 0.5);
         }
     }
 }

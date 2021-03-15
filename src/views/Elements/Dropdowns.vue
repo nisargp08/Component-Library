@@ -18,6 +18,7 @@
         :class="component.class"
         v-for="(component, index) in componentsList"
         :key="index"
+        :details="component.componentName"
       >
         <template v-slot:header>
           {{ component.title }}
@@ -49,25 +50,25 @@ export default {
       componentsList: [
         {
           title: "Simple Dropdown",
-          componentName: "SimpleDropdown",
+          componentName: SimpleDropdown,
           needJS: true,
           class: "height-sm",
         },
         {
           title: "Dropdown With Dividers",
-          componentName: "DividerDropdown",
+          componentName: DividerDropdown,
           needJS: true,
           class: "height-lg",
         },
         {
           title: "Dropdown With Icons ",
-          componentName: "IconsDropdown",
+          componentName: IconsDropdown,
           needJS: true,
           class: "height-lg",
         },
         {
           title: "Dropdown With Header",
-          componentName: "HeaderDropdown",
+          componentName: HeaderDropdown,
           needJS: true,
           class: "height-md",
         },
@@ -85,21 +86,28 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 // Css for containers - not required for component function
-.dropdowns {
-  .component-box-body {
-    background-color: $text-gray-100;
-    align-items: flex-start;
+/deep/ .component-box-body {
+  background-color: $text-gray-100;
+  align-items: flex-start;
+
+  * {
+    box-sizing: border-box;
   }
-  .height-sm .component-box-body {
-    min-height: 12rem;
+
+  > * {
+    padding: 3rem 2rem;
   }
-  .height-md .component-box-body {
-    min-height: 16rem;
-  }
-  .height-lg .component-box-body {
-    min-height: 20rem;
-  }
+}
+
+/deep/ .height-sm .component-box-body {
+  min-height: 18rem;
+}
+/deep/ .height-md .component-box-body {
+  min-height: 24rem;
+}
+/deep/ .height-lg .component-box-body {
+  min-height: 26rem;
 }
 </style>
