@@ -149,7 +149,11 @@ export default {
 
         /deep/ .CodeMirror {
             height: 600px;
-            font-size: 16px;
+            font-size: 12px;
+
+            @media(min-width : 1024px){
+                font-size: 16px;
+            }
         }
     }
 }

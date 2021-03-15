@@ -88,8 +88,12 @@ export default {
   }
 
   > * {
-    padding: 3rem 2rem;
+    padding: 1rem;
     justify-content: center;
+
+    @media(min-width : 640px){
+        padding: 3rem 2rem;
+    }
   }
 }
 </style>

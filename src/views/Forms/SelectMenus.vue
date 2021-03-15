@@ -6,9 +6,10 @@
     <template v-slot:page-body>
       <!-- Component list -->
       <component-box
+        :class="component.class"
         v-for="(component, index) in componentsList"
         :key="index"
-        :class="component.class"
+        :details="component.componentName"
       >
         <template v-slot:header>
           {{ component.title }}
@@ -40,27 +41,27 @@ export default {
       componentsList: [
         {
           title: "Simple Native Menu",
-          componentName: "SimpleNative",
+          componentName: SimpleNative,
           needJS: true,
         },
         {
           title: "Custom Menu with Avatar",
-          componentName: "AvatarMenu",
+          componentName: AvatarMenu,
           needJS: true,
         },
         {
           title: "Custom Menu with Status Indicator",
-          componentName: "StatusIndicator",
+          componentName: StatusIndicator,
           needJS: true,
         },
         {
           title: "Custom Menu with Secondary Text",
-          componentName: "WithSecondaryText",
+          componentName: WithSecondaryText,
           needJS: true,
         },
          {
           title: "Custom Menu with Search",
-          componentName: "WithSearch",
+          componentName: WithSearch,
           needJS: true,
         },
       ],
@@ -80,17 +81,17 @@ export default {
 
 <style lang="scss" scoped>
 /deep/ .component-box-body {
-  background: whitesmoke;
-
-  > * {
-    max-width: 20rem;
-    width: 100%;
-    min-height: 20rem;
-    align-items: flex-start;
-  }
-
+    background: whitesmoke;
   * {
     box-sizing: border-box;
+  }
+
+  > * {
+    max-width: 24rem;
+    padding: 3rem 2rem;
+    width: 100%;
+    min-height: 24rem;
+    align-items: flex-start;
   }
 }
 </style>

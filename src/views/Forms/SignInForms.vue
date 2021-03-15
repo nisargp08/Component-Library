@@ -64,14 +64,6 @@ export default {
 
 <style lang="scss" scoped>
 /deep/ .component-box-body {
-  padding: 0;
-
-  > * {
-    max-width: 100%;
-    width: 100%;
-    align-items: flex-start;
-  }
-
   * {
     box-sizing: border-box;
   }
