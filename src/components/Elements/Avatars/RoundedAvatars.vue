@@ -1,4 +1,5 @@
 <template>
+  <!-- Rounded avatars -->
   <div class="rounded-avatars">
     <div class="rounded-avatar rounded-avatar-xs">
       <img src="@/assets/images/eren-kruger.png" alt="" />
@@ -25,7 +26,7 @@ export default {};
 <style lang="scss" scoped>
 .rounded-avatar {
   display: inline-flex;
-  
+
   img {
     width: 3rem;
     height: 3rem;

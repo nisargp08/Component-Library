@@ -1,4 +1,5 @@
 <template>
+  <!-- Dropdown with header -->
   <div class="parent">
     <div class="dropdown" id="header-dropdown">
       <button

@@ -1,4 +1,5 @@
 <template>
+  <!-- Notification with operation action -->
   <div>
     <transition-zoom>
       <div class="notification" v-if="!isClose">
@@ -9,7 +10,9 @@
           <h4 class="text-title">Zeke Yeager</h4>
           <p class="text-data">Sent you an invite to connect.</p>
           <div class="actions">
-            <button class="btn btn-indigo" @click="isClose = true">Accept</button>
+            <button class="btn btn-indigo" @click="isClose = true">
+              Accept
+            </button>
             <button class="btn decline" @click="isClose = true">
               Decline
             </button>
@@ -84,11 +87,11 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   width: calc(100vw - 6rem);
   // Change position to top at 640
   @media (min-width: 640px) {
-     // top: 1.25rem;
+    // top: 1.25rem;
     // right: 1.25rem;
-    top : 0;
-    right : 0;
-    margin-top : 1.25rem;
+    top: 0;
+    right: 0;
+    margin-top: 1.25rem;
     margin-right: 1.25rem;
     bottom: auto;
   }
@@ -144,7 +147,8 @@ $action-color: #6366f1;
       }
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 0.25rem rgba($color: rgba($action-color, 1), $alpha: 0.5);
+        box-shadow: 0 0 0 0.25rem
+          rgba($color: rgba($action-color, 1), $alpha: 0.5);
       }
     }
     .decline {

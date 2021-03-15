@@ -1,4 +1,5 @@
 <template>
+  <!-- Select menu with a seach bar -->
   <div>
     <div class="wrapper">
       <label id="assignedTo">Assigned to</label>

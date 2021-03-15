@@ -1,4 +1,5 @@
 <template>
+  <!-- Slide over with a wide user profile -->
   <div>
     <button class="btn" @click="isOpen = true">Open Wide User Profile</button>
     <div class="slide-over" :class="{ 'is-open': isOpen }">
@@ -443,7 +444,7 @@ h6 {
         @media (min-width: 640px) {
           font-size: 1rem;
           flex: 0 0 auto;
-        padding-top: 0;
+          padding-top: 0;
           width: 75%;
         }
       }

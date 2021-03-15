@@ -1,4 +1,5 @@
 <template>
+  <!-- Circular Avatars -->
   <div class="circular-avatars">
     <div class="circular-avatar circular-avatar-xs">
       <img src="@/assets/images/eren-kruger.png" alt="" />

@@ -1,4 +1,5 @@
 <template>
+  <!-- Simple modal -->
   <div>
     <button class="btn" @click="isOpen = !isOpen">Open Simple Modal</button>
     <div class="modal" :class="{ 'is-open': isOpen }">
@@ -68,7 +69,7 @@
 </template>
 
 <script>
-import TransitionFade from '@general/TransitionFade.vue'
+import TransitionFade from "@general/TransitionFade.vue";
 
 export default {
   mounted() {
@@ -85,9 +86,9 @@ export default {
       isOpen: false,
     };
   },
-  components : {
-    TransitionFade
-  }
+  components: {
+    TransitionFade,
+  },
 };
 </script>
 

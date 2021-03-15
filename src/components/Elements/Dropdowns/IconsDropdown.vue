@@ -1,4 +1,5 @@
 <template>
+  <!-- Dropdown with icons -->
   <div class="parent">
     <div class="dropdown" id="icons-dropdown">
       <button

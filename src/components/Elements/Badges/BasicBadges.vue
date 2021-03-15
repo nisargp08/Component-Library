@@ -1,4 +1,5 @@
 <template>
+  <!-- Basic badge -->
   <div>
     <span class="badge badge-gray">Badge</span>
 

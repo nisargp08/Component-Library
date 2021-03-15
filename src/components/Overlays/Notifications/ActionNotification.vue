@@ -1,4 +1,5 @@
 <template>
+  <!-- Notification with an action -->
   <div>
     <transition-zoom>
       <div class="notification" v-if="!isClose">
@@ -101,9 +102,9 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   @media (min-width: 640px) {
     // top: 1.25rem;
     // right: 1.25rem;
-    top : 0;
-    right : 0;
-    margin-top : 1.25rem;
+    top: 0;
+    right: 0;
+    margin-top: 1.25rem;
     margin-right: 1.25rem;
     bottom: auto;
   }

@@ -1,4 +1,5 @@
 <template>
+  <!-- Circular avatars with initials -->
   <div class="circular-intials">
     <div class="circular-initials circular-initials-xs">
       <p>NP</p>

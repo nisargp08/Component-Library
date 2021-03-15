@@ -1,4 +1,5 @@
 <template>
+  <!-- Rounded badges -->
   <div>
     <span class="rounded-badge badge-gray">Badge</span>
 

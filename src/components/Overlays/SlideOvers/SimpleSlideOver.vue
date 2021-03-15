@@ -1,4 +1,5 @@
 <template>
+  <!-- Simple slide over -->
   <div>
     <button class="btn" @click="isOpen = true">Open Simple Slide Over</button>
     <div class="slide-over" :class="{ 'is-open': isOpen }">

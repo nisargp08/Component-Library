@@ -1,4 +1,5 @@
 <template>
+  <!-- Avatar with text -->
   <div class="avatar-with-text">
     <img src="@/assets/images/eren-kruger.png" alt="" />
     <div>

@@ -1,4 +1,5 @@
 <template>
+  <!-- Rounded avatars with top notifications -->
   <div class="rounded-top-notifications">
     <div class="rounded-top-notification rounded-top-notification-xs">
       <img src="@/assets/images/eren-kruger.png" alt="" />

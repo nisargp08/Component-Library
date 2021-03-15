@@ -1,4 +1,5 @@
 <template>
+  <!-- Secondary buttons -->
   <div>
     <button class="btn btn-secondary btn-xs" role="button">
       Button text

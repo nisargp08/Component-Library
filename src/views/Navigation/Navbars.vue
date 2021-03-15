@@ -5,7 +5,12 @@
     </template>
     <template v-slot:page-body>
       <!-- Component list -->
-      <component-box v-for="(component, index) in componentsList" :key="index">
+      <component-box
+        :class="component.class"
+        v-for="(component, index) in componentsList"
+        :key="index"
+        :details="component.componentName"
+      >
         <template v-slot:header>
           {{ component.title }}
           <span v-if="component.needJS" class="badge badge-red ml-1"
@@ -37,32 +42,32 @@ export default {
       componentsList: [
         {
           title: "Simple Dark",
-          componentName: "SimpleDark",
+          componentName: SimpleDark,
           needJS: true,
         },
         {
           title: "Simple Light",
-          componentName: "SimpleLight",
+          componentName: SimpleLight,
           needJS: true,
         },
         {
           title: "Simple Dark Search",
-          componentName: "SimpleDarkSearch",
+          componentName: SimpleDarkSearch,
           needJS: true,
         },
         {
           title: "Simple Light Search",
-          componentName: "SimpleLightSearch",
+          componentName: SimpleLightSearch,
           needJS: true,
         },
         {
           title: "Simple dark with menu button on left",
-          componentName: "SimpleDarkLeft",
+          componentName: SimpleDarkLeft,
           needJS: true,
         },
         {
           title: "Dark with quick action",
-          componentName: "DarkWithAction",
+          componentName: DarkWithAction,
           needJS: true,
         },
       ],
@@ -88,6 +93,15 @@ export default {
     min-height: 16rem;
     align-items: flex-start;
     // background: $text-gray-700;
+  }
+}
+</style>
+<style lang="scss" scoped>
+/deep/ .component-box-body {
+  min-height: 16rem;
+
+  * {
+    box-sizing: border-box;
   }
 }
 </style>

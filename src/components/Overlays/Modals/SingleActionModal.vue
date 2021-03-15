@@ -1,4 +1,5 @@
 <template>
+  <!-- Modal with single action button -->
   <div>
     <button class="btn" @click="isOpen = !isOpen">
       Open Single Action Modal
@@ -71,7 +72,7 @@
 </template>
 
 <script>
-import TransitionFade from '@general/TransitionFade.vue'
+import TransitionFade from "@general/TransitionFade.vue";
 
 export default {
   mounted() {
@@ -88,9 +89,9 @@ export default {
       isOpen: false,
     };
   },
-  components : {
-    TransitionFade
-  }
+  components: {
+    TransitionFade,
+  },
 };
 </script>
 
@@ -105,7 +106,7 @@ $bg-tint: rgb(10, 10, 10);
   right: 0;
   bottom: 0;
 }
-.modal{
+.modal {
   --animate-duration: 250ms;
 }
 // Component css

@@ -1,4 +1,5 @@
 <template>
+  <!-- Wide create project form in a slide over  -->
   <div>
     <button class="btn" @click="isOpen = true">
       Open Wide Create Project Form Example
@@ -363,7 +364,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     padding: 0.75rem;
     border: 1px solid $text-gray-400;
     border-radius: 9999px;
-    margin-top : 0.25rem;
+    margin-top: 0.25rem;
     margin-right: 0.5rem;
 
     // &:checked {

@@ -1,4 +1,5 @@
 <template>
+  <!-- Large rounded badges -->
   <div>
     <span class="rounded-badge badge-lg badge-gray">Badge</span>
 
@@ -40,9 +41,9 @@ export default {};
   background-color: #f4f4f5;
   color: #71717a;
 }
-.badge-lg{
-    font-size: 1rem;
-    padding: 0.25rem 1rem;
+.badge-lg {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
 }
 // Badge colors
 .badge-gray {

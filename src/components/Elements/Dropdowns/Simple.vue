@@ -1,4 +1,5 @@
 <template>
+  <!-- Simple basic dropdown -->
   <div class="parent">
     <div class="dropdown" id="simple-dropdown">
       <button

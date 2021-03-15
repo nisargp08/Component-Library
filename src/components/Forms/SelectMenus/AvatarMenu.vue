@@ -1,4 +1,5 @@
 <template>
+  <!-- Select menu with avatars -->
   <div>
     <div class="wrapper">
       <label id="assignedTo">Assigned to</label>
@@ -178,7 +179,7 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("select-menu",this.hideMenu);
+    this.detectClickOutside("select-menu", this.hideMenu);
   },
   methods: {
     // Toggle open/close state

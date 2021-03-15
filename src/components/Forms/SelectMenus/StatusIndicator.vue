@@ -1,4 +1,5 @@
 <template>
+  <!-- Select menu with status indicator -->
   <div>
     <div class="wrapper">
       <label id="assignedTo">Assigned to</label>
@@ -71,7 +72,7 @@
                 :class="{ selected: user.id === selectedUser.id }"
               >
                 <div class="flex items-center">
-                 <span class="status" :class="user.status"></span>
+                  <span class="status" :class="user.status"></span>
                   <span>{{ user.name }}</span>
                 </div>
                 <div class="check-icon">
@@ -110,57 +111,57 @@ export default {
         {
           id: 1,
           name: "Erwin Smith",
-          status : "offline",
+          status: "offline",
         },
         {
           id: 2,
           name: "Zeke Yeager",
-          status : "online",
+          status: "online",
         },
         {
           id: 3,
           name: "Eren Yeager",
-          status : "online",
+          status: "online",
         },
         {
           id: 4,
           name: "Eren Kruger",
-          status : "online",
+          status: "online",
         },
         {
           id: 5,
           name: "Levi Ackerman",
-          status : "online",
+          status: "online",
         },
         {
           id: 6,
           name: "Reiner Braun",
-          status : "offline",
+          status: "offline",
         },
         {
           id: 7,
           name: "Mikasa Ackerman",
-          status : "online",
+          status: "online",
         },
         {
           id: 8,
           name: "Jean Kirstein",
-          status : "offline",
+          status: "offline",
         },
         {
           id: 9,
           name: "Armin Arlert",
-          status : "online",
+          status: "online",
         },
         {
           id: 10,
           name: "Sasha Braus",
-          status : "offline",
+          status: "offline",
         },
         {
           id: 11,
           name: "Annie Leonhart",
-          status : "offline",
+          status: "offline",
         },
       ],
     };
@@ -178,7 +179,7 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("select-menu-2",this.hideMenu);
+    this.detectClickOutside("select-menu-2", this.hideMenu);
   },
   methods: {
     // Toggle open/close state
@@ -262,8 +263,8 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
 $select-bg: white;
 $max-height: 14rem;
 $option-color: $text-gray-900;
-$online-color : #32c48d;
-$offline-color : $text-gray-300;
+$online-color: #32c48d;
+$offline-color: $text-gray-300;
 // Components css
 .h-5 {
   height: 1.25rem;
@@ -326,13 +327,13 @@ label {
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 9999px;
-      margin-left: 0; 
-      
-      &.online{
-          background-color : $online-color;
+      margin-left: 0;
+
+      &.online {
+        background-color: $online-color;
       }
-      &.offline{
-          background-color : $offline-color;
+      &.offline {
+        background-color: $offline-color;
       }
     }
 

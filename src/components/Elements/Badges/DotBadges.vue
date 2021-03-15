@@ -1,4 +1,5 @@
 <template>
+  <!-- Dot badge -->
   <div>
     <span class="dot-badge badge-sm">Small</span>
     <span class="dot-badge badge-lg">Large</span>
@@ -27,7 +28,7 @@ export default {};
     height: 0.375rem;
     width: 0.375rem;
     margin-right: 0.5rem;
-    background-color: #60A5FA;
+    background-color: #60a5fa;
     border-radius: 50%;
     display: inline-block;
   }

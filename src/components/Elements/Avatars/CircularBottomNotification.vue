@@ -1,4 +1,5 @@
 <template>
+  <!-- Circular avatars with bottom notifications -->
   <div class="circular-bottom-notifications">
     <div class="circular-bottom-notification circular-bottom-notification-xs">
       <img src="@/assets/images/eren-kruger.png" alt="" />

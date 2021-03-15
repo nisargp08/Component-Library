@@ -1,4 +1,5 @@
 <template>
+  <!-- Circular Avatars with placeholder -->
   <div class="circular-avatars-placeholder">
     <div class="circular-avatar-placeholder circular-avatar-placeholder-xs">
       <img src="../../../assets/images/placeholder-avatar.svg" alt="" />

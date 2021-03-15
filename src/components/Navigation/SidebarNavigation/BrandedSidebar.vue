@@ -1,4 +1,5 @@
 <template>
+  <!-- Branded sidebar navigation -->
   <div class="relative">
     <transition-slide-left>
       <div class="sidebar-navigation" v-if="isSidebarOpen">
@@ -180,16 +181,16 @@ $sidebar-bg: $brand-color;
 $sidebar-width: 20rem;
 $heading-color: $text-gray-100;
 $font-color: $text-gray-200;
-$active-bg-color: rgba(255,255,255,0.2);
+$active-bg-color: rgba(255, 255, 255, 0.2);
 $active-font-color: $text-gray-100;
 
-$badge-bg: rgba(255,255,255,0.2);
+$badge-bg: rgba(255, 255, 255, 0.2);
 $badge-font-color: $text-gray-300;
-$active-badge-bg: rgba(255,255,255,0.2);
+$active-badge-bg: rgba(255, 255, 255, 0.2);
 $active-badge-font-color: $text-gray-100;
 
 $footer-bg: $brand-color;
-$footer-border: rgba(255,255,255,0.2);
+$footer-border: rgba(255, 255, 255, 0.2);
 // Utilities
 .relative {
   position: relative;

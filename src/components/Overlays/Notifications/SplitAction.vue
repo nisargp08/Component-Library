@@ -1,4 +1,5 @@
 <template>
+  <!-- Notification with split action -->
   <div>
     <transition-zoom>
       <div class="notification" v-if="!isClose">

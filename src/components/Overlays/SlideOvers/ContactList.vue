@@ -1,4 +1,5 @@
 <template>
+  <!-- Slide over with contact list -->
   <div>
     <button class="btn" @click="isOpen = true">
       Open Contact List Slide Over
@@ -167,16 +168,16 @@ export default {
     Tabs,
     ContactListItem,
   },
-  computed : {
+  computed: {
     //   Online user lists
-      onlineList(){
-          return this.allList.filter(x => x.status == 'on');
-      },
+    onlineList() {
+      return this.allList.filter((x) => x.status == "on");
+    },
     //   Offline user lists
-      offlineList(){
-          return this.allList.filter(x => x.status == 'off');
-      }
-  }
+    offlineList() {
+      return this.allList.filter((x) => x.status == "off");
+    },
+  },
 };
 </script>
 
@@ -289,7 +290,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
       border-bottom-color: $theme-color;
     }
   }
-  .tab-body{
+  .tab-body {
     overflow-y: auto;
   }
 }

@@ -1,4 +1,5 @@
 <template>
+  <!-- Notification with avatar -->
   <div>
     <transition-zoom>
       <div class="notification" v-if="!isClose">

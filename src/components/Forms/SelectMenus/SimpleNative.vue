@@ -1,4 +1,5 @@
 <template>
+  <!-- Simple native select menu -->
   <div>
     <div class="wrapper">
       <label id="location">Location</label>
@@ -217,7 +218,7 @@ export default {
       }
     });
     // Clickaway listener - Needs 'id' and action
-    this.detectClickOutside("native-menu",this.hideMenu);
+    this.detectClickOutside("native-menu", this.hideMenu);
   },
   methods: {
     // Toggle open/close state

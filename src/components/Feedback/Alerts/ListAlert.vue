@@ -1,4 +1,5 @@
 <template>
+<!-- Alert in a list format -->
 <div>
     <div class="alert">
         <div class="alert-icon">

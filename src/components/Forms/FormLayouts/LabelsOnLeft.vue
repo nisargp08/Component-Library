@@ -1,4 +1,5 @@
 <template>
+<!-- Form with labels on left -->
 <div>
     <div class="form-layout">
         <form action="#" class="child-border-t">

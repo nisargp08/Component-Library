@@ -1,16 +1,15 @@
 <template>
+  <!-- Simple toggle -->
   <div>
     <div class="toggle">
-      <input type="checkbox" id="switch" checked>
+      <input type="checkbox" id="switch" checked />
       <label class="switch" for="switch"></label>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -21,7 +20,7 @@ $toggle-width: 50px;
 $toggle-height: 25px;
 $toggle-gutter: 4px;
 $toggle-radius: 50%;
-$toggle-control-speed: .15s;
+$toggle-control-speed: 0.15s;
 $toggle-control-ease: ease-in;
 
 // These are our computed variables
@@ -48,7 +47,7 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
   input:checked ~ .switch {
     background-color: $toggle-background-color-on;
-    
+
     &:after {
       left: $toggle-width - $toggle-control-size - $toggle-gutter;
     }

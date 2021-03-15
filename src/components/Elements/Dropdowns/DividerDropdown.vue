@@ -1,4 +1,5 @@
 <template>
+  <!-- Dropdown with divider -->
   <div class="parent">
     <div class="dropdown" id="divide-dropdown">
       <button

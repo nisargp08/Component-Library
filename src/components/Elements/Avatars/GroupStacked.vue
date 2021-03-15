@@ -1,4 +1,5 @@
 <template>
+  <!-- Group stacked avatars -->
   <div class="grouped-stacked">
     <div class="avatar-group avatar-group-sm">
       <img src="@/assets/images/eren-kruger.png" alt="" />

@@ -1,88 +1,98 @@
 <template>
-<div>
+  <!-- Full width breadcrumbs -->
+  <div>
     <div class="breadcrumbs">
-        <a href="#">
-            <svg class="w-6 h-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-        </a>
-        <a href="#">Projects</a>
-        <a href="#">The Rumbling</a>
-        <a href="#">At Paradis</a>
-        <a href="#" class="active">To Marley</a>
+      <a href="#">
+        <svg
+          class="w-6 h-6 flex-shrink-0"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+          />
+        </svg>
+      </a>
+      <a href="#">Projects</a>
+      <a href="#">The Rumbling</a>
+      <a href="#">At Paradis</a>
+      <a href="#" class="active">To Marley</a>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
 // Variables
-$font-color : $text-gray-500;
-$breadcrumb-bg : white;
-$active-color : $theme-color;
+$font-color: $text-gray-500;
+$breadcrumb-bg: white;
+$active-color: $theme-color;
 
 // Component css
 .w-6 {
-    width: 1.5rem;
+  width: 1.5rem;
 }
 
 .h-6 {
-    height: 1.5rem;
+  height: 1.5rem;
 }
 
 .flex-shrink-0 {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .breadcrumbs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  color: $font-color;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background: $breadcrumb-bg;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  row-gap: 0.75rem;
+
+  > :not(:first-child) {
     position: relative;
+
+    &::before {
+      content: url("../../../assets/images/chevron-right.svg");
+      display: inline-block;
+      opacity: 0.5;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 1rem;
+      height: 1rem;
+      color: $font-color;
+    }
+  }
+
+  > * {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     align-items: center;
-    color: $font-color;
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    background: $breadcrumb-bg;
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    row-gap: 0.75rem;
+    transition: all 0.15s ease-in-out;
 
-    > :not(:first-child) {
-        position: relative;
-
-        &::before {
-            content: url('../../../assets/images/chevron-right.svg');
-            display: inline-block;
-            opacity: 0.5;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            width: 1rem;
-            height: 1rem;
-            color: $font-color;
-        }
+    &:hover {
+      color: $active-color;
     }
 
-    >* {
-        display: flex;
-        align-items: center;
-        transition: all .15s ease-in-out;
-
-        &:hover {
-            color: $active-color;
-        }
-
-        &.active {
-            color: $active-color;
-            font-weight: 700;
-        }
+    &.active {
+      color: $active-color;
+      font-weight: 700;
     }
+  }
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <!-- Rounded buttons -->
   <div>
     <button class="btn-rounded btn-primary btn-xs" role="button">
       Button text
@@ -62,7 +63,7 @@ $shadow: $shadow-sm;
   font-size: 0.65rem;
 }
 .btn-sm {
-  padding: 0.40rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   font-size: 0.75rem;
 }
 .btn-md {
@@ -70,7 +71,7 @@ $shadow: $shadow-sm;
   font-size: 0.85rem;
 }
 .btn-lg {
-  padding: 0.70rem 1.25rem;
+  padding: 0.7rem 1.25rem;
   font-size: 0.95rem;
 }
 .btn-xl {

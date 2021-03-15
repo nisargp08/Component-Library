@@ -1,4 +1,5 @@
 <template>
+  <!-- Slide over with a sticky footer -->
   <div>
     <button class="btn" @click="isOpen = true">
       Open Sticky Footer Slide Over

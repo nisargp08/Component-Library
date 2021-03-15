@@ -1,4 +1,5 @@
 <template>
+  <!-- Slide over with a user profile -->
   <div>
     <button class="btn" @click="isOpen = true">Open User Profile</button>
     <div class="slide-over" :class="{ 'is-open': isOpen }">

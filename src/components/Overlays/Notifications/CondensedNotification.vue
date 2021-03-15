@@ -1,4 +1,5 @@
 <template>
+  <!-- Condensed notification -->
   <div>
     <transition-zoom>
       <div class="notification" v-if="!isClose">
@@ -6,7 +7,9 @@
           <h4 class="text-title">Discussion archived</h4>
         </div>
         <div class="action">
-          <button @click="isClose = true" class="reset-btn action-btn">Undo</button>
+          <button @click="isClose = true" class="reset-btn action-btn">
+            Undo
+          </button>
         </div>
         <div class="dismiss">
           <button class="reset-btn" @click="isClose = true">

@@ -1,4 +1,5 @@
 <template>
+  <!-- White buttons -->
   <div>
     <button class="btn btn-white btn-xs" role="button">
       Button text
