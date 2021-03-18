@@ -3,7 +3,6 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import VueCodemirror from "vue-codemirror";
-import VueGtag from "vue-gtag";
 
 Vue.config.productionTip = false;
 
@@ -25,11 +24,6 @@ Vue.use(VueCodemirror, {
     line: true,
   },
 });
-
-// Google analytics
-Vue.use(VueGtag, {
-  config: { id: "G-3PVBT6QW2V" }
-}, router);
 
 new Vue({
   router,
