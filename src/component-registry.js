@@ -10,7 +10,6 @@ const ctxraw = require.context(
 const components_source = ctxraw.keys().map(ctxraw);
 // Object array to store only name and source code
 const componentList = [];
-console.log("FIle called");
 // Looping through ctx to get name
 IterableCtx.forEach((element, index) => {
   if (element.default) {
