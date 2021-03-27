@@ -5,17 +5,25 @@
             <slot name="header"></slot>
         </div>
         <div class="action-tabs">
-            <button @click="makePreviewActive(true)" class="btn" title="View component" :class="{ active: isPreview }">
-                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-                <span class="ml-1">Preview</span>
-            </button>
-            <button @click="makePreviewActive(false)" class="btn ml-2" title="Component code" :class="{ active: !isPreview }">
+            <div class="hidden md:inline-flex">
+                <button @click="makePreviewActive(true)" class="btn" title="View component" :class="{ active: isPreview }">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                    <span class="ml-1">Preview</span>
+                </button>
+                <button @click="makePreviewActive(false)" class="btn ml-2" title="Component code" :class="{ active: !isPreview }">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    <span class="ml-1">Code</span>
+                </button>
+            </div>
+            <!-- Mobile view code button -->
+            <button @click="togglePreview()" class="btn active md:hidden" title="Component code">
                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
-                <span class="ml-1">Code</span>
             </button>
         </div>
     </div>
@@ -58,6 +66,13 @@ export default {
                 this.isPreview = false;
             }
         },
+        togglePreview(){
+            this.isPreview = !this.isPreview;
+            if(!this.isPreview){
+                // Set component details of the current active component(name and source code)
+                this.setComponentDetails();
+            }
+        },
         // Function to set currect component details by name
         setComponentDetails() {
             if (this.details) {
@@ -78,6 +93,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hidden{
+    display : none;
+}
+
+.md\:inline-flex{
+    @media(min-width : 768px){
+        display: inline-flex;
+    }
+}
+
+.md\:hidden{
+    @media(min-width : 768px){
+        display: none;
+    }
+}
 .component-box {
     border: 1px solid $text-gray-200;
     border-radius: 0.375rem;
@@ -100,9 +130,9 @@ export default {
     background-color: white;
     text-transform: capitalize;
     // letter-spacing: -0.025rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
 
     @media (min-width: 768px) {
         font-size: 1.125rem;
@@ -175,6 +205,11 @@ export default {
 }
 
 .action-tabs {
+    .mobile-only{
+        @media(min-width : 640px){
+            display: none;
+        }
+    }
     .btn {
         border: none;
         box-shadow: none;

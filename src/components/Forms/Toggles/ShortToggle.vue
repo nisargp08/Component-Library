@@ -15,18 +15,16 @@ export default {};
 <style lang="scss" scoped>
 $toggle-background-color-on: $theme-color;
 $toggle-background-color-off: $text-gray-300;
+$toggle-width: 2.5rem;
+$toggle-height: 1rem;
+$toggle-radius: 9999px;
+
 $toggle-control-color: white;
-$toggle-width: 40px;
-$toggle-height: 18px;
-$toggle-gutter: -1px;
-$toggle-radius: 50%;
+$toggle-control-size : $toggle-height + 0.25rem;
+$toggle-control-top : -3px;
+$toggle-control-shadow : $shadow-md;
 $toggle-control-speed: 0.15s;
 $toggle-control-ease: ease-in;
-$shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-// These are our computed variables
-// change at your own risk.
-$toggle-radius: $toggle-height / 2;
-$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
 .toggle {
   display: block;
@@ -45,11 +43,11 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
     width: 0;
   }
 
-  input:checked ~ .switch {
+  input:checked ~ .switch{
     background-color: $toggle-background-color-on;
 
-    &:after {
-      left: $toggle-width - $toggle-control-size - $toggle-gutter;
+    &::after{
+      left: $toggle-width - $toggle-control-size;
     }
   }
   .switch {
@@ -57,22 +55,23 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
     top: 0;
     left: 0;
     cursor: pointer;
-    height: $toggle-height;
     width: $toggle-width;
+    height: $toggle-height;
     border-radius: $toggle-radius;
     background-color: $toggle-background-color-off;
     transition: background-color $toggle-control-speed $toggle-control-ease;
 
-    &:after {
+    &::after {
       content: "";
+      top: $toggle-control-top;
+      left: 0;
       position: absolute;
-      left: $toggle-gutter;
-      top: -2px;
-      border: 2px solid $toggle-background-color-off;
       width: $toggle-control-size;
       height: $toggle-control-size;
-      border-radius: 50%;
-      background: $toggle-control-color;
+      border-radius: $toggle-radius;
+      background-color: $toggle-control-color;
+      border: 1px solid $toggle-background-color-off;
+      box-shadow: $toggle-control-shadow;
       transition: left $toggle-control-speed $toggle-control-ease;
     }
   }

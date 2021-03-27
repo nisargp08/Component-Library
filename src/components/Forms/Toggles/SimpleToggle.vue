@@ -19,12 +19,9 @@ $toggle-control-color: white;
 $toggle-width: 50px;
 $toggle-height: 25px;
 $toggle-gutter: 4px;
-$toggle-radius: 50%;
 $toggle-control-speed: 0.15s;
 $toggle-control-ease: ease-in;
 
-// These are our computed variables
-// change at your own risk.
 $toggle-radius: $toggle-height / 2;
 $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
