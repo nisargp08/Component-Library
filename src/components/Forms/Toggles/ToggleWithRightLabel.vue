@@ -1,10 +1,15 @@
 <template>
-  <!-- Simple toggle -->
+  <!-- Toggle with right label -->
   <div>
-    <div class="toggle">
-      <input type="checkbox" id="switch" checked />
-      <label class="switch" for="switch"></label>
-    </div>
+      <div class="toggle-wrapper">
+        <div class="toggle">
+          <input type="checkbox" id="r-switch" />
+          <label class="switch" for="r-switch"></label>
+        </div>
+        <label for="r-switch" class="text">
+          <p class="title">Annual Billing <span class="description">(Save 10%)</span></p>
+        </label>
+      </div>
   </div>
 </template>
 
@@ -25,6 +30,25 @@ $toggle-control-ease: ease-in;
 $toggle-radius: $toggle-height / 2;
 $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
+div.toggle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 20rem;
+}
+.text {
+  .title {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .description {
+    font-weight: 500;
+    color: $text-gray-400;
+  }
+}
 .toggle {
   display: block;
   position: relative;

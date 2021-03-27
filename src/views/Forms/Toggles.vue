@@ -32,6 +32,8 @@ import ComponentBox from "@general/ComponentBox.vue";
 import SimpleToggle from "@toggles/SimpleToggle.vue";
 import ShortToggle from "@toggles/ShortToggle.vue";
 import ToggleWithIcon from '@toggles/ToggleWithIcon.vue';
+import ToggleWithDescription from '@toggles/ToggleWithDescription.vue';
+import ToggleWithRightLabel from '@toggles/ToggleWithRightLabel.vue';
 
 export default {
   data() {
@@ -49,6 +51,14 @@ export default {
           title: "Toggle with icon",
           componentName: ToggleWithIcon,
         },
+        {
+          title: "Toggle with left label and description",
+          componentName: ToggleWithDescription,
+        },
+        {
+          title: "Toggle with right label",
+          componentName: ToggleWithRightLabel,
+        },
       ],
     };
   },
@@ -58,6 +68,7 @@ export default {
     SimpleToggle,
     ShortToggle,
     ToggleWithIcon,
+    ToggleWithDescription
   },
 };
 </script>

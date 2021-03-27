@@ -1,10 +1,19 @@
 <template>
-  <!-- Simple toggle -->
+  <!-- Toggle with left label and description -->
   <div>
-    <div class="toggle">
-      <input type="checkbox" id="switch" checked />
-      <label class="switch" for="switch"></label>
-    </div>
+      <div class="toggle-wrapper">
+        <label for="l-switch" class="text">
+          <p class="title">Available to hire</p>
+          <p class="description">
+            Turn this option on to let the recruiters know that you are available to
+            hire
+          </p>
+        </label>
+        <div class="toggle">
+          <input type="checkbox" id="l-switch" checked />
+          <label class="switch" for="l-switch"></label>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -25,6 +34,27 @@ $toggle-control-ease: ease-in;
 $toggle-radius: $toggle-height / 2;
 $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 
+div.toggle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 42rem;
+}
+.text {
+  .title {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .description {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: $text-gray-400;
+  }
+}
 .toggle {
   display: block;
   position: relative;
