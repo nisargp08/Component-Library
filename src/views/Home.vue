@@ -175,6 +175,13 @@ export default {
                     description: "5 components",
                     linkedTo: "Toggles",
                 },
+                {
+                    subtype: "Forms",
+                    title: "Action Panels",
+                    image: "forms-action-panels.svg",
+                    description: "6 components",
+                    linkedTo: "ActionPanels",
+                },
             ],
         };
     },

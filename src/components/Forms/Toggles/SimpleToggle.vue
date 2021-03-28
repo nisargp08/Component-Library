@@ -28,7 +28,6 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 .toggle {
   display: block;
   position: relative;
-  padding-left: $toggle-width;
   height: $toggle-height;
   width: $toggle-width;
   cursor: pointer;

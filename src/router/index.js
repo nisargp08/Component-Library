@@ -226,6 +226,17 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Toggles" }],
     },
   },
+  {
+    path: "/forms/action-panels",
+    name: "ActionPanels",
+    component: () =>
+      import(
+        /* webpackChunkName : ActionPanels */ "@/views/Forms/ActionPanels.vue"
+      ),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "ActionPanels" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",

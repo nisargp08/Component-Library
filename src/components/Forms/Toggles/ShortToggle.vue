@@ -29,7 +29,6 @@ $toggle-control-ease: ease-in;
 .toggle {
   display: block;
   position: relative;
-  padding-left: $toggle-width;
   height: $toggle-height;
   width: $toggle-width;
   cursor: pointer;

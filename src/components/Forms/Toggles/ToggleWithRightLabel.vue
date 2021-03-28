@@ -52,7 +52,6 @@ div.toggle-wrapper {
 .toggle {
   display: block;
   position: relative;
-  padding-left: $toggle-width;
   height: $toggle-height;
   width: $toggle-width;
   cursor: pointer;

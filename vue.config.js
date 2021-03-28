@@ -44,6 +44,7 @@ module.exports = {
                 '@signInForms' : path.resolve(__dirname,'src/components/Forms/SignInForms/'),
                 '@radioGroups' : path.resolve(__dirname,'src/components/Forms/RadioGroups/'),
                 '@toggles' : path.resolve(__dirname,'src/components/Forms/Toggles/'),
+                '@actionPanels' : path.resolve(__dirname,'src/components/Forms/ActionPanels/'),
             }
         }
     },
