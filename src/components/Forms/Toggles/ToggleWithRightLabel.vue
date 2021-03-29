@@ -1,15 +1,17 @@
 <template>
   <!-- Toggle with right label -->
   <div>
-      <div class="toggle-wrapper">
-        <div class="toggle">
-          <input type="checkbox" id="r-switch" />
-          <label class="switch" for="r-switch"></label>
-        </div>
-        <label for="r-switch" class="text">
-          <p class="title">Annual Billing <span class="description">(Save 10%)</span></p>
-        </label>
+    <div class="toggle-wrapper">
+      <div class="toggle">
+        <input type="checkbox" id="r-switch" />
+        <label class="switch" for="r-switch"></label>
       </div>
+      <label for="r-switch" class="text">
+        <p class="title">
+          Annual Billing <span class="description">(Save 10%)</span>
+        </p>
+      </label>
+    </div>
   </div>
 </template>
 
@@ -40,12 +42,14 @@ div.toggle-wrapper {
 }
 .text {
   .title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
   }
   .description {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     color: $text-gray-400;
   }
 }

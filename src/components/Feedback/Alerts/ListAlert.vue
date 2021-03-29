@@ -67,12 +67,12 @@ $font-description-color : #DC2626;
     }
 
     .title {
-        font-weight: 600;
+        font-weight: 500;
         color: $font-title-color;
     }
 
     .description {
-        font-weight: 500;
+        font-weight: 400;
         color: $font-description-color;
         padding-top: 0.25rem;
     }

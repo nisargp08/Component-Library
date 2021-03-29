@@ -44,15 +44,15 @@ div.toggle-wrapper {
 }
 .text {
   .title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
   }
   .description {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 500;
-    color: $text-gray-400;
+    font-weight: 400;
+    color: $text-gray-500;
   }
 }
 .toggle {

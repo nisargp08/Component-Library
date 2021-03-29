@@ -330,7 +330,7 @@ label {
   display: block;
   font-size: 0.875rem;
   color: $text-gray-700;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25rem;
 }
 
@@ -413,7 +413,7 @@ label {
     padding: 0.5rem 2.5rem 0.5rem 0.75rem;
     margin: 0.25rem 0.25rem 0 0.25rem;
     border-radius: 0.375rem;
-    font-weight: 500;
+    font-weight: 400;
 
     // Check icon
     .check-icon {
@@ -436,7 +436,7 @@ label {
 
     // Selected state
     &.selected {
-      font-weight: 600;
+      font-weight: 500;
       background: $action-color;
       color: $action-hover-color;
 

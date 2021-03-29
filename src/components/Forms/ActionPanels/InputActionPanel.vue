@@ -31,7 +31,6 @@ $action-color: $theme-color;
   padding: 1rem;
   max-width: $card-max-width;
   width: 100%;
-  font-family: $ternaryFont;
 
   @media (min-width: 640px) {
     padding: 1.75rem;
@@ -60,7 +59,7 @@ $action-color: $theme-color;
       width: 100%;
       flex: 1 1 0%;
       padding: 0.5rem 0.75rem;
-      font-weight: 500;
+      font-weight: 400;
       border-radius: 0.375rem;
       border: 1px solid $text-gray-300;
       background-clip: padding-box;

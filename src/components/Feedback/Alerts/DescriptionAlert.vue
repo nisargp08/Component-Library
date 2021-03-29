@@ -71,11 +71,11 @@ $font-description-color: #ca8a04;
     }
   }
   .title {
-    font-weight: 600;
+    font-weight: 500;
     color: $font-title-color;
   }
   .description {
-    font-weight: 500;
+    font-weight: 400;
     padding-top: 0.25rem;
     color: $font-description-color;
   }

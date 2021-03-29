@@ -85,12 +85,12 @@ $font-title-color: #a16207;
   }
 
   .title {
-    font-weight: 500;
+    font-weight: 400;
     color: $font-title-color;
   }
 
   .link {
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: underline;
     color: $font-title-color;
     transition: color 0.15s ease-in-out;

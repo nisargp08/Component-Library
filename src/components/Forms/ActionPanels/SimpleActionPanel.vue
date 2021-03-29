@@ -32,7 +32,6 @@ $btn-text-color: #dc2626;
   padding: 1rem;
   max-width: $card-max-width;
   width: 100%;
-  font-family: $ternaryFont;
 
   @media (min-width: 640px) {
     padding: 1.75rem;

@@ -126,7 +126,6 @@ export default {};
 
 <style lang="scss" scoped>
 // Variables
-$font-type: $ternaryFont;
 $primary-color: #f59e0b;
 $form-bg: white;
 $lg-form-max-width: 28rem;
@@ -191,7 +190,6 @@ $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
 .split-wrapper {
   display: flex;
   min-height: $form-min-height;
-  font-family: $font-type;
 }
 
 .left-content {
@@ -301,7 +299,7 @@ $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     flex: 1 1 0%;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
-    font-weight: 500;
+    font-weight: 400;
     border: 1px solid $text-gray-300;
     background-clip: padding-box;
     transition: box-shadow 0.15s ease-in-out;

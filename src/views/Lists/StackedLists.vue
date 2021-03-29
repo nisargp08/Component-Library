@@ -58,7 +58,6 @@ export default {
 
   > * {
     padding: 1rem;
-    font-family: $ternaryFont;
     max-width: 32rem;
     @media (min-width: 640px) {
       padding: 3rem 1rem;

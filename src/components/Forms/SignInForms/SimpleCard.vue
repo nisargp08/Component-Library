@@ -112,7 +112,6 @@ export default {};
 
 <style lang="scss" scoped>
 // Variables
-$font-type: $ternaryFont;
 $primary-color: #f59e0b;
 $form-bg: $text-gray-100;
 $card-bg: white;
@@ -175,7 +174,6 @@ $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   min-height: $form-min-height;
   background-color: $form-bg;
   padding: 3rem 1rem;
-  font-family: $font-type;
   width: 100%;
 
   @media (min-width: 640px) {
@@ -255,7 +253,7 @@ $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     flex: 1 1 0%;
     padding: 0.5rem 0.75rem;
     border-radius: 0.375rem;
-    font-weight: 500;
+    font-weight: 400;
     border: 1px solid $text-gray-300;
     background-clip: padding-box;
     transition: box-shadow 0.15s ease-in-out;

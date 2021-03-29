@@ -235,7 +235,7 @@
                                     <fieldset class="grid-col-6">
                                         <div class="text-sm col-span-2">
                                             <legend>Push Notifications</legend>
-                                            <p class="text-gray-500 text-weight-500">These are delivered via SMS to your mobile phone.</p>
+                                            <p class="text-gray-500">These are delivered via SMS to your mobile phone.</p>
                                         </div>
                                         <div class="col-span-3">
                                             <div class="mt-6 md:mt-0 space-y-4">
@@ -373,10 +373,6 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     line-height: 1.25rem;
 }
 
-.text-weight-500 {
-    font-weight: 500;
-}
-
 // Flex
 .flex {
     display: flex;
@@ -462,7 +458,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         margin: 0;
         font-size: 1.125rem;
         line-height: 1.5rem;
-        font-weight: 600;
+        font-weight: 500;
         color: $section-title-color;
 
         @media(min-width : 640px) {
@@ -474,7 +470,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     .section-description {
         color: $text-gray-600;
         font-size: 0.875rem;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.25rem;
         margin-top: 0.25rem;
     }
@@ -553,7 +549,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         color: $text-gray-700;
         font-size: 0.875rem;
         line-height: 1.25rem;
-        font-weight: 600;
+        font-weight: 500;
         display: block;
     }
 
@@ -562,7 +558,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: $text-gray-500;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .prefix {
@@ -573,7 +569,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         padding-right: 0.75rem;
         font-size: 0.875rem;
         line-height: 1.25rem;
-        font-weight: 500;
+        font-weight: 400;
         border: 1px solid $text-gray-300;
         border-right-width: 0;
         border-top-left-radius: 0.375rem;
@@ -596,7 +592,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         width: 100%;
         flex: 1 1 0%;
         padding: 0.5rem 0.75rem;
-        font-weight: 500;
+        font-weight: 400;
         border-radius: 0.375rem;
         border: 1px solid $text-gray-300;
         background-clip: padding-box;
@@ -722,7 +718,7 @@ $shadow-sm : 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         font-size: 1rem;
         line-height: 1.5rem;
         padding: 0;
-        font-weight: 600;
+        font-weight: 500;
         color: $text-gray-900;
         padding-right: 1rem;
     }

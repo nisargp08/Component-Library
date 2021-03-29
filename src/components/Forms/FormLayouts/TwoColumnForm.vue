@@ -265,7 +265,7 @@
                   <fieldset>
                     <div class="text-sm">
                       <legend>Push Notifications</legend>
-                      <p class="text-gray-500 text-weight-500">
+                      <p class="text-gray-500">
                         These are delivered via SMS to your mobile phone.
                       </p>
                     </div>
@@ -406,11 +406,6 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-
-.text-weight-500 {
-  font-weight: 500;
-}
-
 // Flex
 .flex {
   display: flex;
@@ -518,7 +513,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     margin: 0;
     font-size: 1.125rem;
     line-height: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $text-gray-900;
 
     @media (min-width: 640px) {
@@ -530,7 +525,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   .section-description {
     color: $text-gray-600;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.25rem;
     margin-top: 0.25rem;
   }
@@ -604,7 +599,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     color: $text-gray-700;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     display: block;
   }
 
@@ -613,7 +608,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: $text-gray-500;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .prefix {
@@ -624,7 +619,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     padding-right: 0.75rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
     border: 1px solid $text-gray-300;
     border-right-width: 0;
     border-top-left-radius: 0.375rem;
@@ -647,7 +642,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     width: 100%;
     flex: 1 1 0%;
     padding: 0.5rem 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 0.375rem;
     border: 1px solid $text-gray-300;
     background-clip: padding-box;
@@ -774,7 +769,7 @@ $shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 0;
-    font-weight: 600;
+    font-weight: 500;
     color: $text-gray-900;
   }
 

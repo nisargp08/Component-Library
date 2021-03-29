@@ -81,12 +81,12 @@ $font-description-color: #16a34a;
   }
 
   .title {
-    font-weight: 600;
+    font-weight: 500;
     color: $font-title-color;
   }
 
   .description {
-    font-weight: 500;
+    font-weight: 400;
     padding-top: 0.25rem;
     color: $font-description-color;
   }
@@ -95,7 +95,7 @@ $font-description-color: #16a34a;
     margin-top: 1rem;
   }
   .action-links {
-    font-weight: 600;
+    font-weight: 500;
     color: $font-title-color;
     transition: color 0.15s ease-in-out;
 

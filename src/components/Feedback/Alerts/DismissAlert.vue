@@ -92,12 +92,11 @@ $font-description-color: #16a34a;
   }
 
   .title {
-    font-weight: 600;
+    font-weight: 500;
     color: $font-title-color;
   }
 
   .dismiss-link {
-    font-weight: 600;
     display: flex;
     align-items: center;
     color: $font-description-color;

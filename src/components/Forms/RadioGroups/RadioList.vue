@@ -69,7 +69,6 @@ export default {
 <style lang="scss" scoped>
 // Variables
 $action-color: $theme-color;
-$font-type: $ternaryFont;
 $card-bg: white;
 $card-border-color: $text-gray-200;
 $description-color: $text-gray-500;
@@ -91,7 +90,6 @@ $max-width: 48rem;
 }
 
 .radio-group {
-  font-family: $font-type;
   background: $card-bg;
   border-radius: 0.375rem;
   border: 1px solid $card-border-color;

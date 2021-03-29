@@ -30,7 +30,6 @@ $action-color : $theme-color;
   padding: 1rem;
   max-width: $card-max-width;
   width: 100%;
-  font-family: $ternaryFont;
 
   @media (min-width: 640px) {
     padding: 1.75rem;
@@ -55,8 +54,8 @@ $action-color : $theme-color;
   }
 
   .link{
-      font-size: 1rem;
-      line-height: 1.5rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
       color : $action-color;
       font-weight: 500;
   }
