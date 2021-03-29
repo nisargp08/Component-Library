@@ -40,14 +40,17 @@ export default {
         {
           title: "Table with avatars and multi-line content",
           componentName: TableWithAvatars,
+          needJS : true,
         },
         {
           title: "Simple Table",
           componentName: SimpleTable,
+          needJS : true,
         },
         {
           title: "Simple Striped Table",
           componentName: SimpleStriped,
+          needJS : true,
         },
       ],
     };

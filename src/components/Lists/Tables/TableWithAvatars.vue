@@ -24,6 +24,7 @@
             type="search"
             placeholder="Search"
             name="search"
+            v-model="searchQuery"
             id="search"
           />
         </div>
@@ -41,7 +42,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(record, index) in tableData" :key="index">
+          <tr v-for="(record, index) in filteredData()" :key="index">
             <td>
               <div class="flex items-center">
                 <div class="avatar">
@@ -68,6 +69,9 @@
             <td>
               <a href="#" class="link">Edit</a>
             </td>
+          </tr>
+          <tr v-if="searchQuery && filteredLength <= 0">
+            <td class="text-center description" colspan="5">🤯 No Results Found !</td>
           </tr>
         </tbody>
         <tfoot>
@@ -135,6 +139,8 @@
 export default {
   data() {
     return {
+      searchQuery: "",
+      filteredLength : "",
       tableData: [
         {
           name: "Erwin Smith",
@@ -206,6 +212,37 @@ export default {
     resolveImagePath(url) {
       return require(`@/assets/images/${url}`);
     },
+    // To filter through object data based on search string
+    filteredData() {
+      if (this.searchQuery) {
+        let result = [];
+        // Iterate through object
+        this.tableData.forEach((record) => {
+          // Iterate through keys to find the search string
+          Object.keys(record).forEach((item) => {
+            // Lowercase,trim and compare
+            if (
+              record[item]
+                .toLowerCase()
+                .trim()
+                .includes(this.searchQuery.toLowerCase().trim())
+            ) {
+              // Return if includes
+              result.push(record);
+            }
+          });
+        });
+        // Remove duplicates
+        let uniqueResult = [...new Set(result)];
+        // Update length
+        this.filteredLength = uniqueResult.length;
+        // Return unique result
+        return uniqueResult;
+      } else { 
+        // Return the object as it is when search string is empty
+        return this.tableData;
+      }
+    },
   },
 };
 </script>
@@ -228,6 +265,9 @@ $table-shadow: $shadow;
 .items-center {
   align-items: center;
 }
+.text-center{
+  text-align : center;
+}
 .ml-4 {
   margin-left: 1rem;
 }
@@ -241,7 +281,6 @@ $table-shadow: $shadow;
 // Component css
 .search-group {
   position: relative;
-  font-family: $ternaryFont;
   //Search icon
   .search-icon {
     position: absolute;
@@ -298,7 +337,6 @@ $table-shadow: $shadow;
 .table {
   width: 100%;
   max-width: 100%;
-  font-family: $ternaryFont;
   border-collapse: collapse;
   > * + * {
     border-top: 1px solid $text-gray-200;
