@@ -114,7 +114,7 @@ div.parent {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   border: 1px solid $border-color;
   background-color: $bg-color;
   border-radius: 0.375rem;
@@ -167,7 +167,7 @@ div.dropdown {
       padding: 0.5rem 1rem;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      font-weight: 500;
+      font-weight: 400;
       margin: 0 0.25rem;
       border-radius: 0.375rem;
 

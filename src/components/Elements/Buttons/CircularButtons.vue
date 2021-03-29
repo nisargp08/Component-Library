@@ -105,7 +105,7 @@ $shadow: $shadow-sm;
   padding: 0.65rem;
   font-size: 0.85rem;
   line-height: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
 
   border-radius: 50%;
   transition: background-color 0.15s ease-in-out;

@@ -1,6 +1,6 @@
 <template>
 <div class="site-footer">
-    <p>Designed by <a class="tailwind" href="https://github.com/tailwindlabs" target="_blank">Tailwind Labs</a> made with ❤️‍ by <a href="https://www.github.com/nisargp08" target="_blank">Nisarg Patel</a></p>
+    <p>Designed by <a class="tailwind" href="https://github.com/tailwindlabs" target="_blank">Tailwind Labs</a> made with 💖‍ by <a href="https://www.github.com/nisargp08" target="_blank">Nisarg Patel</a></p>
 </div>
 </template>
 
@@ -16,7 +16,7 @@ $tailwind-color : #21d0ee;
 .site-footer {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     margin-top: 4rem;
     padding: 1rem;

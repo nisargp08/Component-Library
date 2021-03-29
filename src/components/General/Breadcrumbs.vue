@@ -74,7 +74,7 @@ $active-color : $theme-color;
     flex-wrap: wrap;
     align-items: center;
     color: $font-color;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.25rem;
     padding: 0.5rem 0;
@@ -105,7 +105,6 @@ $active-color : $theme-color;
 
         &.active {
             color: $active-color;
-            font-weight: 700;
             cursor: pointer;
         }
     }

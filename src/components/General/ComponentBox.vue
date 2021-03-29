@@ -125,7 +125,6 @@ export default {
     border-top-left-radius: 0.375rem;
     border-top-right-radius: 0.375rem;
     line-height: 1.75rem;
-    font-weight: 600;
     color: $text-gray-900;
     background-color: white;
     text-transform: capitalize;
@@ -193,7 +192,7 @@ export default {
     padding: 0 0.75rem;
     border-radius: 9999px;
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 600;
     background-color: #f4f4f5;
     color: #71717a;
     text-transform: uppercase;

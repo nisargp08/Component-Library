@@ -68,7 +68,7 @@ export default {};
   border-radius: 9999px;
   font-size: 0.875rem;
   padding: 0.25rem 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #dbeafe;
   color: #3b82f6;
 }

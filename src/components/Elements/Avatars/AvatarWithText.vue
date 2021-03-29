@@ -32,12 +32,14 @@ div.avatar-with-text {
   }
   .text-title {
     color: $primary-text-color;
-    font-weight: 600;
-    font-size: 1.125rem;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .text-description {
     color: $secondary-text-color;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 </style>

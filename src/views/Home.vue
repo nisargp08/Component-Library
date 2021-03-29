@@ -302,14 +302,13 @@ export default {
 
 // Figures text
 .figcaption {
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .figcaption-description {
     font-size: 0.875rem;
-    font-weight: 500;
     line-height: 1.25rem;
     color: $text-gray-500;
 }

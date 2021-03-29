@@ -37,7 +37,7 @@ export default {};
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #f4f4f5;
   color: #71717a;
 }
