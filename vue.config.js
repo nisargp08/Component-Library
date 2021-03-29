@@ -47,6 +47,7 @@ module.exports = {
                 '@actionPanels' : path.resolve(__dirname,'src/components/Forms/ActionPanels/'),
                 // Lists
                 '@tables' : path.resolve(__dirname,'src/components/Lists/Tables/'),
+                '@stackedLists' : path.resolve(__dirname,'src/components/Lists/StackedLists/'),
             }
         }
     },

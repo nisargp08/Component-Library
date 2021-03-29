@@ -24,7 +24,6 @@
             type="search"
             placeholder="Search"
             name="search"
-            v-model="searchQuery"
             id="search"
           />
         </div>

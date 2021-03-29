@@ -190,6 +190,13 @@ export default {
                     description: "3 components",
                     linkedTo: "Tables",
                 },
+                {
+                    subtype: "Lists",
+                    title: "Stacked Lists",
+                    image: "lists-stacked-lists.svg",
+                    description: "8 components",
+                    linkedTo: "StackedLists",
+                },
             ],
         };
     },
