@@ -1,6 +1,35 @@
 <template>
   <!-- Table with avatars and multi-line content -->
   <div>
+    <div class="w-100 flex justify-end">
+      <div>
+        <div class="search-group">
+          <div class="search-icon">
+            <svg
+              class="w-4 h-4 text-gray-700"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            placeholder="Search"
+            name="search"
+            v-model="searchQuery"
+            id="search"
+          />
+        </div>
+      </div>
+    </div>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -188,8 +217,14 @@ $active-action-color: white;
 $table-shadow: $shadow;
 
 // Utilities
+.w-100 {
+  width: 100%;
+}
 .flex {
   display: flex;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .items-center {
   align-items: center;
@@ -204,7 +239,53 @@ $table-shadow: $shadow;
 .h-3 {
   height: 0.75rem;
 }
-// Table
+// Component css
+.search-group {
+  position: relative;
+  font-family: $ternaryFont;
+  //Search icon
+  .search-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+  }
+
+  //   Search bar
+  input[type="search"] {
+    display: block;
+    width: 100%;
+    padding: 0.375rem;
+    padding-left: 2.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid $text-gray-300;
+    background-clip: padding-box;
+    transition: box-shadow 0.15s ease-in-out;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.15rem
+        rgba($color: rgba($action-color, 1), $alpha: 0.3);
+      border: 1px solid $action-color;
+    }
+  }
+}
 .table-responsive {
   overflow-x: auto;
   width: 100%;
@@ -232,7 +313,7 @@ $table-shadow: $shadow;
     > * + * {
       border-top: 1px solid $text-gray-200;
     }
-    tr:hover{
+    tr:hover {
       background-color: $text-gray-50;
     }
   }
@@ -313,7 +394,6 @@ $table-shadow: $shadow;
     }
   }
 }
-// Pagination
 .pagination {
   display: flex;
   align-items: center;
@@ -324,10 +404,10 @@ $table-shadow: $shadow;
   padding: 0.5rem 1rem;
   justify-content: space-between;
   border-radius: 0 0 0.375rem 0.375rem;
-  font-size : 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.25;
   background-color: white;
-  color : $text-gray-900;
+  color: $text-gray-900;
 
   .pagination-buttons {
     display: flex;
