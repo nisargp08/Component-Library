@@ -45,6 +45,8 @@ module.exports = {
                 '@radioGroups' : path.resolve(__dirname,'src/components/Forms/RadioGroups/'),
                 '@toggles' : path.resolve(__dirname,'src/components/Forms/Toggles/'),
                 '@actionPanels' : path.resolve(__dirname,'src/components/Forms/ActionPanels/'),
+                // Lists
+                '@tables' : path.resolve(__dirname,'src/components/Lists/Tables/'),
             }
         }
     },

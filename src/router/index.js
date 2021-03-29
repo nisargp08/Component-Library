@@ -201,7 +201,10 @@ const routes = [
         /* webpackChunkName : SignInForms */ "@/views/Forms/SignInForms.vue"
       ),
     meta: {
-      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Sign-in and Registration" }],
+      breadcrumb: [
+        { name: "Home", link: "Home" },
+        { name: "Sign-in and Registration" },
+      ],
     },
   },
   {
@@ -219,9 +222,7 @@ const routes = [
     path: "/forms/toggles",
     name: "Toggles",
     component: () =>
-      import(
-        /* webpackChunkName : Toggles */ "@/views/Forms/Toggles.vue"
-      ),
+      import(/* webpackChunkName : Toggles */ "@/views/Forms/Toggles.vue"),
     meta: {
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Toggles" }],
     },
@@ -234,7 +235,16 @@ const routes = [
         /* webpackChunkName : ActionPanels */ "@/views/Forms/ActionPanels.vue"
       ),
     meta: {
-      breadcrumb: [{ name: "Home", link: "Home" }, { name: "ActionPanels" }],
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Action Panels" }],
+    },
+  },
+  {
+    path: "/lists/tables",
+    name: "Tables",
+    component: () =>
+      import(/* webpackChunkName : Tables */ "@/views/Lists/Tables.vue"),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Tables" }],
     },
   },
   // Wildcard for any other path

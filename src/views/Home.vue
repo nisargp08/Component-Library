@@ -182,6 +182,14 @@ export default {
                     description: "6 components",
                     linkedTo: "ActionPanels",
                 },
+                // Lists
+                {
+                    subtype: "Lists",
+                    title: "Tables",
+                    image: "lists-tables.svg",
+                    description: "3 components",
+                    linkedTo: "Tables",
+                },
             ],
         };
     },
