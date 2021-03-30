@@ -30,6 +30,10 @@ import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
 // Toggles
 import NarrowWithAvatarGroup from "@stackedLists/NarrowWithAvatarGroup.vue";
+import AvatarGroupWithActions from "@stackedLists/AvatarGroupWithActions.vue";
+import ContentLinksWithAction from '@stackedLists/ContentLinksWithAction';
+import WithHeadings from '@stackedLists/WithHeadings';
+import TwoColumnsWithAvatar from '@stackedLists/TwoColumnsWithAvatar';
 
 export default {
   data() {
@@ -39,6 +43,23 @@ export default {
           title: "Narrow Stacked list with avatar group",
           componentName: NarrowWithAvatarGroup,
         },
+        {
+          title: "Avatar Groups with Actions",
+          componentName: AvatarGroupWithActions,
+        },
+        {
+          title: "Content links with action",
+          componentName: ContentLinksWithAction,
+        },
+        {
+          title: "Avatar Groups with headings",
+          componentName: WithHeadings,
+        },
+        {
+          title: "Two-column with avatar",
+          componentName: TwoColumnsWithAvatar,
+          class : "bg-whitesmoke w-100"
+        },
       ],
     };
   },
@@ -46,6 +67,10 @@ export default {
     ComponentLayout,
     ComponentBox,
     NarrowWithAvatarGroup,
+    AvatarGroupWithActions,
+    ContentLinksWithAction,
+    WithHeadings,
+    TwoColumnsWithAvatar
   },
 };
 </script>
@@ -63,5 +88,11 @@ export default {
       padding: 3rem 1rem;
     }
   }
+}
+/deep/ .bg-whitesmoke .component-box-body{
+  background-color: whitesmoke;
+}
+/deep/ .w-100 .component-box-body > *{
+  max-width: 100%;
 }
 </style>

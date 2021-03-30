@@ -194,7 +194,7 @@ export default {
                     subtype: "Lists",
                     title: "Stacked Lists",
                     image: "lists-stacked-lists.svg",
-                    description: "8 components",
+                    description: "7 components",
                     linkedTo: "StackedLists",
                 },
             ],
@@ -233,9 +233,9 @@ export default {
 .primary-header {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
-    font-family: $primaryFont;
-    letter-spacing: -0.015em;
+    font-weight: 500;
+    font-family: $secondaryFont;
+    letter-spacing: -0.05em;
 }
 
 .section {
@@ -255,11 +255,11 @@ export default {
 
 .component-section-header {
     letter-spacing: -0.025em;
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 500;
+    font-size: 1.125rem;
     line-height: 1.75rem;
     margin: 0;
-    font-family: $secondaryFont;
+    // font-family: $primaryFont;
 }
 
 /* Component Group */

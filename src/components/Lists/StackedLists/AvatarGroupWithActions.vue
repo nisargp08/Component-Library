@@ -1,19 +1,27 @@
 <template>
-  <!-- Narrow stacked list with avatar group -->
+  <!-- Avatar groups with actions -->
   <div>
     <div class="stacked-list">
       <div
         v-for="(record, index) in userList"
         :key="index"
-        class="flex items-center py-4"
+        class="flex flex-wrap justify-between items-center"
       >
-        <div class="avatar">
-          <img :src="resolveImagePath(record.photoUrl)" alt="" />
+        <div class="flex items-center py-4">
+          <div class="avatar">
+            <img :src="resolveImagePath(record.photoUrl)" alt="" />
+          </div>
+          <div class="ml-4">
+            <p class="text">{{ record.name }}</p>
+            <p class="description">@{{ record.handle }}</p>
+          </div>
         </div>
-        <div class="ml-4">
-          <p class="text">{{ record.name }}</p>
-          <p class="description">{{ record.email }}</p>
+        <div>
+          <div><button class="btn action-btn">View</button></div>
         </div>
+      </div>
+      <div class="border-none">
+        <button class="btn all-btn">View All</button>
       </div>
     </div>
   </div>
@@ -26,22 +34,22 @@ export default {
       userList: [
         {
           name: "Erwin Smith",
-          email: "OG_gambler@surveycorps.com",
+          handle: "OG_gambler",
           photoUrl: "erwin-smith.png",
         },
         {
           name: "Zeke Yeager",
-          email: "wonderkid@eldia.com",
+          handle: "wonderkid",
           photoUrl: "zeke-yeager.jpg",
         },
         {
           name: "Reiner Braun",
-          email: "letmedieinpiece@eldia.com",
+          handle: "letmedieinpiece",
           photoUrl: "reiner-braun.jpg",
         },
         {
           name: "Eren Yeager",
-          email: "freedomsupplier@eren.com",
+          handle: "freedomsupplier",
           photoUrl: "eren-yeager.jpg",
         },
       ],
@@ -59,6 +67,12 @@ export default {
 .flex {
   display: flex;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-between {
+  justify-content: space-between;
+}
 .items-center {
   align-items: center;
 }
@@ -74,6 +88,17 @@ export default {
   width: 100%;
   > * + * {
     border-top: 1px solid $text-gray-200;
+    margin-top: 0.25rem;
+    @media (min-width: 640px) {
+      margin-top: 0;
+    }
+  }
+  .border-none {
+    border-top: none;
+  }
+  .all-btn {
+    width: 100%;
+    margin-top: 0.5rem;
   }
   .avatar {
     height: 2.5rem;
@@ -97,6 +122,13 @@ export default {
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: $text-gray-500;
+  }
+  .action-btn {
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 }
 </style>
