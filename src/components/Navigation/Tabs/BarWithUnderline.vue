@@ -83,7 +83,7 @@ $box-shadow : $shadow;
     .tab-head {
       font-size: 0.875rem;
       line-height: 1.25rem;
-      font-weight: 600;
+      font-weight: 500;
       color: $font-color;
       margin-bottom: -1px;
       border-bottom: 2px solid transparent;

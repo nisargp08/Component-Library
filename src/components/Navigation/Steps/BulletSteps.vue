@@ -34,7 +34,7 @@ $steps-unfinished: $text-gray-200;
   align-items: center;
 
   .step-counter {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .step-marker {

@@ -206,7 +206,7 @@ $bg-tint: rgb(10, 10, 10);
       font-size: 1.125rem;
       //   letter-spacing: -0.025rem;
       line-height: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 0;
       @media (min-width: 768px) {
         margin-top: 0;
@@ -239,7 +239,7 @@ $bg-tint: rgb(10, 10, 10);
     .btn {
       width: 100%;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 500;
       @media (min-width: 768px) {
         width: auto;
         font-size: 0.875rem;

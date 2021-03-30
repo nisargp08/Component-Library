@@ -73,6 +73,8 @@ $box-shadow: $shadow;
   width: 100%;
   align-self: flex-end;
   flex-wrap: wrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   padding: 0.5rem 1rem;
   justify-content: space-between;
   border-radius: 0.375rem;
@@ -136,7 +138,6 @@ $box-shadow: $shadow;
   }
 
   .page-link {
-    font-size: 1rem;
     display: block;
     padding: 0.5rem 1rem;
     text-align: center;

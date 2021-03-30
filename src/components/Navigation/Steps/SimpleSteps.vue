@@ -90,7 +90,7 @@ $font-color: $text-gray-900;
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: $steps-finished;
   }
 
@@ -98,7 +98,7 @@ $font-color: $text-gray-900;
     text-transform: capitalize;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 

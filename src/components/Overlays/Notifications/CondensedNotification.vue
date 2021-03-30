@@ -106,11 +106,12 @@ $text-color: #6366f1;
   .text-title {
     margin: 0;
     font-size: 1rem;
+    font-weight: 500;
   }
 }
 .action-btn {
   color: $text-color;
-  font-weight: 600;
+  font-weight: 500;
 }
 .reset-btn{
  &:focus{

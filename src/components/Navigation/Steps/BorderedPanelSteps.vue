@@ -208,7 +208,7 @@ $border-color: $text-gray-200;
     text-transform: uppercase;
     font-size: 0.875rem;
     line-height: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $steps-unfinished;
     border-radius: 9999px;
     border: 3px solid $border-color;
@@ -234,12 +234,12 @@ $border-color: $text-gray-200;
     font-size: 0.75rem;
     letter-spacing: 0.025rem;
     line-height: 1rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .step-description {
     text-transform: none;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -278,7 +278,7 @@ $border-color: $text-gray-200;
 
   .step-title {
     color: $font-color;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 </style>

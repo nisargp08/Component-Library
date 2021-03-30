@@ -240,7 +240,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     margin: 0;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $text-gray-900;
   }
 }
@@ -277,9 +277,9 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     }
 
     .tab-head {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.25rem;
-      font-weight: 600;
+      font-weight: 500;
       padding-bottom: 1rem;
       color: $text-gray-500;
       border-bottom: 2px solid transparent;

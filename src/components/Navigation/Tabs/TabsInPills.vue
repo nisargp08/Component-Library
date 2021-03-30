@@ -59,9 +59,9 @@ $border-color: $text-gray-200;
     }
 
     .tab-head {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.25rem;
-      font-weight: 600;
+      font-weight: 500;
       color: $font-color;
       border-radius: 0.375rem;
       transition: all 0.15s ease-in-out;

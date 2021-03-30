@@ -292,8 +292,8 @@ $active-badge-font-color: $text-gray-700;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.875rem;
-    line-height: 1.5rem;
-    font-weight: 600;
+    line-height: 1.25rem;
+    font-weight: 500;
     color: $font-color;
     padding: 0.5rem 1rem;
     margin-top: 0.25rem;
@@ -308,7 +308,7 @@ $active-badge-font-color: $text-gray-700;
     &.active {
       background-color: $active-bg-color;
       color: $active-font-color;
-      font-weight: 700;
+      font-weight: 600;
 
       .badge {
         background-color: $active-badge-bg;
@@ -333,7 +333,7 @@ $active-badge-font-color: $text-gray-700;
     padding: 0 0.75rem;
     border-radius: 9999px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 500;
     background-color: $badge-bg;
     color: $badge-font-color;
   }

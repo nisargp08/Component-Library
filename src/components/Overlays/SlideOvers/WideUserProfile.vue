@@ -243,7 +243,7 @@ h6 {
     margin: 0;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $text-gray-900;
   }
 }
@@ -319,7 +319,7 @@ h6 {
         font-size: 1.75rem;
         letter-spacing: -0.025rem;
         line-height: 2.5rem;
-        font-weight: 700;
+        font-weight: 600;
         display: inline-block;
       }
 
@@ -338,7 +338,7 @@ h6 {
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: $text-gray-500;
-        font-weight: 600;
+        font-weight: 500;
       }
     }
 
@@ -402,7 +402,7 @@ h6 {
             padding: 0.5rem 1rem;
             font-size: 0.875rem;
             line-height: 1.25rem;
-            font-weight: 500;
+            font-weight: 400;
 
             &:hover {
               background-color: $text-gray-100;
@@ -428,10 +428,10 @@ h6 {
           width: 25%;
         }
         > * {
-          font-size: 1rem;
+          font-size: 0.875rem;
           line-height: 1.25rem;
           color: $text-gray-500;
-          font-weight: 600;
+          font-weight: 500;
           text-transform: capitalize;
         }
       }
@@ -442,7 +442,6 @@ h6 {
         line-height: 1.25rem;
 
         @media (min-width: 640px) {
-          font-size: 1rem;
           flex: 0 0 auto;
           padding-top: 0;
           width: 75%;

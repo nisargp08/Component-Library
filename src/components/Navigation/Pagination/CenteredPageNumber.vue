@@ -72,6 +72,8 @@ $active-border-color: $theme-color;
   width: 100%;
   align-self: flex-end;
   flex-wrap: wrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   margin: 1.5rem;
   justify-content: space-between;
   background-color: white;
@@ -99,7 +101,7 @@ $active-border-color: $theme-color;
 .left,
 .right {
   color: $font-color;
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.15s ease-in-out;
   a,
   button {
@@ -146,7 +148,6 @@ $active-border-color: $theme-color;
   }
 
   .page-link {
-    font-size: 1rem;
     display: block;
     padding: 1.25rem 1rem;
     text-align: center;

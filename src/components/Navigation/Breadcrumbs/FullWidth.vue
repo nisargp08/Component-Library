@@ -56,7 +56,7 @@ $active-color: $theme-color;
   width: 100%;
   align-items: center;
   color: $font-color;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
   background: $breadcrumb-bg;
@@ -91,7 +91,7 @@ $active-color: $theme-color;
 
     &.active {
       color: $active-color;
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 }

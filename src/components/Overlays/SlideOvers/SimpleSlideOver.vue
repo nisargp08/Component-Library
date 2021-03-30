@@ -122,7 +122,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     margin: 0;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $text-gray-900;
   }
 }
@@ -151,7 +151,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 .reset-btn{

@@ -52,7 +52,7 @@ $active-color: $theme-color;
   flex-wrap: wrap;
   align-items: center;
   color: $font-color;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
   border-radius: 8px;
@@ -85,7 +85,7 @@ $active-color: $theme-color;
 
     &.active {
       color: $active-color;
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 }

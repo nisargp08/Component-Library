@@ -313,7 +313,7 @@ $shadow: $shadow-lg;
         padding-bottom: 0.5rem;
         font-size: 0.875rem;
         cursor: pointer;
-        font-weight: 500;
+        font-weight: 400;
       }
 
       @media (min-width: 640px) {
@@ -372,8 +372,9 @@ $shadow: $shadow-lg;
 
       .text-title {
         color: $font-color;
-        font-weight: 600;
-        font-size: 1rem;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height : 1.25rem;
       }
 
       .text-description {
@@ -407,7 +408,7 @@ $shadow: $shadow-lg;
       font-size: 0.875rem;
       border-radius: 0.375rem;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 500;
       color: $font-color;
       transition: all 0.15s ease-in-out;
 

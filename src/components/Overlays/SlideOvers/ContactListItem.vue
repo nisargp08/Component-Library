@@ -171,14 +171,15 @@ $ringColor: white;
     padding-right: 1rem;
 
     .details-title {
-      font-weight: 700;
-      font-size: 1rem;
-      line-height: 1.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
     }
 
     .details-description {
       font-size: 0.875rem;
-      font-weight: 500;
+      line-height: 1.25rem;
+      font-weight: 400;
       color: $text-gray-500;
     }
   }
@@ -227,7 +228,7 @@ $ringColor: white;
           padding: 0.5rem 1rem;
           font-size: 0.875rem;
           line-height: 1.25rem;
-          font-weight: 500;
+          font-weight: 400;
 
           &:hover {
             background-color: $text-gray-100;

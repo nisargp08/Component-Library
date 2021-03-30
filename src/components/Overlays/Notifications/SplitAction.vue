@@ -127,12 +127,13 @@ $text-color: #6366f1;
   .text-title {
     margin: 0;
     font-size: 1rem;
+    font-weight: 500;
   }
 
   .text-data {
     font-size: 0.875rem;
-    color: $text-gray-400;
-    font-weight: 500;
+    color: $text-gray-500;
+    font-weight: 400;
     line-height: 1.25rem;
     padding-top: 0.25rem;
   }
@@ -152,7 +153,7 @@ $text-color: #6366f1;
     border-top: 1px solid $text-gray-200;
   }
   button {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.875rem;
     padding: 0 1rem;
     width: 100%;

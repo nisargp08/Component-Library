@@ -172,8 +172,8 @@ $border-color: $text-gray-200;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.875rem;
-    line-height: 1.5rem;
-    font-weight: 600;
+    line-height: 1.25rem;
+    font-weight: 500;
     color: $font-color;
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -184,7 +184,7 @@ $border-color: $text-gray-200;
     &.active {
       background-color: $active-bg-color;
       color: $active-font-color;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     // Hover State
@@ -201,9 +201,10 @@ $border-color: $text-gray-200;
 
     .heading {
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: 0.875rem;
-      letter-spacing: -0.025rem;
+      font-weight: 600;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      letter-spacing: 0.05em;
       padding: 1rem;
       padding-bottom: 0.5rem;
     }

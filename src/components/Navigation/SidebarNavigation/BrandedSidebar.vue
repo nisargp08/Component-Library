@@ -287,8 +287,8 @@ $footer-border: rgba(255, 255, 255, 0.2);
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.875rem;
-    line-height: 1.5rem;
-    font-weight: 600;
+    line-height: 1.25rem;
+    font-weight: 500;
     color: $font-color;
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -299,7 +299,7 @@ $footer-border: rgba(255, 255, 255, 0.2);
     &.active {
       background-color: $active-bg-color;
       color: $active-font-color;
-      font-weight: 700;
+      font-weight: 600;
 
       .badge {
         background-color: $active-badge-bg;
@@ -324,7 +324,7 @@ $footer-border: rgba(255, 255, 255, 0.2);
     padding: 0 0.75rem;
     border-radius: 9999px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 500;
     background-color: $badge-bg;
     color: $badge-font-color;
   }
@@ -347,15 +347,16 @@ $footer-border: rgba(255, 255, 255, 0.2);
 
   .text-title {
     color: $font-color;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5rem;
     font-size: 1rem;
   }
 
   .text-description {
     color: $text-gray-300;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 </style>

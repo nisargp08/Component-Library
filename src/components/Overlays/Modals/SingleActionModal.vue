@@ -199,7 +199,7 @@ $bg-tint: rgb(10, 10, 10);
     .text-title {
       font-size: 1.125rem;
       line-height: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 0;
     }
     .text-data {

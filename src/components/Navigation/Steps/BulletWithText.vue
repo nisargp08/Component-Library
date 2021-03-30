@@ -142,8 +142,9 @@ $font-color-secondary: $text-gray-500;
     .step-text {
       margin-left: 0.75rem;
       font-size: 0.875rem;
+      line-height: 1.25rem;
       color: $font-color-secondary;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 

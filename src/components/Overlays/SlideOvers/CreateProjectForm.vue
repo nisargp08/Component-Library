@@ -261,7 +261,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     margin: 0;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
   }
 
@@ -307,7 +307,7 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
   display: inline-block;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -329,9 +329,9 @@ $shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
 
 .form-description {
   display: block;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.875rem;
-  color: $text-gray-400;
+  color: $text-gray-500;
 }
 
 .form-input,
@@ -414,17 +414,19 @@ textarea {
     align-items: center;
     flex-wrap: wrap;
     color: $theme-color;
-    line-height: 1.5rem;
-    font-weight: 600;
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
   }
 
   .learn-more {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    font-weight: 600;
-    line-height: 1.5rem;
-    color: $text-gray-400;
+    font-weight: 500;
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    color: $text-gray-500;
   }
 }
 </style>

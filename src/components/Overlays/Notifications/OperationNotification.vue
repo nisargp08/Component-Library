@@ -120,11 +120,12 @@ $action-color: #6366f1;
   .text-title {
     margin: 0;
     font-size: 1rem;
+    font-weight: 500;
   }
   .text-data {
     font-size: 0.875rem;
-    font-weight: 500;
-    color: $text-gray-400;
+    font-weight: 400;
+    color: $text-gray-500;
     line-height: 1.25rem;
     padding-top: 0.25rem;
   }
@@ -134,7 +135,7 @@ $action-color: #6366f1;
     button {
       margin: 0;
       padding: 0;
-      font-weight: 600;
+      font-weight: 500;
       padding: 0.4rem 0.75rem;
       font-size: 0.875rem;
     }

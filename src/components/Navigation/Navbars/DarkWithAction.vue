@@ -384,8 +384,9 @@ $dropdown-shadow: $shadow-lg;
 
       .text-title {
         color: $font-color;
-        font-weight: 600;
-        font-size: 1rem;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height : 1.25rem;
       }
 
       .text-description {
@@ -445,7 +446,7 @@ $dropdown-shadow: $shadow-lg;
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
         cursor: pointer;
-        font-weight: 500;
+        font-weight: 400;
 
         &:hover {
           background-color: $text-gray-100;
@@ -481,7 +482,7 @@ $dropdown-shadow: $shadow-lg;
       font-size: 0.875rem;
       border-radius: 0.375rem;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 500;
       color: $font-color;
       transition: all 0.15s ease-in-out;
 

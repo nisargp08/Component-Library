@@ -75,4 +75,8 @@ export default {
   text-transform: lowercase;
   text-transform: capitalize;
 }
+.tab-body{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 </style>

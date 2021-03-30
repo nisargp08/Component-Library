@@ -164,8 +164,8 @@ $active-font-color: $theme-color;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.875rem;
-    line-height: 1.5rem;
-    font-weight: 600;
+    line-height: 1.25rem;
+    font-weight: 500;
     color: $font-color;
     border-radius: 4px;
     padding: 0.5rem 1rem;
@@ -176,7 +176,7 @@ $active-font-color: $theme-color;
     &.active {
       background-color: $active-bg-color;
       color: $active-font-color;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     // Hover State
