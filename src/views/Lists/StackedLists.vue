@@ -28,7 +28,7 @@
 <script>
 import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
-// Toggles
+// Stacked Lists
 import NarrowWithAvatarGroup from "@stackedLists/NarrowWithAvatarGroup.vue";
 import AvatarGroupWithActions from "@stackedLists/AvatarGroupWithActions.vue";
 import ContentLinksWithAction from '@stackedLists/ContentLinksWithAction';

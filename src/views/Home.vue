@@ -197,6 +197,13 @@ export default {
                     description: "6 components",
                     linkedTo: "StackedLists",
                 },
+                {
+                    subtype: "Lists",
+                    title: "Grid Lists",
+                    image: "lists-grid-lists.svg",
+                    description: "6 components",
+                    linkedTo: "GridLists",
+                },
             ],
         };
     },

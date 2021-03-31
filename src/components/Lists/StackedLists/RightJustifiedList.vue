@@ -1,5 +1,5 @@
 <template>
-  <!-- Two-column with Avatar -->
+  <!-- List With Right-Justified Second Column -->
   <div>
     <div class="stacked-list">
       <div
@@ -112,13 +112,13 @@ $ringColor: #b5b5b5;
 .flex-1 {
   flex: 1 1 0%;
 }
-.flex-grow-1{
-    flex-grow: 1;
+.flex-grow-1 {
+  flex-grow: 1;
 }
-.sm\:flex-grow-0{
-    @media(min-width : 640px){
-        flex-grow: 0;
-    }
+.sm\:flex-grow-0 {
+  @media (min-width: 640px) {
+    flex-grow: 0;
+  }
 }
 .gap-4 {
   gap: 1rem;

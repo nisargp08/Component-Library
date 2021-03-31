@@ -48,6 +48,7 @@ module.exports = {
                 // Lists
                 '@tables' : path.resolve(__dirname,'src/components/Lists/Tables/'),
                 '@stackedLists' : path.resolve(__dirname,'src/components/Lists/StackedLists/'),
+                '@gridLists' : path.resolve(__dirname,'src/components/Lists/GridLists/'),
             }
         }
     },

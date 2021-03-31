@@ -256,6 +256,15 @@ const routes = [
       breadcrumb: [{ name: "Home", link: "Home" }, { name: "Stacked Lists" }],
     },
   },
+  {
+    path: "/lists/grid-lists",
+    name: "GridLists",
+    component: () =>
+      import(/* webpackChunkName : GridLists */ "@/views/Lists/GridLists.vue"),
+    meta: {
+      breadcrumb: [{ name: "Home", link: "Home" }, { name: "Grid Lists" }],
+    },
+  },
   // Wildcard for any other path
   {
     path: "*",

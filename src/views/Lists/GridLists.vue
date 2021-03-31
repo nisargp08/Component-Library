@@ -1,7 +1,14 @@
 <template>
-  <component-layout class="tables-container">
+  <component-layout class="grid-lists-container">
     <template v-slot:page-header>
-      <p>Tables</p>
+      <p>Grid Lists</p>
+    </template>
+    <template v-slot:page-description>
+      <div class="warning-alert">
+        <p>
+          <b>Please note : </b> These components will not render properly in browsers not supporting grid.
+        </p>
+      </div>
     </template>
     <template v-slot:page-body>
       <!-- Component list -->
@@ -28,29 +35,21 @@
 <script>
 import ComponentLayout from "@v-includes/ComponentLayout.vue";
 import ComponentBox from "@general/ComponentBox.vue";
-// Tables
-import TableWithAvatars from "@tables/TableWithAvatars.vue";
-import SimpleTable from "@tables/SimpleTable.vue";
-import SimpleStriped from "@tables/SimpleStriped.vue";
+// Grid List
+import SmallContactCards from "@gridLists/SmallContactCards.vue";
+import ContactCards from "@gridLists/ContactCards.vue";
 
 export default {
   data() {
     return {
       componentsList: [
         {
-          title: "Table with avatars and multi-line content",
-          componentName: TableWithAvatars,
-          needJS : true,
+          title: "Contact Card grid with small portraits",
+          componentName: SmallContactCards,
         },
         {
-          title: "Simple Table",
-          componentName: SimpleTable,
-          needJS : true,
-        },
-        {
-          title: "Simple Striped Table",
-          componentName: SimpleStriped,
-          needJS : true,
+          title: "Contact Cards",
+          componentName: ContactCards,
         },
       ],
     };
@@ -58,9 +57,8 @@ export default {
   components: {
     ComponentLayout,
     ComponentBox,
-    TableWithAvatars,
-    SimpleTable,
-    SimpleStriped
+    SmallContactCards,
+    ContactCards,
   },
 };
 </script>
