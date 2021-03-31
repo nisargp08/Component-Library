@@ -194,7 +194,7 @@ export default {
                     subtype: "Lists",
                     title: "Stacked Lists",
                     image: "lists-stacked-lists.svg",
-                    description: "7 components",
+                    description: "6 components",
                     linkedTo: "StackedLists",
                 },
             ],

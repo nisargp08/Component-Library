@@ -34,6 +34,7 @@ import AvatarGroupWithActions from "@stackedLists/AvatarGroupWithActions.vue";
 import ContentLinksWithAction from '@stackedLists/ContentLinksWithAction';
 import WithHeadings from '@stackedLists/WithHeadings';
 import TwoColumnsWithAvatar from '@stackedLists/TwoColumnsWithAvatar';
+import RightJustifiedList from '@stackedLists/RightJustifiedList';
 
 export default {
   data() {
@@ -60,6 +61,11 @@ export default {
           componentName: TwoColumnsWithAvatar,
           class : "bg-whitesmoke w-100"
         },
+        {
+          title: "List with right-justified second column",
+          componentName: RightJustifiedList,
+          class : "bg-whitesmoke w-100"
+        },
       ],
     };
   },
@@ -70,7 +76,8 @@ export default {
     AvatarGroupWithActions,
     ContentLinksWithAction,
     WithHeadings,
-    TwoColumnsWithAvatar
+    TwoColumnsWithAvatar,
+    RightJustifiedList
   },
 };
 </script>
