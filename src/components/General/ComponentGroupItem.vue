@@ -9,7 +9,7 @@
     </figure>
     <figcaption class="mt-3">
       <p class="figcaption">{{ title }}</p>
-      <p class="figcaption-description">{{ description }}</p>
+      <p class="figcaption-description">{{ total }} components</p>
     </figcaption>
   </router-link>
 </template>
@@ -23,7 +23,7 @@ export default {
     },
     image: String,
     title: String,
-    description: String,
+    total: Number,
   },
   computed: {
     // To fetch image path from the directory dynamically
