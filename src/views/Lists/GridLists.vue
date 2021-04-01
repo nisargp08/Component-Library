@@ -6,7 +6,8 @@
     <template v-slot:page-description>
       <div class="warning-alert">
         <p>
-          <b>Please note : </b> These components will not render properly in browsers not supporting grid.
+          <b>Please note : </b> These components will not render properly in
+          browsers not supporting grid.
         </p>
       </div>
     </template>
@@ -38,6 +39,7 @@ import ComponentBox from "@general/ComponentBox.vue";
 // Grid List
 import SmallContactCards from "@gridLists/SmallContactCards.vue";
 import ContactCards from "@gridLists/ContactCards.vue";
+import ImageGrid from "@gridLists/ImageGrid.vue";
 
 export default {
   data() {
@@ -51,6 +53,11 @@ export default {
           title: "Contact Cards",
           componentName: ContactCards,
         },
+        {
+          title: "Image Grid with details",
+          componentName: ImageGrid,
+          class: "no-padding",
+        },
       ],
     };
   },
@@ -59,6 +66,7 @@ export default {
     ComponentBox,
     SmallContactCards,
     ContactCards,
+    ImageGrid,
   },
 };
 </script>
@@ -76,6 +84,12 @@ export default {
     @media (min-width: 640px) {
       padding: 3rem 1rem;
     }
+  }
+}
+/deep/ .no-padding .component-box-body {
+  background-color: white;
+  > * {
+    padding: 0;
   }
 }
 </style>
