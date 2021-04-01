@@ -1,4 +1,5 @@
 <template>
+  <!-- Image Grid -->
   <div>
     <template v-if="api.isLoading">
       <loading-svg></loading-svg>
@@ -48,17 +49,16 @@
 
 <script>
 import LoadingSvg from "@general/Loading.vue";
+import { unsplashAPI } from "@general/unsplashApi.js";
+
 export default {
+  mixins: [unsplashAPI],
   data() {
     return {
       api: {
         isLoading: null,
         isDone: null,
         isError: null,
-      },
-      apiCreds: {
-        url: "https://api.unsplash.com",
-        access: "V0H8ODt3AlB68xlFWj181aiZo_X7hOk7I1FlhvQKYRg",
       },
       imageGallery: [],
     };
@@ -82,7 +82,7 @@ export default {
     },
   },
   methods: {
-    // Get a random image from unsplash
+    // Get random images from unsplash
     async getRandomImages() {
       // Reset api state
       this.resetApiState();
